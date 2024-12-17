@@ -24,19 +24,15 @@ void main()
     gl_Position = projectedPosition;
 
     // Point size
-
-    //las siguientes 3 lineas son para controlar el ciclo de ls particulas -> se alargan, se mantienen, y vuelve a su sitio
-    float sizeIn = smoothstep(0.0, 0.1, particle.a); //tenemos acceso al particles gsl
+    float sizeIn = smoothstep(0.0, 0.1, particle.a); 
     float sizeOut = 1.0 - smoothstep(0.7, 1.0, particle.a); 
     float size = min(sizeIn, sizeOut);
 
     gl_PointSize = size * aSize * uSize * uResolution.y;
     gl_PointSize *= (1.0 / - viewPosition.z);
 
-
-
- vec3 color = vec3(1.0, 0.1, 0.9);
-
+	// Color
+    vec3 color = vec3(1.0, 0.1, 0.9);
     float depth = (modelPosition.y + 1.0) * 0.5; 
    
     if (depth <= 0.5) {
@@ -45,8 +41,6 @@ void main()
         color = mix(uColor2, uColor3, (depth - 0.5) * 1.8); 
     }
 
-
     // Varyings
-    // vColor = aColor;
     vColor = color;
 }
