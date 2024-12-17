@@ -237,8 +237,8 @@ const animate = (time) => {
 	controls.update()
 
 	// GPGPU Update
-	gpgpu.particlesVariable.material.uniforms.uTime.value = elapsedTime;
-	gpgpu.particlesVariable.material.uniforms.uDeltaTime.value = deltaTime;
+	gpgpu.particlesVariable.material.uniforms.uTime.value = elapsedTime * 0.5;
+	gpgpu.particlesVariable.material.uniforms.uDeltaTime.value = deltaTime * 0.5;
 	gpgpu.computation.compute();
 	particles.material.uniforms.uParticlesTexture.value = gpgpu.computation.getCurrentRenderTarget(gpgpu.particlesVariable).texture;
 
