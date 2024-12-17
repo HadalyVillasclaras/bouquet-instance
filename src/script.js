@@ -211,20 +211,27 @@ gui
 	.step(0.001)
 	.name('uFlowFieldFrequency');
 
-
-
 /**
  * Animate
  */
 const clock = new THREE.Clock()
 let previousTime = 0
 
+// throttle
+const fps = 30; 
+const interval = 1000 / fps;
+let lastTime = 0;
+let animationFrameId = null;
 
-const animate = () => {
+const animate = (time) => {
+	animationFrameId = requestAnimationFrame(animate);
 	console.log(controls);
+
 	const elapsedTime = clock.getElapsedTime();
 	const deltaTime = elapsedTime - previousTime;
 	previousTime = elapsedTime;
+
+	lastTime = time;
 
 	// Update controls
 	controls.update()
@@ -236,8 +243,6 @@ const animate = () => {
 	particles.material.uniforms.uParticlesTexture.value = gpgpu.computation.getCurrentRenderTarget(gpgpu.particlesVariable).texture;
 
 	renderer.render(scene, camera);
-
-	window.requestAnimationFrame(animate);
 }
 
 animate();
