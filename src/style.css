@@ -12,6 +12,10 @@
 	font-style: normal;
 }
 
+:root {
+	--color-black: #1e1e1e;
+	--color-white: #ededed;
+}
 
 * {
 	margin: 0;
@@ -32,6 +36,8 @@ html,
 body {
 	overflow: hidden;
 	text-transform: uppercase;
+	color: var(--color-black);
+
 }
 
 main {
@@ -43,10 +49,24 @@ main {
 p {
 }
 
+button {
+	text-transform: uppercase;
+	border: none;
+	font-size: 12px;
+}
+
+h2 {
+	font-size: 16px;
+}
+
 h3 {
 	font-size: 12px;
-	font-family: 'B612Mono';
 	font-weight: bold;
+}
+
+h4 {
+	font-size: 10px;
+	font-weight: normal;
 }
 
 li {
@@ -57,14 +77,14 @@ ul ul {
 	margin-left: 16px;
 }
 
-.webgl {
-	position: relative;
+.webgl, .canvas-poster {
+	position: absolute;
 	top: 0;
 	left: 0;
 }
 
 .s-data__cn {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	z-index: 2;
@@ -74,6 +94,7 @@ ul ul {
 }
 
 .s-data__cl {
+	z-index: 2;
 	right: 0;
 	position: absolute;
 	top: 0;
@@ -91,6 +112,41 @@ ul ul {
 	margin-bottom: 8px;
 }
 
+/* Transparent components  */
+.c-transp {
+	padding: 5px 6px 4px;
+	background-color: var(--color-black);
+	color: var(--color-white);
+	border-radius: 4px;
+	opacity: 0.60;
+	margin-bottom: 2px;
+}
+
+.c-transp p {
+	font-size: 9px;
+	line-height: 11px;
+}
+
+.c-transp > header {
+	margin-bottom: 8px;
+}
+
+.c-transp > header h2{
+	margin-top: 6px;
+}
+
+.crt__data,
+.crt__btn {
+	position: absolute;
+	top: 40%;
+	margin: 16px;
+	z-index: 3;
+}
+
+.crt__data {
+	right: 0px;
+	max-width: 200px;
+}
 
 
 
@@ -147,3 +203,8 @@ ul ul {
 	grid-column: 12/13;
 	grid-row: 1;
 }  */
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-black);
+}

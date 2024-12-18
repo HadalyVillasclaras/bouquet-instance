@@ -12,7 +12,7 @@ import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
  * Base
  */
 // Debug
-const gui = new GUI({ width: 340 })
+// const gui = new GUI({ width: 340 })
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -190,26 +190,26 @@ scene.add(particles.points)
 /**
  * Tweaks
  */
-gui.add(particles.material.uniforms.uSize, 'value').min(0).max(1).step(0.001).name('uSize')
+// gui.add(particles.material.uniforms.uSize, 'value').min(0).max(1).step(0.001).name('uSize')
 
-gui
-	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence, 'value')
-	.min(0)
-	.max(10)
-	.name('uFlowFieldInfluence');
+// gui
+// 	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence, 'value')
+// 	.min(0)
+// 	.max(10)
+// 	.name('uFlowFieldInfluence');
 
-gui
-	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength, 'value')
-	.min(0)
-	.max(10)
-	.name('uFlowFieldStrength');
+// gui
+// 	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength, 'value')
+// 	.min(0)
+// 	.max(10)
+// 	.name('uFlowFieldStrength');
 
-gui
-	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency, 'value')
-	.min(0)
-	.max(1)
-	.step(0.001)
-	.name('uFlowFieldFrequency');
+// gui
+// 	.add(gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency, 'value')
+// 	.min(0)
+// 	.max(1)
+// 	.step(0.001)
+// 	.name('uFlowFieldFrequency');
 
 /**
  * Animate
