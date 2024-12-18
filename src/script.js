@@ -8,6 +8,7 @@ import particlesVertexShader from './shaders/particles/vertex.glsl'
 import particlesFragmentShader from './shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
 import DataUpdater from './DataUpdater';
+import { toDegrees, getRotation, updateFPS } from './helpers.js';
 
 /**
  * Base
@@ -225,13 +226,10 @@ scene.add(particles.points)
 const clock = new THREE.Clock()
 
 // throttle
-const interval = 30;
+const interval = 60;
 let lastTime = 0;
 let previousTime = 0;
 let animationFrameId = null;
-
-let fpsLastTime = performance.now();
-let frameCount = 0;
 
 const uiUpdater = new DataUpdater();
 
@@ -242,20 +240,32 @@ const animate = (time) => {
 		return;
 	}
 
-	// FPS
-	frameCount++;
-	const now = performance.now();
-	const elapsed = now - fpsLastTime;
-
-	if (elapsed >= 1000) {
-		uiUpdater.setFPS(frameCount);
-		frameCount = 0;
-		fpsLastTime = now;
-	}
+	const currentRotation = {
+		x: parseFloat(camera.rotation.x.toFixed(2)),
+		y: parseFloat(camera.rotation.y.toFixed(2)),
+		z: parseFloat(camera.rotation.z.toFixed(2))
+	};
 
 	// UI Setters
+	const rotationValues = getRotation(currentRotation);
+	if (rotationValues) {
+		uiUpdater.setRotation({
+			deg: rotationValues.deg,
+			rad: rotationValues.rad,
+			xDeg: rotationValues.xDeg,
+			yDeg: rotationValues.yDeg,
+			zDeg: rotationValues.zDeg
+		});
+	}
+
+	const fps = updateFPS(1000);
+	if (fps !== null) {
+		uiUpdater.setFPS(fps);
+	}
+
 	uiUpdater.setCameraPosition(camera.position.x, camera.position.y, camera.position.z);
 	uiUpdater.setTime(clock.getElapsedTime());
+
 
 	const elapsedTime = clock.getElapsedTime();
 	const deltaTime = elapsedTime - previousTime;
@@ -271,9 +281,6 @@ const animate = (time) => {
 	gpgpu.particlesVariable.material.uniforms.uDeltaTime.value = deltaTime * 0.5;
 	gpgpu.computation.compute();
 	particles.material.uniforms.uParticlesTexture.value = gpgpu.computation.getCurrentRenderTarget(gpgpu.particlesVariable).texture;
-
-
-
 
 	renderer.render(scene, camera);
 }
