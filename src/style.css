@@ -90,22 +90,65 @@ ul ul {
 	z-index: 2;
 	padding: 12px;
 	display: flex;
-	gap: 6vw;
+	flex-direction: column;
+	gap: 24px;
+
+
+	left: 20%;
+	width: fit-content;
+	height: 200px;
+	overflow: auto;
+	padding-top: 85vh;
+	pointer-events: none;
+
+}
+
+/* Hide scroll bar */
+.s-data__cn::-webkit-scrollbar {
+  display: none;
+}
+
+.s-data__cn {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.s-data__cn  > div {
+	pointer-events: auto;
 }
 
 .s-data__cl {
 	z-index: 2;
 	right: 0;
-	position: absolute;
+	position: relative;
 	top: 0;
 	padding: 12px;
+	width: fit-content;
+}
+
+@media only screen and (min-width: 800px) {
+  .s-data__cn {
+    flex-direction: row;
+		gap: 6vw;
+  }
+
+	.s-data__cl {
+		position: absolute;
+	}
 }
 
 .s-data {
-	width: 250px;
+	width: 205px;
 	display: flex;
 	flex-direction: column;
-	gap: 32px;
+	gap: 16px;
+}
+
+@media only screen and (min-width: 800px) {
+	.s-data {
+		gap: 32px;
+		width: 250px;
+  }
 }
 
 .s-data__el header{
@@ -138,17 +181,34 @@ ul ul {
 .crt__data,
 .crt__btn {
 	position: absolute;
-	top: 40%;
-	margin: 16px;
+	margin: 16px 0;
 	z-index: 3;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	bottom: 0;
+	height: fit-content;
 }
 
 .crt__data {
-	right: 0px;
 	max-width: 200px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	top: 0;
 }
 
+@media only screen and (min-width: 800px) {
+	.crt__data {
+		right: 0px;
+		max-width: 200px;
+		top: 40%;
+	}
 
+	.crt__data,
+	.crt__btn {
+		top: 40%;
+		margin: 16px;
+	}
+}
 
 /* Utilities */
 .txt-no-transform {
