@@ -7,6 +7,7 @@ import GUI from 'lil-gui'
 import particlesVertexShader from './shaders/particles/vertex.glsl'
 import particlesFragmentShader from './shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
+import DataUpdater from './DataUpdater';
 
 /**
  * Base
@@ -23,8 +24,8 @@ const scene = new THREE.Scene();
 // Manager
 const manager = new THREE.LoadingManager();
 
-manager.onLoad = function() {
-  console.log('Loaded');
+manager.onLoad = function () {
+	console.log('Loaded');
 	document.querySelector('.webgl').classList.add('loaded');
 };
 
@@ -72,7 +73,7 @@ window.addEventListener('resize', () => {
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100);
-camera.position.set(4.5, 4, 15);
+camera.position.set(-10, 5.0, 8.1);
 scene.add(camera);
 
 // Controls
@@ -109,7 +110,7 @@ gpgpu.size = Math.ceil(Math.sqrt(baseGeometry.count));
 gpgpu.computation = new GPUComputationRenderer(gpgpu.size, gpgpu.size, renderer)
 
 // Base particles
-const baseParticlesTexture = gpgpu.computation.createTexture(); 
+const baseParticlesTexture = gpgpu.computation.createTexture();
 
 for (let i = 0; i < baseGeometry.count; i++) {
 	const i3 = i * 3;
@@ -156,7 +157,7 @@ for (let y = 0; y < gpgpu.size; y++) {
 		const i2 = i * 2;
 
 		// Particles UV
-		const uvX = (x + 0.5) / gpgpu.size; 
+		const uvX = (x + 0.5) / gpgpu.size;
 		const uvY = (y + 0.5) / gpgpu.size;
 
 		particleUvArray[i2 + 0] = uvX;
@@ -222,17 +223,39 @@ scene.add(particles.points)
  * Animate
  */
 const clock = new THREE.Clock()
-let previousTime = 0
 
 // throttle
-const fps = 30; 
-const interval = 1000 / fps;
+const interval = 30;
 let lastTime = 0;
+let previousTime = 0;
 let animationFrameId = null;
+
+let fpsLastTime = performance.now();
+let frameCount = 0;
+
+const uiUpdater = new DataUpdater();
 
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
-	// console.log(controls);
+
+	if (time < lastTime + interval) {
+		return;
+	}
+
+	// FPS
+	frameCount++;
+	const now = performance.now();
+	const elapsed = now - fpsLastTime;
+
+	if (elapsed >= 1000) {
+		uiUpdater.setFPS(frameCount);
+		frameCount = 0;
+		fpsLastTime = now;
+	}
+
+	// UI Setters
+	uiUpdater.setCameraPosition(camera.position.x, camera.position.y, camera.position.z);
+	uiUpdater.setTime(clock.getElapsedTime());
 
 	const elapsedTime = clock.getElapsedTime();
 	const deltaTime = elapsedTime - previousTime;
@@ -248,6 +271,9 @@ const animate = (time) => {
 	gpgpu.particlesVariable.material.uniforms.uDeltaTime.value = deltaTime * 0.5;
 	gpgpu.computation.compute();
 	particles.material.uniforms.uParticlesTexture.value = gpgpu.computation.getCurrentRenderTarget(gpgpu.particlesVariable).texture;
+
+
+
 
 	renderer.render(scene, camera);
 }
