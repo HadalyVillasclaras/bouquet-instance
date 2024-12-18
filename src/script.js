@@ -20,11 +20,19 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene();
 
+// Manager
+const manager = new THREE.LoadingManager();
+
+manager.onLoad = function() {
+  console.log('Loaded');
+	document.querySelector('.webgl').classList.add('loaded');
+};
+
 // Loaders
-const dracoLoader = new DRACOLoader()
+const dracoLoader = new DRACOLoader(manager)
 dracoLoader.setDecoderPath('/draco/')
 
-const gltfLoader = new GLTFLoader()
+const gltfLoader = new GLTFLoader(manager)
 gltfLoader.setDRACOLoader(dracoLoader)
 
 /**
@@ -90,7 +98,6 @@ renderer.setClearColor('#f4f4f4');
  */
 const baseGeometry = {}
 baseGeometry.instance = gltf.scene.children[0].geometry;
-console.log(baseGeometry.instance);
 baseGeometry.count = baseGeometry.instance.attributes.position.count;
 
 /**
@@ -225,7 +232,7 @@ let animationFrameId = null;
 
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
-	console.log(controls);
+	// console.log(controls);
 
 	const elapsedTime = clock.getElapsedTime();
 	const deltaTime = elapsedTime - previousTime;
