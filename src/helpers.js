@@ -52,3 +52,22 @@ export const updateFPS = (updateInterval) => {
   }
   return null;
 };
+
+
+export function initCameraPanningKeyEvents(controls) {
+	const arrow_keys = [ 'ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft' ];
+
+	window.addEventListener( 'pointerdown', ( event ) => {}, false);
+	window.addEventListener( 'pointerup', ( event ) => {}, false);
+	window.addEventListener( 'wheel', ( event ) => {}, false);
+	window.addEventListener( 'keydown', ( event ) => {
+		if (arrow_keys.some( k => k === event.key ) || event.ctrlKey || event.metaKey || event.shiftKey) {
+			controls.listenToKeyEvents( window );
+		}
+	}, false);
+	window.addEventListener( 'keyup', ( event ) => {
+		if (arrow_keys.some( k => k === event.key )) {
+			controls.stopListenToKeyEvents();
+		}
+	}, false);
+}

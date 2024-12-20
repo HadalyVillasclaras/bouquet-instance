@@ -111,7 +111,7 @@ ul ul {
 }
 
 .s-data-cnt--rg  > div {
-	pointer-events: auto;
+	pointer-events: none;
 }
 
 @media only screen and (min-width: 800px) {
@@ -121,7 +121,7 @@ ul ul {
 		height: unset;
 		overflow: auto;
 		padding-top: 12px;
-		pointer-events: all;
+		pointer-events: none;
 	}
 
 	.s-data-cnt--lf {
@@ -134,6 +134,8 @@ ul ul {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	pointer-events: all;
+	height: fit-content;
 }
 
 @media only screen and (min-width: 800px) {

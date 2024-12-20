@@ -8,7 +8,7 @@ import particlesVertexShader from './shaders/particles/vertex.glsl'
 import particlesFragmentShader from './shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
 import DataUpdater from './DataUpdater';
-import { toDegrees, getRotation, updateFPS } from './helpers.js';
+import { initCameraPanningKeyEvents, getRotation, updateFPS } from './helpers.js';
 
 /**
  * Base
@@ -80,6 +80,24 @@ scene.add(camera);
 // Controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
+controls.enablePan = true;
+const minPan = new THREE.Vector3( - 2, - 2, - 2 );
+const maxPan = new THREE.Vector3( 2, 2, 2 );
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.2;
+controls.dampingFactor = 0.1;
+controls.keyPanSpeed = 1.2;
+controls.maxDistance = 18;
+controls.minDistance = 8;
+
+controls.keys = {
+	LEFT: 'ArrowRight', 
+	UP: 'ArrowDown', 
+	RIGHT: 'ArrowRight', 
+	BOTTOM: 'ArrowUp'
+}
+
+initCameraPanningKeyEvents(controls);
 
 /**
  * Renderer
@@ -233,12 +251,21 @@ let animationFrameId = null;
 
 const uiUpdater = new DataUpdater();
 
+
+console.log(controls);
+console.log('environmentIntensity: ' + scene.environmentIntensity); //1
+console.log('visible: ' + scene.visible); //true
+
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
 
 	if (time < lastTime + interval) {
 		return;
 	}
+
+	// ZOOM 
+	const distance = camera.position.distanceTo(controls.target);
+	// console.log(distance);
 
 	const currentRotation = {
 		x: parseFloat(camera.rotation.x.toFixed(2)),
@@ -249,20 +276,13 @@ const animate = (time) => {
 	// UI Setters
 	const rotationValues = getRotation(currentRotation);
 	if (rotationValues) {
-		uiUpdater.setRotation({
-			deg: rotationValues.deg,
-			rad: rotationValues.rad,
-			xDeg: rotationValues.xDeg,
-			yDeg: rotationValues.yDeg,
-			zDeg: rotationValues.zDeg
-		});
+		uiUpdater.setRotation(rotationValues);
 	}
 
 	const fps = updateFPS(1000);
 	if (fps !== null) {
 		uiUpdater.setFPS(fps);
 	}
-
 	uiUpdater.setCameraPosition(camera.position.x, camera.position.y, camera.position.z);
 	uiUpdater.setTime(clock.getElapsedTime());
 
@@ -273,7 +293,8 @@ const animate = (time) => {
 
 	lastTime = time;
 
-	// Update controls
+	// Orbit Controls
+	controls.target.clamp(minPan, maxPan); //Limit camera panning
 	controls.update()
 
 	// GPGPU Update
