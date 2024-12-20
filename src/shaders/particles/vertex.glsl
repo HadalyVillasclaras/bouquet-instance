@@ -2,7 +2,6 @@ uniform vec2 uResolution;
 uniform float uSize;
 uniform sampler2D uParticlesTexture;
 attribute vec2 aParticlesUv;
-attribute vec3 aColor;
 attribute float aSize; // random sizes (set in the for loop)
 
 varying vec3 vPosition;
