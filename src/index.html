@@ -5,17 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GPGPU Flowfield Animation</title>
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 	<main>
-		<div class="s-data-cnt s-data-cnt--rg">
+		<section class="s-data-cnt s-data-cnt--tl">
 			<div class="o-clrw">
-				<section class="s-data">
-					<article class="s-data__el">
+				<section class="o-list">
+					<article class="s-data">
 						<header>
-							<h3>Instance II: Bouquet</h3>
+							<h1 class="txt-highlight">Instance II: Bouquet</h1>
 						</header>
 						<div>
 							<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF I/O v4.2.70. KHR Draco Mesh Compression.
@@ -23,7 +23,7 @@
 						</div>
 					</article>
 
-					<article class="s-data__el">
+					<article class="s-data">
 						<header>
 							<h3>_UParticles</h3>
 						</header>
@@ -35,7 +35,7 @@
 						</div>
 					</article>
 
-					<article class="s-data__el">
+					<article class="s-data">
 						<header>
 							<h3>_scene</h3>
 						</header>
@@ -47,8 +47,8 @@
 					</article>
 				</section>
 
-				<section class="s-data">
-					<article class="s-data__el">
+				<section class="o-list">
+					<article class="s-data">
 						<header>
 							<h3>BASE GEOMETRY COUNT: 730639</h3>
 						</header>
@@ -88,8 +88,8 @@
 					</article>
 				</section>
 
-				<section class="s-data">
-					<article class="s-data__el">
+				<section class="o-list">
+					<article class="s-data">
 						<header>
 							<h3>A. BUFFER (8767668)</h3>
 						</header>
@@ -99,7 +99,7 @@
 						</div>
 					</article>
 
-					<article class="s-data__el">
+					<article class="s-data">
 						<header>
 							<h3>_VECTOR3</h3>
 						</header>
@@ -114,45 +114,19 @@
 					</article>
 				</section>
 			</div>
-		</div>
+			<button class="c-transp">Clear data</button>
+		</section>
 
-
-		<div class="s-data-cnt s-data-cnt--lf">
-			<section>
-				<article class="s-data__el">
-					<header>
-						<h3>730639</h3>
-					</header>
-				</article>
-			</section>
-		</div>
-
-		<button class="c-transp m-12">
-			Clear data
-		</button>
-
-		<div class="c-crt c-crt__data">
-			<section class="c-transp s-data__el">
+		<section class="s-data-cnt s-data-cnt--tr">
+			<div class="s-data">
 				<header>
-					<h3>_Uposition</h3>
+					<h3>730639</h3>
 				</header>
-				<h2 id="dt-cam-pos">-10.0x,5.0y,8.1z</h2>
-				<div>
-				</div>
-			</section>
-			<section class="c-transp s-data__el">
-				<header>
-					<h3>_Utime</h3>
-				</header>
-				<h2 id="dt-time">00:00:00:00</h2>
-			</section>
-			<section class="c-transp s-data__el">
-				<header>
-					<h3>Rotation magnitude</h3>
-				</header>
-				<h2 id="dt-rotation-mag">1.08 rad</h2>
-			</section>
-			<section class="c-transp s-data__el">
+			</div>
+		</section>
+
+		<section class="s-data-cnt s-data-cnt--ml o-list o-list--sm">
+			<div class="c-transp s-data">
 				<header>
 					<h3>Axis rotation</h3>
 				</header>
@@ -161,14 +135,46 @@
 					<p class="p2">Y: -48.13°</p>
 					<p class="p2">Z: -25.78°</p>
 				</div>
-				<p id="dt-rotation"></p>
+				<p class="visually-hidden" id="dt-rotation"></p>
+			</div>
+			<div class="c-transp s-data">
+				<header>
+					<h3>Auto-rotate dir.</h3>
+				</header>
+				<p>RIGHT</p>
+			</div>
+		</section>
+
+		<section class="s-data-cnt s-data-cnt--mr o-list o-list--sm">
+			<section class="c-transp s-data">
+				<header>
+					<h3>_Uposition</h3>
+				</header>
+				<h2 id="dt-cam-pos">-10.0x,5.0y,8.1z</h2>
+				<div>
+				</div>
+			</section>
+			<section class="c-transp s-data">
+				<header>
+					<h3>_Utime</h3>
+				</header>
+				<h2 id="dt-time">00:00:00:00</h2>
+			</section>
+			<section class="c-transp s-data">
+				<header>
+					<h3>Rotation magnitude</h3>
+				</header>
+				<h2 id="dt-rotation-mag">1.08 rad</h2>
 			</section>
 
-			<section class="c-transp s-data__el ctrls">
+		</section>
+
+		<section class="s-data-cnt s-data-cnt--ctr">
+			<div class="c-transp s-data">
 				<header>
 					<h3>Controls</h3>
 				</header>
-				<div>
+				<div class="o-list o-list--xs">
 					<div>
 						<p>camera panning:</p>
 						<p>arrow keys (↑ ↓ ← →)</p>
@@ -182,16 +188,11 @@
 						<p>drag & move (⤴)</p>
 					</div>
 				</div>
-			</section>
-			<section class="c-transp s-data__el ctrls">
-				<header>
-					<h3>Auto-rotate dir.</h3>
-				</header>
-				<p>RIGHT</p>
-			</section>
-		</div>
+			</div>
+		</section>
 
-		<!-- <img class="canvas-poster" src="./poster.png" alt=""> -->
+		
+		<!-- <img class="canvas-poster bg-cover" src="./poster.png" alt=""> -->
 		<canvas class="webgl"></canvas>
 	</main>
 	<footer class="p-12">

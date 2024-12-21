@@ -1,0 +1,63 @@
+/* Typography */
+@font-face {
+	font-family: 'B612Mono';
+	src: url('../assets/B612Mono-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'B612Mono';
+	src: url('../assets/B612Mono-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-size: 9px;
+	font-family: 'B612Mono', "monospace";
+	font-weight: normal;
+	line-height: 12.5px;
+	text-transform: uppercase;
+}
+
+p, .p1, p.p1 {
+	font-size: 9px;
+	font-weight: normal;
+	line-height: 12.5px;
+}
+
+.p2, p.p2 {
+	font-size: 12px;
+	line-height: 14.5px;
+	font-weight: normal;
+}
+
+h1,
+h3, .h3,
+h4, .h4 {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+h2, .h2 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+h1, h3, h4,
+.txt-highlight {
+	background-color: rgba(0, 0, 0, 0.795);
+	color: white;
+	width: fit-content;
+	padding: 1px 2px 0px;
+}
+
+.txt-bold, .txt-bold * {
+	font-weight: bold;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-black);
+}

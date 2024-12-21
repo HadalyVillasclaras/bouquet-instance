@@ -1,0 +1,256 @@
+@import url('./typography.css');
+
+:root {
+	--color-black: #1e1e1e;
+	--color-white: #ededed;
+
+	--spc-m: 12px;
+	--spc-default: var(--spc-m);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	overflow: hidden;
+	color: var(--color-black);
+}
+
+main {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+
+.webgl, .canvas-poster {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+button {
+	text-transform: uppercase;
+	border: none;
+	font-size: 12px;
+}
+
+li {
+	list-style: none;
+}
+
+ul ul {
+	margin-left: 16px; /* indent */
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
+
+/* Data containers and sections */
+.s-data header{
+	margin-bottom: 6px;
+}
+
+
+/* Data Containers */
+.s-data-cnt {
+	position: relative;
+	width: fit-content;
+	z-index: 2;
+	padding: var(--spc-default);
+}
+
+/* Positioning the data containers */
+.s-data-cnt--tl {
+	top: 0;
+	left: 20%;
+}
+
+.s-data-cnt--tr {
+	right: 0;
+	top: 0;
+}
+
+.s-data-cnt--mr,
+.s-data-cnt--ml {
+	top: 48%;
+}
+
+.s-data-cnt--mr {
+	right: 0;
+}
+
+.s-data-cnt--ctr {
+	top: 0;
+	right: 0;
+}
+
+.s-data-cnt--tl {
+	height: 200px;
+	overflow: auto;
+	padding-top: 85vh;
+	pointer-events: none;
+
+	-ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.s-data-cnt--tl::-webkit-scrollbar {
+  display: none;
+}
+
+.s-data-cnt--tl > div {
+	pointer-events: none;
+}
+
+@media only screen and (min-width: 800px) {
+	.s-data-cnt--tl {
+		top: 0;
+		left: 0;
+		height: unset;
+		overflow: auto;
+		padding-top: 12px;
+		pointer-events: none;
+	}
+
+	.s-data-cnt--tr,
+	.s-data-cnt--mr,
+	.s-data-cnt--ml, 
+	.s-data-cnt--ctr { 
+		position: absolute;
+	}
+}
+
+
+
+
+/* Transparent components  */
+.c-transp {
+	/* padding: 5px 6px 4px; */
+	/* background-color: var(--color-black); */
+	color: var(--color-black);
+	border-radius: 4px;
+	/* opacity: 0.80; */
+	/* margin-bottom: 2px; */
+	z-index: 2;
+	position: relative;
+}
+
+
+
+
+
+
+
+/* Objects */
+.o-clrw {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+@media only screen and (min-width: 800px) {
+	.o-clrw {
+		flex-direction: row;
+		gap: 6vw;
+	}
+}
+
+.o-list {
+	width: 205px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	pointer-events: all;
+	height: fit-content;
+}
+
+@media only screen and (min-width: 800px) {
+	.o-list {
+		gap: 32px;
+		width: 250px;
+  }
+
+	.o-list--sm {
+		gap: 20px;
+	}
+
+	.o-list--xs {
+		gap: 8px;
+	}
+}
+
+
+
+/* Utilities */
+.txt-no-transform {
+	text-transform: initial;
+}
+
+.bg-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.p-24 {
+	padding: 24px;
+}
+
+.p-12 {
+	padding: 12px;
+}
+
+.m-24 {
+	margin: 24px;
+}
+
+.m-12 {
+	margin: 12px;
+}
+
+
+
+/* Animations  */
+/* Fade in */
+.s-data-cnt {
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+.c-transp {
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+.webgl, .canvas-poster {
+	opacity: 0;
+}
+
+.webgl.loaded, .canvas-poster.loaded {
+	animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
