@@ -1,0 +1,36 @@
+/* Utilities */
+.txt-no-transform {
+	text-transform: initial;
+}
+
+.bg-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.p-24 {
+	padding: 24px;
+}
+
+.p-12 {
+	padding: 12px;
+}
+
+.m-24 {
+	margin: 24px;
+}
+
+.m-12 {
+	margin: 12px;
+}

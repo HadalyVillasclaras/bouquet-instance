@@ -1,9 +1,13 @@
 @import url('./typography.css');
+@import url('./objects.css');
+@import url('./utilities.css');
+@import url('./animations.css');
+
+
 
 :root {
 	--color-black: #1e1e1e;
 	--color-white: #ededed;
-
 	--spc-m: 12px;
 	--spc-default: var(--spc-m);
 }
@@ -24,7 +28,6 @@ main {
 	height: 100vh;
 	width: 100%;
 }
-
 
 .webgl, .canvas-poster {
 	position: absolute;
@@ -57,7 +60,6 @@ footer {
 .s-data header{
 	margin-bottom: 6px;
 }
-
 
 /* Data Containers */
 .s-data-cnt {
@@ -116,7 +118,7 @@ footer {
 		left: 0;
 		height: unset;
 		overflow: auto;
-		padding-top: 12px;
+		padding-top: var(--spc-default);
 		pointer-events: none;
 	}
 
@@ -149,108 +151,9 @@ footer {
 
 
 
-/* Objects */
-.o-clrw {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-}
-
-@media only screen and (min-width: 800px) {
-	.o-clrw {
-		flex-direction: row;
-		gap: 6vw;
-	}
-}
-
-.o-list {
-	width: 205px;
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-	pointer-events: all;
-	height: fit-content;
-}
-
-@media only screen and (min-width: 800px) {
-	.o-list {
-		gap: 32px;
-		width: 250px;
-  }
-
-	.o-list--sm {
-		gap: 20px;
-	}
-
-	.o-list--xs {
-		gap: 8px;
-	}
-}
 
 
 
-/* Utilities */
-.txt-no-transform {
-	text-transform: initial;
-}
 
-.bg-cover {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.visually-hidden {
-	position: absolute;
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0;
-	border: 0;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-}
-
-.p-24 {
-	padding: 24px;
-}
-
-.p-12 {
-	padding: 12px;
-}
-
-.m-24 {
-	margin: 24px;
-}
-
-.m-12 {
-	margin: 12px;
-}
-
-
-
-/* Animations  */
-/* Fade in */
-.s-data-cnt {
-	animation: fadeIn 1s ease-in-out forwards;
-	opacity: 0;
-}
-
-.c-transp {
-	animation: fadeIn 1s ease-in-out forwards;
-	opacity: 0;
-}
-
-.webgl, .canvas-poster {
-	opacity: 0;
-}
-
-.webgl.loaded, .canvas-poster.loaded {
-	animation: fadeIn 2s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-	0% { opacity: 0; }
-	100% { opacity: 1; }
-}
 
 

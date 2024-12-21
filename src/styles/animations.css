@@ -1,0 +1,24 @@
+/* Animations  */
+/* Fade in */
+.s-data-cnt {
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+.c-transp {
+	animation: fadeIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
+.webgl, .canvas-poster {
+	opacity: 0;
+}
+
+.webgl.loaded, .canvas-poster.loaded {
+	animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
