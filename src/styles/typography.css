@@ -35,7 +35,7 @@ p, .p1, p.p1 {
 
 h1,
 h3, .h3,
-h4, .h4 {
+h4, .h4, a {
 	font-size: 10px;
 	font-weight: bold;
 }
@@ -45,12 +45,16 @@ h2, .h2 {
 	font-weight: normal;
 }
 
-h1, h3, h4,
+h1, h3, h4, a,
 .txt-highlight {
 	background-color: rgba(0, 0, 0, 0.795);
 	color: white;
 	width: fit-content;
 	padding: 1px 2px 0px;
+}
+
+a {
+	text-decoration: none;
 }
 
 .txt-bold, .txt-bold * {

@@ -13,7 +13,6 @@
 }
 
 .o-list {
-	width: 205px;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
@@ -24,7 +23,6 @@
 @media only screen and (min-width: 800px) {
 	.o-list {
 		gap: 32px;
-		width: 250px;
   }
 
 	.o-list--sm {
@@ -35,3 +33,4 @@
 		gap: 8px;
 	}
 }
+

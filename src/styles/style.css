@@ -10,11 +10,13 @@
 	--color-white: #ededed;
 	--spc-m: 12px;
 	--spc-default: var(--spc-m);
+	--spc-width-def: 250px;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
 html,
@@ -27,6 +29,7 @@ main {
 	position: relative;
 	height: 100vh;
 	width: 100%;
+	padding: var(--spc-default);
 }
 
 .webgl, .canvas-poster {
@@ -55,6 +58,17 @@ footer {
 	bottom: 0;
 }
 
+.c-footer {
+	width: 100%;
+	justify-content: space-between;
+}
+
+.c-footer__rg {
+	display: flex;
+	gap: 6vw;
+
+}
+
 
 /* Data containers and sections */
 .s-data header{
@@ -64,20 +78,30 @@ footer {
 /* Data Containers */
 .s-data-cnt {
 	position: relative;
-	width: fit-content;
 	z-index: 2;
-	padding: var(--spc-default);
+	/* margin: var(--spc-default); */
 }
 
-/* Positioning the data containers */
+.s-data-cnt .o-list {
+	width: var(--spc-width-def);
+}
+
+@media only screen and (min-width: 800px) {
+	.s-data-cnt .o-list {
+		width: var(--spc-width-def);
+	}
+}
+
+/* Position of data containers */
 .s-data-cnt--tl {
 	top: 0;
 	left: 20%;
 }
 
-.s-data-cnt--tr {
-	right: 0;
-	top: 0;
+.s-data-cnt--tr,
+.s-data-cnt--ctr {
+	top: var(--spc-default);
+	right: var(--spc-default);
 }
 
 .s-data-cnt--mr,
@@ -86,12 +110,12 @@ footer {
 }
 
 .s-data-cnt--mr {
-	right: 0;
+	right: var(--spc-default);
 }
 
 .s-data-cnt--ctr {
-	top: 0;
-	right: 0;
+	top: var(--spc-default);
+	right: var(--spc-default);
 }
 
 .s-data-cnt--tl {
@@ -118,7 +142,7 @@ footer {
 		left: 0;
 		height: unset;
 		overflow: auto;
-		padding-top: var(--spc-default);
+		padding-top: 0;
 		pointer-events: none;
 	}
 
