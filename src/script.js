@@ -55,7 +55,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 /**
  * Model
  */
-const gltf = await gltfLoader.loadAsync('./mfs.glb');
+const gltf = await gltfLoader.loadAsync('./bouquet.glb');
 
 
 /**
@@ -161,15 +161,15 @@ scene.add(particles.points)
 /**
  * GUI
  */
-const gui = new GUI({ width: 340 })
+// const gui = new GUI({ width: 340 })
 
-guiSetUp(
-	gui,
-	particles.material.uniforms.uSize, 
-	gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence, 
-	gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength, 
-	gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency
-);
+// guiSetUp(
+// 	gui,
+// 	particles.material.uniforms.uSize, 
+// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence, 
+// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength, 
+// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency
+// );
 
 /**
  * Animate
@@ -184,7 +184,13 @@ let animationFrameId = null;
 
 const uiUpdater = new DataUpdater();
 
-console.log(controls);
+console.log(gltf);
+console.log(gpgpu.size);
+console.log(gpgpu.computation);
+
+
+
+
 
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
@@ -192,10 +198,11 @@ const animate = (time) => {
 	if (time < lastTime + interval) {
 		return;
 	}
+	console.log(gpgpu.particlesVariable.dependencies[0].material);
 
 	// ZOOM 
 	const distance = camera.position.distanceTo(controls.target);
-	// console.log(distance);
+	console.log(distance);
 
 	const currentRotation = {
 		x: parseFloat(camera.rotation.x.toFixed(2)),

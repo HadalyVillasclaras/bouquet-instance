@@ -1,25 +1,5 @@
 
-export function controlsSetUp(controls) {
-  controls.enableDamping = true;
-  controls.enablePan = true;
-
-  controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.1;
-  controls.dampingFactor = 0.1;
-  controls.keyPanSpeed = 1.2;
-  controls.maxDistance = 18;
-  controls.minDistance = 8;
-
-  controls.keys = {
-    LEFT: 'ArrowRight',
-    UP: 'ArrowDown',
-    RIGHT: 'ArrowLeft',
-    BOTTOM: 'ArrowUp'
-  }
-
-  initCameraPanningKeyEvents(controls);
-}
-
+// Manager set up
 export function managerSetUp(manager) {
   manager.onLoad = function () {
     console.log('Loaded');
@@ -27,7 +7,7 @@ export function managerSetUp(manager) {
   };
 }
 
-
+// Particle set up
 export function baseParticlesSetUp(baseGeometry, baseParticlesTexture) {
   // Base particles
   for (let i = 0; i < baseGeometry.count; i++) {
@@ -64,6 +44,8 @@ for (let y = 0; y < gpgpu.size; y++) {
 }
 }
 
+
+// GUI set up
 export function guiSetUp(gui, uSize, uFlowFieldInfluence, uFlowFieldStrength, uFlowFieldFrequency) {
   gui
     .add(uSize, 'value')
@@ -90,6 +72,29 @@ export function guiSetUp(gui, uSize, uFlowFieldInfluence, uFlowFieldStrength, uF
     .max(1)
     .step(0.001)
     .name('uFlowFieldFrequency');
+}
+
+// OrbitControls set up
+export function controlsSetUp(controls) {
+  controls.enableDamping = true;
+  controls.enablePan = true;
+
+  controls.autoRotate = true;
+  controls.autoRotateSpeed = 0.1;
+  controls.dampingFactor = 0.1;
+  controls.keyPanSpeed = 1.2;
+  controls.maxDistance = 18;
+  controls.minDistance = 8;
+  controls.rotateSpeed = 0.4;
+
+  controls.keys = {
+    LEFT: 'ArrowRight',
+    UP: 'ArrowDown',
+    RIGHT: 'ArrowLeft',
+    BOTTOM: 'ArrowUp'
+  }
+
+  initCameraPanningKeyEvents(controls);
 }
 
 function initCameraPanningKeyEvents(controls) {
