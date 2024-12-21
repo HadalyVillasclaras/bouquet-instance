@@ -15,34 +15,34 @@
 				<section class="s-data">
 					<article class="s-data__el">
 						<header>
-							<h3>Instance II</h3>
+							<h3>Instance II: Bouquet</h3>
 						</header>
 						<div>
-							<p class="txt-no-transform">Donec quis facilists sem. Duis id
-								risus ac nisi tempus etticitur varius
-								id libero. Integer at urna sit amet
-								ante lacinia e cirend. In pharotra.</p>
+							<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF I/O v4.2.70. KHR Draco Mesh Compression.
+								Version: "2.0".</p>
 						</div>
 					</article>
 
 					<article class="s-data__el">
 						<header>
-							<h3>_Vector3</h3>
+							<h3>_UParticles</h3>
 						</header>
 						<div>
-							<p>MAX AZIMUTH A.: INFINITY, DISTANCE: INFINITY PROJECTIO
-								NMATRIX:
-								MATRIX4</p>
+							<p>Data texture. Mapping: 300.</p>
+							<p>_Matrix3 {elements: Array(9)}</p>
+							<p>name: GPU Computation Shader</p>
+							<p>resolution: vec2( 855.0, 855.0 )</p>
 						</div>
 					</article>
 
 					<article class="s-data__el">
 						<header>
-							<h3>_utime</h3>
+							<h3>_scene</h3>
 						</header>
 						<div>
-							<p>MAX AZIMUTH ANGLE: INFINIT'
-								MAX DISTANCE: INFINITY</p>
+							<p>environment Intensity: 1 </p>
+							<p>visible: true</p>
+							<p>dynamic env. mapping: null</p>
 						</div>
 					</article>
 				</section>
@@ -116,6 +116,7 @@
 			</div>
 		</div>
 
+
 		<div class="s-data-cnt s-data-cnt--lf">
 			<section>
 				<article class="s-data__el">
@@ -131,37 +132,71 @@
 		</button>
 
 		<div class="c-crt c-crt__data">
-			<section class="c-transp">
+			<section class="c-transp s-data__el">
 				<header>
-					<h4>_Uposition</h4>
-					<h2  id="dt-cam-pos">-10.0x,5.0y,8.1z</h2>
+					<h3>_Uposition</h3>
 				</header>
+				<h2 id="dt-cam-pos">-10.0x,5.0y,8.1z</h2>
 				<div>
 				</div>
 			</section>
-			<section class="c-transp">
+			<section class="c-transp s-data__el">
 				<header>
-					<h4>_Utime</h4>
-					<h2 id="dt-time">00:00:00:00</h2>
+					<h3>_Utime</h3>
 				</header>
+				<h2 id="dt-time">00:00:00:00</h2>
 			</section>
-			<section class="c-transp">
+			<section class="c-transp s-data__el">
 				<header>
-					<h4>FPS</h4>
-					<h2 id="dt-fps">00</h2>
+					<h3>Rotation magnitude</h3>
 				</header>
+				<h2 id="dt-rotation-mag">1.08 rad</h2>
 			</section>
-			<section class="c-transp">
+			<section class="c-transp s-data__el">
 				<header>
-					<h4>Rotation magnitude</h4>
-					<h3 id="dt-rotation"></h3>
+					<h3>Axis rotation</h3>
 				</header>
+				<div id="dt-rotation-axis">
+					<p class="p2">X: -33.23°</p>
+					<p class="p2">Y: -48.13°</p>
+					<p class="p2">Z: -25.78°</p>
+				</div>
+				<p id="dt-rotation"></p>
+			</section>
+
+			<section class="c-transp s-data__el ctrls">
+				<header>
+					<h3>Controls</h3>
+				</header>
+				<div>
+					<div>
+						<p>camera panning:</p>
+						<p>arrow keys (↑ ↓ ← →)</p>
+					</div>
+					<div>
+						<p>zoom:</p>
+						<p>Mouse wheel (+ -)</p>
+					</div>
+					<div>
+						<p>rotate model</p>
+						<p>drag & move (⤴)</p>
+					</div>
+				</div>
+			</section>
+			<section class="c-transp s-data__el ctrls">
+				<header>
+					<h3>Auto-rotate dir.</h3>
+				</header>
+				<p>RIGHT</p>
 			</section>
 		</div>
 
 		<!-- <img class="canvas-poster" src="./poster.png" alt=""> -->
 		<canvas class="webgl"></canvas>
 	</main>
+	<footer class="p-12">
+		<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
+	</footer>
 	<script type="module" src="./script.js"></script>
 </body>
 

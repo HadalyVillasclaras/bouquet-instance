@@ -20,7 +20,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-size: 10px;
+	font-size: 9px;
 	font-family: 'B612Mono', "monospace";
 	font-weight: normal;
 	line-height: 12.5px;
@@ -51,18 +51,36 @@ button {
 	font-size: 12px;
 }
 
-h2 {
+p {
+	font-size: 9px;
+	font-weight: normal;
+	line-height: 12.5px;
+}
+
+p.p2 {
+font-size: 12px!important;
+line-height: 14.5px!important;
+}
+
+h2, .h2 {
 	font-size: 16px;
 }
 
-h3 {
-	font-size: 12px;
+h3, .h3 {
+	font-size: 10px;
 	font-weight: bold;
 }
 
 h4 {
 	font-size: 10px;
 	font-weight: normal;
+}
+
+h4, h3 {
+	background-color: rgba(0, 0, 0, 0.795);
+	color: white;
+	width: fit-content;
+	padding: 1px 2px 0px;
 }
 
 li {
@@ -77,8 +95,13 @@ ul ul {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 0;
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+}
 
 
 /* Data containers and sections */
@@ -146,14 +169,21 @@ ul ul {
 }
 
 .s-data__el header{
-	margin-bottom: 8px;
+	margin-bottom: 6px;
 }
+
+.s-data__el.ctrls > div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
 
 /* Transparent components  */
 .c-transp {
 	padding: 5px 6px 4px;
-	background-color: var(--color-black);
-	color: var(--color-white);
+	/* background-color: var(--color-black); */
+	color: var(--color-black);
 	border-radius: 4px;
 	opacity: 0.80;
 	margin-bottom: 2px;
@@ -166,9 +196,7 @@ ul ul {
 	line-height: 11px;
 }
 
-.c-transp > header {
-	margin-bottom: 8px;
-}
+
 
 .c-transp > header h2{
 	margin-top: 6px;
@@ -186,6 +214,10 @@ ul ul {
 .c-crt__data {
 	left: 50%;
 	transform: translate(-50%, 0%);
+}
+
+.c-crt__data > * {
+	margin-bottom: 6px;
 }
 
 @media only screen and (min-width: 800px) {

@@ -5,7 +5,10 @@ class DataUpdater {
       cameraPosition: document.getElementById('dt-cam-pos'),
       time: document.getElementById('dt-time'),
       fps: document.getElementById('dt-fps'),
-      rotation: document.getElementById('dt-rotation')
+      rotation: document.getElementById('dt-rotation'),
+      rotationMagnitude: document.getElementById('dt-rotation-mag'),
+      rotationAxis: document.getElementById('dt-rotation-axis')
+
     };
 
     this.data = {
@@ -47,6 +50,7 @@ class DataUpdater {
     const yDegNumber = Number(rotationData.yDeg);
     const zDegNumber = Number(rotationData.zDeg);
 
+    const rotationMagnitude = `${radNumber.toFixed(2)} rad`;
     const formattedRotation = `${radNumber.toFixed(2)} rad (${degNumber.toFixed(2)}°) | X: ${xDegNumber.toFixed(2)}°, Y: ${yDegNumber.toFixed(2)}°, Z: ${zDegNumber.toFixed(2)}°`;
 
     if (this.data.rotation.deg !== degNumber || this.data.rotation.rad !== radNumber ||
@@ -58,7 +62,17 @@ class DataUpdater {
         yDeg: yDegNumber,
         zDeg: zDegNumber
       };
-      this.updateUI('rotation', formattedRotation);
+      this.updateUI('rotation', '·');
+      this.updateUI('rotationMagnitude', rotationMagnitude);
+
+      if (this.elements.rotationAxis) {
+        this.elements.rotationAxis.innerHTML = `
+          <p class="p2">X: ${xDegNumber.toFixed(2)}°</p>
+          <p class="p2">Y: ${yDegNumber.toFixed(2)}°</p>
+          <p class="p2">Z: ${zDegNumber.toFixed(2)}°</p>
+        `;
+      }
+      
     }
   }
 
