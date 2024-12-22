@@ -7,9 +7,9 @@ import GUI from 'lil-gui'
 import particlesVertexShader from './shaders/particles/vertex.glsl'
 import particlesFragmentShader from './shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
-import DataUpdater from './DataUpdater';
-import { getRotation, updateFPS } from './helpers.js';
-import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './animationSetUp.js';
+import DataUpdater from './js/DataUpdater.js';
+import { getRotation, getFPS } from './js/helpers.js';
+import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './js/animationSetUp.js';
 
 /**
  * Globals
@@ -55,7 +55,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 /**
  * Model
  */
-const gltf = await gltfLoader.loadAsync('./bouquet.glb');
+const gltf = await gltfLoader.loadAsync('./assets/models/bouquet.glb');
 
 
 /**
@@ -107,7 +107,7 @@ baseParticlesSetUp(baseGeometry, baseParticlesTexture)
 gpgpu.particlesVariable = gpgpu.computation.addVariable('uParticles', gpgpuParticlesShader, baseParticlesTexture)
 gpgpu.computation.setVariableDependencies(gpgpu.particlesVariable, [gpgpu.particlesVariable]);
 
-	// Uniforms
+// Uniforms
 gpgpu.particlesVariable.material.uniforms.uTime = new THREE.Uniform(0);
 gpgpu.particlesVariable.material.uniforms.uDeltaTime = new THREE.Uniform(0);
 gpgpu.particlesVariable.material.uniforms.uBase = new THREE.Uniform(baseParticlesTexture);
@@ -117,7 +117,6 @@ gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency = new THREE.Unifor
 
 //Init
 gpgpu.computation.init()
-
 
 /**
  * Particles
@@ -134,7 +133,6 @@ particles.geometry = new THREE.BufferGeometry();
 particles.geometry.setDrawRange(0, baseGeometry.count);
 particles.geometry.setAttribute('aParticlesUv', new THREE.BufferAttribute(particleUvArray, 2));
 particles.geometry.setAttribute('aSize', new THREE.BufferAttribute(sizesArray, 1));
-
 
 // Material
 particles.material = new THREE.ShaderMaterial({
@@ -156,7 +154,6 @@ particles.material = new THREE.ShaderMaterial({
 // Points
 particles.points = new THREE.Points(particles.geometry, particles.material)
 scene.add(particles.points)
-
 
 /**
  * GUI
@@ -188,17 +185,12 @@ console.log(gltf);
 console.log(gpgpu.size);
 console.log(gpgpu.computation);
 
-
-
-
-
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
 
 	if (time < lastTime + interval) {
 		return;
 	}
-	console.log(gpgpu.particlesVariable.dependencies[0].material);
 
 	// ZOOM 
 	const distance = camera.position.distanceTo(controls.target);
@@ -216,7 +208,7 @@ const animate = (time) => {
 		uiUpdater.setRotation(rotationValues);
 	}
 
-	const fps = updateFPS(1000);
+	const fps = getFPS(1000);
 	if (fps !== null) {
 		uiUpdater.setFPS(fps);
 	}

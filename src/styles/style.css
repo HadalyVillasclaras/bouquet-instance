@@ -3,8 +3,6 @@
 @import url('./utilities.css');
 @import url('./animations.css');
 
-
-
 :root {
 	--color-black: #1e1e1e;
 	--color-white: #ededed;
@@ -66,7 +64,6 @@ footer {
 .c-footer__rg {
 	display: flex;
 	gap: 6vw;
-
 }
 
 
@@ -153,9 +150,6 @@ footer {
 		position: absolute;
 	}
 }
-
-
-
 
 /* Transparent components  */
 .c-transp {
