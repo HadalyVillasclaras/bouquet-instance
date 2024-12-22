@@ -183,9 +183,13 @@ const uiUpdater = new DataUpdater();
 
 let lastZoom = 0;
 
-console.log(gltf);
+console.log(controls);
 console.log(gpgpu.size);
 console.log(gpgpu.computation);
+
+document.getElementById('dt-toggle-rotate-dir').addEventListener('click', () => {
+  uiUpdater.setRotationDirection(controls);
+});
 
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
@@ -194,6 +198,7 @@ const animate = (time) => {
 		return;
 	}
 
+	
 	// ZOOM 
 	const distance = Math.round(camera.position.distanceTo(controls.target));
 	if (distance !== lastZoom) {

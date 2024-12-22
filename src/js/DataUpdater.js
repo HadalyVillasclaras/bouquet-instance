@@ -7,7 +7,8 @@ class DataUpdater {
       rotation: document.getElementById('dt-rotation'),
       rotationMagnitude: document.getElementById('dt-rotation-mag'),
       rotationAxis: document.getElementById('dt-rotation-axis'),
-      zoom: document.getElementById('dt-zoom') 
+      zoom: document.getElementById('dt-zoom'),
+      toggleRotateDir: document.getElementById('dt-toggle-rotate-dir') 
     };
 
     this.data = {
@@ -19,6 +20,17 @@ class DataUpdater {
     };
   }
 
+  setRotationDirection(controls) {
+    if (controls.autoRotateSpeed === 0.2) {
+      controls.autoRotateSpeed *= -1;
+      this.updateUI('toggleRotateDir', 'left');
+    } else {
+      controls.autoRotateSpeed = 0.2;
+      this.updateUI('toggleRotateDir', 'right');
+    }
+
+    this.elements.toggleRotateDir.textContent = controls.autoRotateSpeed > 0 ? 'right' : 'left';
+  }
   setCameraPosition(x, y, z) {
     const formattedX = x.toFixed(1);
     const formattedY = y.toFixed(1);

@@ -79,7 +79,7 @@ export function controlsSetUp(controls) {
   controls.enablePan = true;
 
   controls.autoRotate = true;
-  controls.autoRotateSpeed = 0.1;
+  controls.autoRotateSpeed = 0.2;
   controls.dampingFactor = 0.1;
   controls.keyPanSpeed = 1.2;
   controls.maxDistance = 18;
