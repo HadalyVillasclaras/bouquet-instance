@@ -6,15 +6,16 @@ class DataUpdater {
       fps: document.getElementById('dt-fps'),
       rotation: document.getElementById('dt-rotation'),
       rotationMagnitude: document.getElementById('dt-rotation-mag'),
-      rotationAxis: document.getElementById('dt-rotation-axis')
-
+      rotationAxis: document.getElementById('dt-rotation-axis'),
+      zoom: document.getElementById('dt-zoom') 
     };
 
     this.data = {
       cameraPosition: { x: 0, y: 0, z: 0 },
       time: 0,
       fps: 0,
-      rotation: { x: 0, y: 0, z: 0 }
+      rotation: { x: 0, y: 0, z: 0 },
+      zoom: 0
     };
   }
 
@@ -28,7 +29,6 @@ class DataUpdater {
       this.updateUI('cameraPosition', formattedPosition);
     }
   }
-
 
   setTime(time) {
     const hours = Math.floor(time / 3600).toString().padStart(2, '0');
@@ -71,8 +71,15 @@ class DataUpdater {
           <p class="p2">Z: ${zDegNumber.toFixed(2)}°</p>
         `;
       }
-      
     }
+  }
+
+  setZoom(value) {
+    const formattedValue = value < 10 ? `0${value}` : value;
+  if (this.data.zoom !== formattedValue) {
+    this.data.zoom = formattedValue;
+    this.updateUI('zoom', formattedValue);
+  }
   }
 
   setFPS(fps) {

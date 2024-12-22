@@ -181,6 +181,8 @@ let animationFrameId = null;
 
 const uiUpdater = new DataUpdater();
 
+let lastZoom = 0;
+
 console.log(gltf);
 console.log(gpgpu.size);
 console.log(gpgpu.computation);
@@ -193,8 +195,11 @@ const animate = (time) => {
 	}
 
 	// ZOOM 
-	const distance = camera.position.distanceTo(controls.target);
-	console.log(distance);
+	const distance = Math.round(camera.position.distanceTo(controls.target));
+	if (distance !== lastZoom) {
+			uiUpdater.setZoom(distance);
+			lastZoom = distance;
+	}
 
 	const currentRotation = {
 		x: parseFloat(camera.rotation.x.toFixed(2)),
