@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,165 @@
 
 <body>
 	<main>
-		<section class="s-data-cnt s-data-cnt--tl">
+		<div class="o-grid">
+			<section class="o-list s-data-cnt--intro">
+				<article class="s-data">
+					<header>
+						<h1 class="txt-highlight">Instance II: Bouquet</h1>
+					</header>
+					<div>
+						<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
+							I/O v4.2.70. KHR Draco Mesh Compression.
+							Version: "2.0".</p>
+					</div>
+				</article>
+
+				<article class="s-data">
+					<header>
+						<h3>_UParticles</h3>
+					</header>
+					<div>
+						<p>Data texture. Mapping: 300.</p>
+						<p>_Matrix3 {elements: Array(9)}</p>
+						<p>name: GPU Computation Shader</p>
+						<p>resolution: vec2( 855.0, 855.0 )</p>
+					</div>
+				</article>
+
+				<article class="s-data">
+					<header>
+						<h3>_scene</h3>
+					</header>
+					<div>
+						<p>environment Intensity: 1 </p>
+						<p>visible: true</p>
+						<p>dynamic env. mapping: null</p>
+					</div>
+				</article>
+			</section>
+
+			<section class="o-list s-data-cnt--geo">
+				<article class="s-data">
+					<header>
+						<h3>BASE GEOMETRY COUNT: 730639</h3>
+					</header>
+					<div>
+						<ul class="">
+							<li>1. BUFFERATTRIBUTE</li>
+							<li>2. ARRAY: FLOAT32ARRAY {2191917]
+								<ul class="txt-no-transform">
+									<li>a. 0 0 899999</li>
+									<li>b. [1000000 … 1999999]</li>
+									<li>c. 2000000 .. . 2191916]</li>
+									<li>d. BUFFER: ARRAYBUFFER (8767668)
+									<li>e. BYTELENGTH: 8767668</li>
+									<li>f. BYTEOFFSET: 0</li>
+									<li>g. LENGTH: 2191917</li>
+									<li>h. SYMBOL [SYMBOL. TOSTRINGTAG ] <br>:[ *FLOAT32ARRAY*</li>
+								</ul>
+							</li>
+							<li>3. [[PROTOTYPE ]]: TYPEDARRAY</li>
+							<li>4. COUNT: 730639</li>
+							<li>5. GPUTYPE: 1015</li>
+							<li>6. NORMALIZED: FALSE</li>
+							<li>7. USAGC: 39044</li>
+							<li>8. VERSION:
+								<ul>
+									<li>UPDATERANGE:
+										<ul>
+											<li>a. COUNT:</li>
+											<li>b. OFFSET: O Cu/loeishift</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>9. [[PROTOTYPE]]: OBJECT</li>
+						</ul>
+					</div>
+				</article>
+			</section>
+
+			<section class="o-list s-data-cnt--dummy">
+				<article class="s-data">
+					<header>
+						<h3>A. BUFFER (8767668)</h3>
+					</header>
+					<div>
+						<p>[23X: 31Y: 047]</p>
+						<p>FLOAT32ARRAY</p>
+					</div>
+				</article>
+
+				<article class="s-data">
+					<header>
+						<h3>_VECTOR3</h3>
+					</header>
+					<div>
+						<ul>
+							<li>MAX AZIMUTH ANGLE:</li>
+							<li>INFINITY</li>
+							<li>MAX DISTANCE:</li>
+							<li>INFINITY</li>
+						</ul>
+					</div>
+				</article>
+			</section>
+
+			<section class="o-list s-data-cnt--zoom">
+				<article class="s-data">
+						<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
+				</article>
+				<section class="c-transp s-data">
+					<header>
+						<h3>Rotation magnitude</h3>
+					</header>
+					<p id="dt-rotation-mag">1.08 rad</p>
+				</section>
+			</section>
+
+			<section class="o-list s-data-cnt--time">
+				<section class="c-transp s-data">
+					<header>
+						<h3>_Utime</h3>
+					</header>
+					<p id="dt-time">00:00:00:00</p>
+				</section>
+				<div class="c-transp s-data">
+					<header>
+						<h3>Axis rotation</h3>
+					</header>
+					<div id="dt-rotation-axis">
+						<p>X: -33.23°</p>
+						<p>Y: -48.13°</p>
+						<p>Z: -25.78°</p>
+					</div>
+					<p class="visually-hidden" id="dt-rotation"></p>
+				</div>
+				<div class="c-transp s-data">
+					<header>
+						<h3>Auto-rotate dir.</h3>
+					</header>
+					<button id="dt-toggle-rotate-dir">Right</button>
+				</div>
+				<section class="c-transp s-data">
+					<header>
+						<h3>_Uposition</h3>
+					</header>
+					<p id="dt-cam-pos">-10.0x,5.0y,8.1z</p>
+					<div>
+					</div>
+				</section>
+			</section>
+
+			<section class="s-data s-data-cnt--fps">
+				<header>
+					<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
+				</header>
+			</section>
+		</div>
+
+
+		<!-- <section class="s-data-cnt s-data-cnt--tl">
 			<div class="o-clrw">
 				<section class="o-list">
 					<article class="s-data">
@@ -17,7 +176,8 @@
 							<h1 class="txt-highlight">Instance II: Bouquet</h1>
 						</header>
 						<div>
-							<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF I/O v4.2.70. KHR Draco Mesh Compression.
+							<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
+								I/O v4.2.70. KHR Draco Mesh Compression.
 								Version: "2.0".</p>
 						</div>
 					</article>
@@ -113,13 +273,12 @@
 					</article>
 				</section>
 			</div>
-			<button class="c-transp">Clear data</button>
 		</section>
 
 		<section class="s-data-cnt s-data-cnt--tr">
 			<div class="s-data">
 				<header>
-					<h3>730639</h3>
+					<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
 				</header>
 			</div>
 		</section>
@@ -165,10 +324,11 @@
 				</header>
 				<h2 id="dt-rotation-mag">1.08 rad</h2>
 			</section>
+		</section> -->
 
-		</section>
 
-		<section class="s-data-cnt s-data-cnt--ctr">
+		<!-- controls -->
+		<!-- <section class="s-data-cnt s-data-cnt--ctr">
 			<div class="c-transp s-data">
 				<header>
 					<h3>Controls</h3>
@@ -188,21 +348,18 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		
-		<!-- <img class="canvas-poster bg-cover" src=".assets/media/poster.png" alt=""> -->
-		<canvas class="webgl"></canvas>
+		</section> -->
+		<button class="c-transp">Clear data</button>
+
+		<img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt="">
+		<!-- <canvas class="webgl"></canvas> -->
 	</main>
 	<footer class="p-12 c-footer o-clrw">
-		<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
 		<div class="c-footer__rg">
 			<a target="_blank" href="https://www.instagram.com/hahahada.dev/">@hahahada.dev</a>
-			
-			<div class="w-def">
-				<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
-			</div>
 		</div>
 	</footer>
-	<script type="module" src="./script.js"></script>
+	<!-- <script type="module" src="./script.js"></script> -->
 </body>
+
 </html>

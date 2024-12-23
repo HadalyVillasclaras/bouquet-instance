@@ -15,16 +15,18 @@
 
 * {
 	font-size: 9px;
-	font-family: 'B612Mono', "monospace";
+	font-family: 'Helvetica', "monospace";
 	font-weight: normal;
 	line-height: 12.5px;
 	text-transform: uppercase;
+	letter-spacing: -0.4px;
 }
 
 p, .p1, p.p1 {
-	font-size: 9px;
+	/* font-size: 9px;
 	font-weight: normal;
 	line-height: 12.5px;
+	letter-spacing: -0.4px; */
 }
 
 .p2, p.p2 {
@@ -36,8 +38,9 @@ p, .p1, p.p1 {
 h1,
 h3, .h3,
 h4, .h4, a {
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: bold;
+	letter-spacing: -0.2px;
 }
 
 h2, .h2 {
@@ -47,10 +50,10 @@ h2, .h2 {
 
 h1, h3, h4, a,
 .txt-highlight {
-	background-color: rgba(0, 0, 0, 0.795);
+	/* background-color: rgba(0, 0, 0, 0.795);
 	color: white;
 	width: fit-content;
-	padding: 1px 2px 0px;
+	padding: 1px 2px 0px; */
 }
 
 a {

@@ -181,15 +181,17 @@ let animationFrameId = null;
 
 const uiUpdater = new DataUpdater();
 
+document.getElementById('dt-toggle-rotate-dir').addEventListener('click', () => {
+  uiUpdater.setRotationDirection(controls);
+});
+
 let lastZoom = 0;
 
 console.log(controls);
 console.log(gpgpu.size);
 console.log(gpgpu.computation);
 
-document.getElementById('dt-toggle-rotate-dir').addEventListener('click', () => {
-  uiUpdater.setRotationDirection(controls);
-});
+
 
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);

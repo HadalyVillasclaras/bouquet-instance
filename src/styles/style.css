@@ -40,7 +40,7 @@ main {
 button {
 	text-transform: uppercase;
 	border: none;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 li {
@@ -69,7 +69,7 @@ footer {
 
 /* Data containers and sections */
 .s-data header{
-	margin-bottom: 6px;
+	margin-bottom: 2px;
 }
 
 /* Data Containers */
@@ -90,6 +90,54 @@ footer {
 }
 
 /* Position of data containers */
+/* grid positioning*/
+.s-data-cnt--intro {
+	grid-column: 1 / span 3;
+	grid-row: 1;
+	max-width: 250px;
+}
+
+.s-data-cnt--geo {
+	grid-column: 4 / span 3;
+	grid-row: 1;
+}
+
+.s-data-cnt--dummy {
+	grid-column: 7 / span 2;
+	grid-row: 1;
+}
+
+.s-data-cnt--zoom {
+	grid-column: 9 / span 2;
+	grid-row: 1;
+}
+
+.s-data-cnt--time {
+	grid-column: 11 / span 2;
+	grid-row: 1;
+}
+
+.s-data-cnt--fps {
+	grid-column: 12 / 13;
+	justify-self: end;
+	grid-row: 1;
+}
+
+@media only screen and (min-width: 1400px) {
+	.s-data-cnt--geo {
+		grid-column: 3 / span 3;
+		margin-left: 3rem;
+	}
+
+	
+	.s-data-cnt--dummy {
+		grid-column: 6 / span 2;
+		grid-row: 1;
+	}
+}
+
+/* flex */
+
 .s-data-cnt--tl {
 	top: 0;
 	left: 20%;

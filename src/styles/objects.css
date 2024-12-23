@@ -12,6 +12,17 @@
 	}
 }
 
+.o-grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 24px;
+
+	position: relative;
+	z-index: 3;
+	width: 100%;
+	/* border: 1px solid red; */
+}
+
 .o-list {
 	display: flex;
 	flex-direction: column;
@@ -22,7 +33,7 @@
 
 @media only screen and (min-width: 800px) {
 	.o-list {
-		gap: 32px;
+		gap: 16px;
   }
 
 	.o-list--sm {
