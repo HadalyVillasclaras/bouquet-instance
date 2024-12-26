@@ -14,8 +14,8 @@
 }
 
 * {
-	font-size: 9px;
-	font-family: 'Helvetica', "monospace";
+	font-size: 10px;
+	font-family: 'B612Mono', 'Helvetica', "monospace";
 	font-weight: normal;
 	line-height: 12.5px;
 	text-transform: uppercase;
@@ -37,27 +37,18 @@ p, .p1, p.p1 {
 
 h1,
 h3, .h3,
-h4, .h4, a {
+h4, .h4, a, button {
 	font-size: 11px;
 	font-weight: bold;
 	letter-spacing: -0.2px;
 }
 
+button, a {
+	font-weight: normal;
+}
 h2, .h2 {
 	font-size: 16px;
 	font-weight: normal;
-}
-
-h1, h3, h4, a,
-.txt-highlight {
-	/* background-color: rgba(0, 0, 0, 0.795);
-	color: white;
-	width: fit-content;
-	padding: 1px 2px 0px; */
-}
-
-a {
-	text-decoration: none;
 }
 
 .txt-bold, .txt-bold * {

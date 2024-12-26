@@ -10,11 +10,11 @@
 
 <body>
 	<main>
-		<div class="o-grid">
+		<div class="o-grid s-data-cnt">
 			<section class="o-list s-data-cnt--intro">
 				<article class="s-data">
 					<header>
-						<h1 class="txt-highlight">Instance II: Bouquet</h1>
+						<h1 class="">Instance II: Bouquet</h1>
 					</header>
 					<div>
 						<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
@@ -35,7 +35,7 @@
 					</div>
 				</article>
 
-				<article class="s-data">
+				<!-- <article class="s-data">
 					<header>
 						<h3>_scene</h3>
 					</header>
@@ -44,7 +44,7 @@
 						<p>visible: true</p>
 						<p>dynamic env. mapping: null</p>
 					</div>
-				</article>
+				</article> -->
 			</section>
 
 			<section class="o-list s-data-cnt--geo">
@@ -114,16 +114,19 @@
 				</article>
 			</section>
 
+			<section class="o-list s-data-cnt--rot">
+				<section class="c-transp s-data">
+					<header>
+						<h3>Rot. magnitude</h3>
+					</header>
+					<p id="dt-rotation-mag">1.08 rad</p>
+				</section>
+			</section>
+
 			<section class="o-list s-data-cnt--zoom">
 				<article class="s-data">
 						<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
 				</article>
-				<section class="c-transp s-data">
-					<header>
-						<h3>Rotation magnitude</h3>
-					</header>
-					<p id="dt-rotation-mag">1.08 rad</p>
-				</section>
 			</section>
 
 			<section class="o-list s-data-cnt--time">
@@ -148,7 +151,7 @@
 					<header>
 						<h3>Auto-rotate dir.</h3>
 					</header>
-					<button id="dt-toggle-rotate-dir">Right</button>
+					<p id="dt-toggle-rotate-dir">Right</p>
 				</div>
 				<section class="c-transp s-data">
 					<header>
@@ -167,13 +170,40 @@
 			</section>
 		</div>
 
+		<div class="o-grid s-controls-cnt">
+			<menu class="o-list s-controls-cnt--menu o-list--xs">
+				<button class="btn">Clear data</button>
+				<button class="btn">About</button>
+				<a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a>
+			</menu>
+
+			<div class="s-controls-cnt--ctr">
+				<header>
+					<h3 class="highlight-1">Controls</h3>
+				</header>
+				<div class="o-list o-list--sm ">
+					<div class="highlight-2">
+						<p>camera panning:</p>
+						<p>arrow keys (↑ ↓ ← →)</p>
+					</div>
+					<div class="highlight-2">
+						<p>zoom:</p>
+						<p>Mouse wheel (+  -)</p>
+					</div>
+					<div class="highlight-2">
+						<p>rotate model</p>
+						<p>drag & move (⤴)</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- <section class="s-data-cnt s-data-cnt--tl">
 			<div class="o-clrw">
 				<section class="o-list">
 					<article class="s-data">
 						<header>
-							<h1 class="txt-highlight">Instance II: Bouquet</h1>
+							<h1 class="highlight-1">Instance II: Bouquet</h1>
 						</header>
 						<div>
 							<p class="txt-no-transform">glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
@@ -349,17 +379,15 @@
 				</div>
 			</div>
 		</section> -->
-		<button class="c-transp">Clear data</button>
-
-		<img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt="">
-		<!-- <canvas class="webgl"></canvas> -->
+	
+		<!-- <img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt=""> -->
+		<canvas class="webgl"></canvas>
 	</main>
 	<footer class="p-12 c-footer o-clrw">
 		<div class="c-footer__rg">
-			<a target="_blank" href="https://www.instagram.com/hahahada.dev/">@hahahada.dev</a>
 		</div>
 	</footer>
-	<!-- <script type="module" src="./script.js"></script> -->
+	<script type="module" src="./script.js"></script>
 </body>
 
 </html>

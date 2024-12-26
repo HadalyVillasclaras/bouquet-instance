@@ -27,7 +27,7 @@ const maxPan = new THREE.Vector3( 2, 2, 2 );
 // Styles
 const bgColor = "#f4f4f4";
 const color1 = "#0e083a";
-const color2 = "#172074";
+const color2 = "#172574";
 const color3 = "#0e083a";
 
 // Canvas

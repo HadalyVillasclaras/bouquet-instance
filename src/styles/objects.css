@@ -14,12 +14,14 @@
 
 .o-grid {
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	gap: 24px;
+	grid-template-columns: repeat(24, 1fr);
+	gap: 12px;
 
 	position: relative;
 	z-index: 3;
 	width: 100%;
+
+	pointer-events: none;
 	/* border: 1px solid red; */
 }
 
@@ -27,21 +29,18 @@
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	pointer-events: all;
 	height: fit-content;
+
+}
+
+.o-list--sm {
+	gap: 8px;
+}
+
+.o-list--xs {
+	gap: 2px;
 }
 
 @media only screen and (min-width: 800px) {
-	.o-list {
-		gap: 16px;
-  }
-
-	.o-list--sm {
-		gap: 20px;
-	}
-
-	.o-list--xs {
-		gap: 8px;
-	}
 }
 
