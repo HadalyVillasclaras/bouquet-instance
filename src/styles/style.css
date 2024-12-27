@@ -75,7 +75,10 @@ ul ul {
 	margin-left: 16px; /* indent */
 }
 
-
+pre {
+	white-space: pre-wrap;
+	text-transform: none;
+}
 
 
 /* Sections */
@@ -134,15 +137,28 @@ ul ul {
 }
 
 /* Data Containers */
-.s-data-cnt {
-	padding: var(--spc-default);
-
-	/* position: relative;
+.s-data-grid {
+	padding: 0 var(--spc-default);
+	position: relative;
+	height: 100%;
+		/* position: relative;
 	z-index: 2;
 	pointer-events: none; */
 	/* margin: var(--spc-default); */
 }
 
+.s-data-cnt {
+	padding-top: var(--spc-default);
+	padding-bottom: var(--spc-default);
+	overflow-y: scroll;
+	-ms-overflow-style: none;
+  scrollbar-width: none;
+	height: 100%;
+}
+
+.s-data-cnt--tl::-webkit-scrollbar {
+  display: none;
+}
 
 
 /* Position of data containers */
@@ -150,7 +166,7 @@ ul ul {
 .s-data-cnt--intro {
 	grid-column: 1 / span 4;
 	grid-row: 1;
-	max-width: 210px;
+	max-width: 230px;
 }
 
 .s-data-cnt--geo {

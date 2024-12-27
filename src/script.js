@@ -10,7 +10,7 @@ import gpgpuParticlesShader from './shaders/gpgpu/particles.glsl'
 import DataUpdater from './js/DataUpdater.js';
 import { getRotation, getFPS } from './js/helpers.js';
 import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './js/animationSetUp.js';
-
+import './js/dataDisplay.js';
 /**
  * Globals
  */
@@ -32,7 +32,6 @@ const color3 = "#0e083a";
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
-
 
 /**
  * Base
@@ -187,12 +186,6 @@ document.getElementById('dt-toggle-rotate-dir').addEventListener('click', () => 
 
 let lastZoom = 0;
 
-console.log(controls);
-console.log(gpgpu.size);
-console.log(gpgpu.computation);
-
-
-
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
 
@@ -248,6 +241,27 @@ const animate = (time) => {
 }
 
 animate();
+scene.visible = false;
+// Objects
+console.log(manager);
+
+console.log(scene);
+console.log(camera);
+console.log(controls);
+// console.log(renderer);
+
+console.log(dracoLoader);
+console.log(gltfLoader);
+
+console.log(gltf); // Loaded model
+console.log(baseGeometry); //instance: gltf.scene.children[0].geometry
+
+console.log(gpgpu);
+
+// //particles
+console.log(particles);
+// console.log(particles.geometry); // particles.geometry = new THREE.BufferGeometry();
+// console.log(particles.material); // new THREE.ShaderMaterial
 
 
 window.addEventListener('resize', () => {

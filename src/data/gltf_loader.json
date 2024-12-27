@@ -1,0 +1,18 @@
+{
+  "CROSS_ORIGIN": "ANONYMOUS",
+  "DRACO_LOADER": {
+   "[[PROTOTYPE]]": "LOADER"
+  },
+  "KTX2_LOADER": "NULL",
+  "MANAGER": {
+    "[[PROTOTYPE]]": "LOADER"
+  },
+  "MESHOPT_DECODER": "NULL",
+  "PATH": "",
+  "PLUGIN_CALLBACKS": "['ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ', 'ƒ']",
+  "REQUEST_HEADER": {
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "RESOURCE_PATH": "",
+  "WITH_CREDENTIALS": "FALSE"
+}

@@ -78,9 +78,9 @@ class DataUpdater {
 
       if (this.elements.rotationAxis) {
         this.elements.rotationAxis.innerHTML = `
-          <p class="p2">X: ${xDegNumber.toFixed(2)}°</p>
-          <p class="p2">Y: ${yDegNumber.toFixed(2)}°</p>
-          <p class="p2">Z: ${zDegNumber.toFixed(2)}°</p>
+          <p>X: ${xDegNumber.toFixed(2)}°</p>
+          <p>Y: ${yDegNumber.toFixed(2)}°</p>
+          <p>Z: ${zDegNumber.toFixed(2)}°</p>
         `;
       }
     }

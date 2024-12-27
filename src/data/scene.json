@@ -1,0 +1,101 @@
+{
+  "[[PROTOTYPE]]": "_OBJECT3D",
+  "IS_OBJECT3D": "TRUE",
+  "UUID": "7D74DBF7-416E-41B5-8C61-FCC4FBA5158F",
+  "TYPE": "SCENE",
+  "PARENT": "NULL",
+  "ANIMATIONS": "[]",
+  "BACKGROUND": "NULL",
+  "BACKGROUND_BLURRINESS": 0,
+  "BACKGROUND_INTENSITY": 1,
+  "BACKGROUND_ROTATION": {
+    "TYPE": "_EULER",
+    "IS_EULER": "TRUE",
+    "_ORDER": "XYZ",
+    "_X": 0,
+    "_Y": 0,
+    "_Z": 0
+  },
+  "CAST_SHADOW": "FALSE",
+  "CHILDREN": [
+    "PERSPECTIVE_CAMERA [OBJECT]",
+    "POINTS [OBJECT]"
+  ],
+  "ENVIRONMENT": "NULL",
+  "ENVIRONMENT_INTENSITY": 1,
+  "ENVIRONMENT_ROTATION": {
+    "TYPE": "_EULER",
+    "IS_EULER": "TRUE",
+    "_X": 0,
+    "_Y": 0,
+    "_Z": 0,
+    "_ORDER": "XYZ"
+  },
+  "FOG": "NULL",
+  "FRUSTUM_CULLED": "TRUE",
+  "IS_SCENE": "TRUE",
+  "LAYERS": {
+    "MASK": 1
+  },
+  "MATRIX": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": "ARRAY(16) [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
+  },
+  "MATRIX_AUTO_UPDATE": "TRUE",
+  "MATRIX_WORLD": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": "ARRAY(16) [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
+  },
+  "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
+  "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
+  "OVERRIDE_MATERIAL": "NULL",
+  "POSITION": {
+    "TYPE": "_VECTOR3",
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "QUATERNION": {
+    "TYPE": "QUATERNION",
+    "IS_QUATERNION": "TRUE",
+    "_ON_CHANGE_CALLBACK": "ƒ ON_QUATERNION_CHANGE()",
+    "_X": 0,
+    "_Y": 0,
+    "_Z": 0,
+    "_W": 1
+  },
+  "RECEIVE_SHADOW": "FALSE",
+  "RENDER_ORDER": 0,
+  "ROTATION": {
+    "TYPE": "_EULER",
+    "IS_EULER": "TRUE",
+    "_ON_CHANGE_CALLBACK": "ƒ ON_ROTATION_CHANGE()",
+    "_X": 0,
+    "_Y": 0,
+    "_Z": 0,
+    "_ORDER": "XYZ"
+  },
+  "SCALE": {
+    "TYPE": "_VECTOR3",
+    "X": 1,
+    "Y": 1,
+    "Z": 1
+  },
+  "UP": {
+    "TYPE": "_VECTOR3",
+    "X": 0,
+    "Y": 1,
+    "Z": 0
+  },
+  "USER_DATA": {},
+  "VISIBLE": "TRUE",
+  "ID": 6,
+  "MODEL_VIEW_MATRIX": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": "ARRAY(16)"
+  },
+  "NORMAL_MATRIX": {
+    "TYPE": "_MATRIX3",
+    "ELEMENTS": "ARRAY(9)"
+  }
+}

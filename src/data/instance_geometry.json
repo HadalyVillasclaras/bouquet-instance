@@ -1,0 +1,67 @@
+{
+  "TYPE": "BUFFER_GEOMETRY",
+  "UUID": "31ca6f9e-709a-4460-b25e-ade7503490af",
+  
+  "BUFFER_ATTRIBUTE": {
+    "FLOAT32_ARRAY(2191917)": [
+      "0. [0 … 999999]",
+      "1. [1000000 … 1999999]",
+      "2. [2000000 … 2191916]"
+    ],
+    "BYTE_LENGTH": 8767668,
+    "BYTE_OFFSET": 0,
+    "LENGTH": 2191917,
+    "SYMBOL_TO_STRING": "FLOAT32",
+    "BUFFER": {
+      "TYPE": "ARRAY_BUFFER",
+      "BYTE_LENGTH": 8767668
+    },
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "IS_BUFFER_ATTRIBUTE": "TRUE",
+    "ITEM_SIZE": 3,
+    "NORMALIZED": "FALSE",
+    "UPDATE_RANGES": "Array(0)",
+    "USAGE": 35044,
+    "VERSION": 0,
+    "_UPDATE_RANGE": {
+      "OFFSET": 0,
+      "COUNT": -1,
+      "[[PROTOTYPE]]": "OBJECT"
+    }
+  },
+  "BOUNDING_BOX": {
+    "IS_BOX3": "TRUE",
+    "MAX": {
+      "TYPE": "_VECTOR3",
+      "X": 7.69027757644,
+      "Y": 4.1890444755,
+      "Z": 4.86159706115
+    },
+    "MIN": {
+      "TYPE": "_VECTOR3",
+      "X": -9.83853340148,
+      "Y": -8.05487918853,
+      "Z": -3.032575368881
+    }
+  },
+  "BOUNDING_SPHERE": {
+    "TYPE": "_VECTOR3",
+    "X": -1.074127912521,
+    "Y": -1.932917356491,
+    "Z": 0.914510846138,
+    "IS_SPHERE": "TRUE",
+    "RADIUS": 11.396170
+  },
+  "DRAW_RANGE": {
+    "COUNT": "INFINITY",
+    "START": 0
+  },
+  "GROUPS": "[]",
+  "ID": 3,
+  "INDEX": "UINT32_ARRAY(2097183)",
+  "USER_DATA": "{}",
+  "IS_BUFFER_GEOMETRY": "TRUE",
+  "MORPH_ATTRIBUTES": "{}",
+  "MORPH_TARGETS_RELATIVE": "FALSE"
+}
