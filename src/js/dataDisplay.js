@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/loading_manager.json', elementId: 'obj-manager' },
 
     { url: '../data/instance_extensions.json', elementId: 'obj-inst-ext' },
-    { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' }
+    { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },
+    { url: '../data/mesh_material.json', elementId: 'obj-mesh-mat' }
+
 
 
 
