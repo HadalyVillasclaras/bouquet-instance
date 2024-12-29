@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/scene.json', elementId: 'obj-scene' },
     { url: '../data/camera.json', elementId: 'obj-camera' },
     { url: '../data/orbit_controls.json', elementId: 'obj-orbit' },
+    { url: '../data/webgl_render.json', elementId: 'obj-render' },
+
     
     
     { url: '../data/draco_loader.json', elementId: 'obj-draco' },
@@ -63,11 +65,11 @@ function formatObjectStyle(obj, indentLevel) {
     const formattedKey = key;
 
     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 1)}${indent}}\n`;
+      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.7)}${indent}}\n`;
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 2); 
+          const objectContent = formatObjectStyle(v, indentLevel + 1.3); 
           return `${indent}  {\n${objectContent}${indent}  }`; 
         } else {
           return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
