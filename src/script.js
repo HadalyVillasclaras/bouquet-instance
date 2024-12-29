@@ -248,7 +248,7 @@ console.log(manager);
 console.log(scene);
 console.log(camera);
 console.log(controls);
-// console.log(renderer);
+console.log(renderer);
 
 console.log(dracoLoader);
 console.log(gltfLoader);

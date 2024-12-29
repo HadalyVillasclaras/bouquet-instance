@@ -20,11 +20,12 @@
   "GET_POLAR_ANGLE": "ƒ()",
   "KEY_PAN_SPEED": 1.2,
   "KEYS": {
-    "LEFT": "ArrowRight",
-    "UP": "ArrowDown",
-    "RIGHT": "ArrowLeft",
-    "BOTTOM": "ArrowUp"
+    "LEFT": "ARROWRIGHT",
+    "UP": "ARROWDOWN",
+    "RIGHT": "ARROWLEFT",
+    "BOTTOM": "ARROWUP"
   },
+  "LISTEN_TO_KEY_EVENTS": "ƒ(DOMELEMENT2)",
   "MAX_AZIMUTH_ANGLE": "INFINITY",
   "MAX_DISTANCE": 18,
   "MAX_POLAR_ANGLE": 3.141592653589793,
@@ -40,7 +41,9 @@
     "MIDDLE": 1,
     "RIGHT": 2
   },
-  "OBJECT": "PerspectiveCamera {isObject3D: true, uuid: '0e169d78-35c8-41c2-8628-7df90e86523c', type: 'PerspectiveCamera'}",
+  "OBJECT": {
+    "[[PROTOTYPE]]": "CAMERA"
+  },
   "PAN_SPEED": 1,
   "POSITION0": {
     "TYPE": "_VECTOR3",
@@ -49,6 +52,7 @@
     "Z": 8.1
   },
   "ROTATE_SPEED": 0.4,
+  "SAVE_STATE": "ƒ()",
   "SCREEN_SPACE_PANNING": "TRUE",
   "STOP_LISTEN_TO_KEY_EVENTS": "ƒ()",
   "TARGET": {
@@ -67,8 +71,11 @@
     "ONE": 0,
     "TWO": 2
   },
+  "UPDATE": "ƒ(DELTATIME = NULL)",
   "ZOOM0": 1,
   "ZOOM_SPEED": 1,
   "ZOOM_TO_CURSOR": "FALSE",
-  "_DOM_ELEMENT_KEY_EVENTS": "NULL"
+  "_DOM_ELEMENT_KEY_EVENTS": {
+    "[[PROTOTYPE]]": "WINDOW"
+  }
 }

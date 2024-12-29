@@ -17,36 +17,6 @@
   "LAYERS": {
     "MASK": 1
   },
-  "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
-  "NAME": "",
-  "NEAR": 0.1,
-  "PARENT": {
-    "TYPE": "SCENE",
-    "UUID": "7198A6D3-01AA-403D-A81F-341AAB4186F1"
-  },
-  "POSITION": {
-    "TYPE": "_VECTOR3",
-    "X": -10.03914493900319,
-    "Y": 5,
-    "Z": 8.051432723042943
-  },
-  "PROJECTION_MATRIX": {
-    "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16)"
-  },
-  "PROJECTION_MATRIX_INVERSE": {
-    "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16)"
-  },
-  "QUATERNION": {
-    "TYPE": "QUATERNION",
-    "IS_QUATERNION": "TRUE",
-    "_X": -0.16609772309387977,
-    "_Y": -0.4252329790923459,
-    "_Z": -0.07970593790609551,
-    "_W": 0.8861351044495341,
-    "_ON_CHANGE_CALLBACK": "ƒ ON_QUATERNION_CHANGE()"
-  },
   "MATRIX": {
     "TYPE": "_MATRIX4",
     "ELEMENTS": [
@@ -112,6 +82,71 @@
       1
     ]
   },
+  "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
+  "NAME": "",
+  "NEAR": 0.1,
+  "PARENT": {
+    "[[PROTOTYPE]]": "_OBJECT3D",
+    "TYPE": "SCENE",
+    "UUID": "7198A6D3-01AA-403D-A81F-341AAB4186F1"
+  },
+  "POSITION": {
+    "TYPE": "_VECTOR3",
+    "X": -10.03914493900319,
+    "Y": 5,
+    "Z": 8.051432723042943
+  },
+ "PROJECTION_MATRIX": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": [
+      1.5055522314832601,
+      0,
+      0,
+      0,
+      0,
+      3.171594802363213,
+      0,
+      0,
+      0,
+      0,
+      -1.002002002002002,
+      -1,
+      0,
+      0,
+      -0.20020020020020018,
+      0
+    ]
+  },
+  "PROJECTION_MATRIX_INVERSE": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": [
+      0.6642081085521733,
+      0,
+      0,
+      0,
+      0,
+      0.3152987888789835,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -4.995000000000001,
+      0,
+      0,
+      -1.0000000000000002,
+      5.005000000000001
+    ]
+  },
+  "QUATERNION": {
+    "TYPE": "QUATERNION",
+    "IS_QUATERNION": "TRUE",
+    "_W": 0.8861351044495341,
+    "_X": -0.16609772309387977,
+    "_Y": -0.4252329790923459,
+    "_Z": -0.07970593790609551,
+    "_ON_CHANGE_CALLBACK": "ƒ ON_QUATERNION_CHANGE()"
+  },
   "RECEIVE_SHADOW": "FALSE",
   "RENDER_ORDER": 0,
   "ROTATION": {
@@ -136,7 +171,7 @@
     "Y": 1,
     "Z": 0
   },
-  "USER_DATA": {},
+  "USER_DATA": "{}",
   "UUID": "9CC5BDE5-5307-4DD5-9D00-FC5EAE215B5C",
   "VIEW": "NULL",
   "VISIBLE": "TRUE",
@@ -144,10 +179,10 @@
   "ID": 9,
   "MODEL_VIEW_MATRIX": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16)"
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1"
   },
   "NORMAL_MATRIX": {
     "TYPE": "_MATRIX3",
-    "ELEMENTS": "ARRAY(9)"
+    "ELEMENTS": "[1, 0, 0, 0, 1, 0, 0, 0, 1]"
   }
 }
