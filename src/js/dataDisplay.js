@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     { url: '../data/instance_extensions.json', elementId: 'obj-inst-ext' },
     { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },
+    { url: '../data/instance_parser.json', elementId: 'obj-inst-parser' },
     { url: '../data/mesh_material.json', elementId: 'obj-mesh-mat' }
 
 
@@ -62,9 +63,16 @@ function formatObjectStyle(obj, indentLevel) {
     const formattedKey = key;
 
     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.7)}${indent}}\n`;
+      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 1)}${indent}}\n`;
     } else if (Array.isArray(value)) {
-      const arrayContent = value.map(v => `${indent}${indent}${removeQuotes(JSON.stringify(v))}`).join(',\n');
+      const arrayContent = value.map(v => {
+        if (typeof v === 'object' && v !== null) {
+          const objectContent = formatObjectStyle(v, indentLevel + 2); 
+          return `${indent}  {\n${objectContent}${indent}  }`; 
+        } else {
+          return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
+        }
+      }).join(',\n');
       result += `${indent}${formattedKey}: [\n${arrayContent}\n${indent}]\n`;
     } else {
       result += `${indent}${formattedKey}: ${removeQuotes(JSON.stringify(value))}\n`;
@@ -73,6 +81,7 @@ function formatObjectStyle(obj, indentLevel) {
 
   return result;
 }
+
 
 
 function removeQuotes(value) {

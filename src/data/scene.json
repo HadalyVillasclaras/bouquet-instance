@@ -1,6 +1,8 @@
 {
   "[[PROTOTYPE]]": "_OBJECT3D",
   "IS_OBJECT3D": "TRUE",
+  "VISIBLE": "TRUE",
+  "ID": 6,
   "UUID": "7D74DBF7-416E-41B5-8C61-FCC4FBA5158F",
   "TYPE": "SCENE",
   "PARENT": "NULL",
@@ -39,12 +41,12 @@
   },
   "MATRIX": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16) [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
   },
   "MATRIX_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16) [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
   },
   "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
@@ -87,15 +89,5 @@
     "Y": 1,
     "Z": 0
   },
-  "USER_DATA": {},
-  "VISIBLE": "TRUE",
-  "ID": 6,
-  "MODEL_VIEW_MATRIX": {
-    "TYPE": "_MATRIX4",
-    "ELEMENTS": "ARRAY(16)"
-  },
-  "NORMAL_MATRIX": {
-    "TYPE": "_MATRIX3",
-    "ELEMENTS": "ARRAY(9)"
-  }
+  "USER_DATA": "{}"
 }

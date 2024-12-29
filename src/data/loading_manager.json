@@ -1,7 +1,5 @@
 {
-  "[[PROTOTYPE]]": {
-    "CONSTRUCTOR": "CLASS"
-  },
+  "[[PROTOTYPE]]": "LOADER",
   "ONSTART": "NULL",
   "ONPROGRESS": "NULL",
   "ONERROR": "NULL",

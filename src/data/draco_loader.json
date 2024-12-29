@@ -32,8 +32,8 @@
   "WORKER_NEXT_TASK_ID": 2,
   "WORKER_POOL": [
     {
-      "_CALLBACKS": {},
-      "_TASK_COSTS": {},
+      "_CALLBACKS": "{}",
+      "_TASK_COSTS": "{}",
       "_TASK_LOAD": 0,
       "ON_ERROR": "NULL",
       "ON_MESSAGE": "ƒ (E)",

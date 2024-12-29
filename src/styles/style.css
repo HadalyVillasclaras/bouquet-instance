@@ -128,7 +128,7 @@ pre {
 
 /* Data containers and sections */
 .s-data {
-	width: fit-content;
+	width: 100%;
 	pointer-events: all;
 }
 
