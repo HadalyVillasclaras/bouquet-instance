@@ -26,7 +26,7 @@
   },
   "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
-  "NAME": "mfs",
+  "NAME": "BOUQUET",
   "PARENT": {
    "[[PROTOTYPE]]": "_OBJECT3D"
   },
@@ -67,7 +67,7 @@
     "Z": 0
   },
   "USER_DATA": {
-    "NAME": "mfs"
+    "NAME": "BOUQUET"
   },
   "UUID": "4708fe3b-f90e-4cf2-9ebc-aae612fbe29d",
   "VISIBLE": "TRUE",

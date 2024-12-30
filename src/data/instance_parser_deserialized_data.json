@@ -1,0 +1,97 @@
+{
+  "ACCESSORS": {
+    "0": {
+      "COMPONENTTYPE": 5126,
+      "COUNT": 730639,
+      "MAX": [
+        7.690277576446533,
+        4.18904447555542,
+        4.861597061157227
+      ],
+      "MIN": [
+        -9.838533401489258,
+        -8.054879188537598,
+        -3.0325753688812256
+      ],
+      "TYPE": "VEC3",
+      "[[PROTOTYPE]]": "OBJECT"
+    },
+    "1": {
+      "COMPONENTTYPE": 5126,
+      "COUNT": 730639,
+      "TYPE": "VEC3"
+    },
+    "2": {
+      "COMPONENTTYPE": 5126,
+      "COUNT": 730639,
+      "TYPE": "VEC2"
+    },
+    "3": {
+      "COMPONENTTYPE": 5125,
+      "COUNT": 2097183,
+      "TYPE": "SCALAR"
+    },
+    "[[PROTOTYPE]]": "ARRAY"
+  },
+  "ASSET": {
+    "GENERATOR": "Khronos glTF Blender I/O v4.2.70",
+    "VERSION": "2.0",
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "BUFFERVIEWS": {
+    "0": {
+      "BUFFER": 0,
+      "BYTELENGTH": 4330065,
+      "BYTEOFFSET": 0
+    },
+    "[[PROTOTYPE]]": "ARRAY"
+  },
+  "BUFFERS": {
+    "0": {
+      "BYTELENGTH": 4330068
+    }
+  },
+  "EXTENSIONS_REQUIRED": {
+    "0": "KHR_DRACO_MESH_COMPRESSION"
+  },
+  "EXTENSIONS_USED": {
+    "0": "KHR_DRACO_MESH_COMPRESSION"
+  },
+  "MESHES": {
+    "0": {
+      "NAME": "OBJECT_4",
+      "PRIMITIVES": {
+        "0": {
+          "ATTRIBUTES": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "EXTENSIONS": {
+            "KHR_DRACO_MESH_COMPRESSION": {
+              "BUFFERVIEW": 0
+            }
+          },
+          "INDICES": 3,
+          "MODE": 4
+        }
+      }
+    },
+    "[[PROTOTYPE]]": "ARRAY"
+  },
+  "NODES": {
+    "0": {
+      "MESH": 0,
+      "NAME": "BOUQUET",
+      "[[PROTOTYPE]]": "OBJECT"
+    },
+    "[[PROTOTYPE]]": "ARRAY"
+  },
+  "SCENE": 0,
+  "SCENES": {
+    "0": {
+      "NAME": "SCENE",
+      "NODES": "{}"
+    }
+  }
+}

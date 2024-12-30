@@ -1,158 +1,98 @@
 {
-  "ACCESSORS": [
-    {
-      "COMPONENTTYPE": 5126,
-      "COUNT": 730639,
-      "MAX": [
-        7.690277576446533,
-        4.18904447555542,
-        4.861597061157227
-      ],
-      "MIN": [
-        -9.838533401489258,
-        -8.054879188537598,
-        -3.0325753688812256
-      ],
-      "TYPE": "VEC3"
-    },
-    {
-      "COMPONENTTYPE": 5126,
-      "COUNT": 730639,
-      "TYPE": "VEC3"
-    },
-    {
-      "COMPONENTTYPE": 5126,
-      "COUNT": 730639,
-      "TYPE": "VEC2"
-    },
-    {
-      "COMPONENTTYPE": 5125,
-      "COUNT": 2097183,
-      "TYPE": "SCALAR"
-    }
-  ],
-  "BUFFERVIEWS": {
-    "BUFFER": 0,
-    "BYTELENGTH": 4330065,
-    "BYTEOFFSET": 0
-  },
-  "BUFFERS": {
-    "BYTELENGTH": 4330068
-  },
-  "MESHES": {
-    "NAME": "OBJECT_4",
-    "PRIMITIVES": {
-      "ATTRIBUTES": {
-        "NORMAL": 1,
-        "POSITION": 0,
-        "TEXCOORD_0": 2
+  "ASSOCIATIONS MAP(2)": {
+    "ENTRY 1": {
+      "KEY": {
+        "[[PROTOTYPE]]": "MESH MATERIAL"
       },
-      "EXTENSIONS": {
-        "KHR_DRACO_MESH_COMPRESSION": {
-          "ATTRIBUTES": {
-            "NORMAL": 1,
-            "POSITION": 0,
-            "TEXCOORD_0": 2
-          },
-          "BUFFERVIEW": 0
-        }
+      "VALUE": "UNDEFINED"
+    },
+    "ENTRY 2": {
+      "KEY": {
+        "[[PROTOTYPE]]": "MESH OBJECT"
       },
-      "INDICES": 3,
-      "MODE": 4
+      "VALUE": {
+        "MESHES": 0,
+        "PRIMITIVES": 0,
+        "NODES": 0
+      }
+    },
+    "SIZE": 2,
+    "[[PROTOTYPE]]": "MAP"
+  },
+  "CACHE": {
+    "DEFAULT_MATERIAL": {
+      "[[PROTOTYPE]]": "MESH MATERIAL"
+    },
+    "ADD": "ƒ (KEY, OBJECT)",
+    "GET": "ƒ (KEY)",
+    "REMOVE": "ƒ (KEY)",
+    "REMOVE_ALL": "ƒ ()",
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "CAMERA_CACHE": {
+    "REFS": {},
+    "USES": {},
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "EXTENSIONS": {
+    "[[PROTOTYPE]]": "EXTENSIONS"
+  },
+  "FILE_LOADER": {
+    "TYPE": "FILELOADER",
+    "CROSS_ORIGIN": "ANONYMOUS",
+    "MANAGER": {
+      "[[PROTOTYPE]]": "LOADING MANAGER"
+    },
+    "PATH": "",
+    "REQUEST_HEADER": {},
+    "RESOURCE_PATH": "",
+    "RESPONSE_TYPE": "ARRAYBUFFER",
+    "WITH_CREDENTIALS": "FALSE",
+    "[[PROTOTYPE]]": "LOADER"
+  },
+  "JSON": {
+    "[[PROTOTYPE]]": "DESERIALIZED DATA"
+  },
+  "LIGHT_CACHE": {
+    "REFS": "{}",
+    "USES": "{}"
+  },
+  "MESH_CACHE": {
+    "REFS": {
+      "0": 1
+    },
+    "USES": "{}"
+  },
+  "NODE_CACHE": {
+    "0": {
+      "[[PROTOTYPE]]": "PROMISE",
+      "[[PROMISE_STATE]]": "FULFILLED",
+      "[[PROMISE_RESULT]]": {
+        "TYPE": "MESH"
+      }
     }
+  },
+  "NODE_NAMES_USED": {
+    "OBJECT_4": 0,
+    "SCENE": 0,
+    "BOUQUET": 0,
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "OPTIONS": {
+    "CROSS_ORIGIN": "ANONYMOUS",
+    "KTX2_LOADER": "NULL",
+    "MANAGER": {
+      "[[PROTOTYPE]]": "LOADING MANAGER"
+    },
+    "MESHOPT_DECODER": "NULL",
+    "PATH": "./assets/models/",
+    "REQUEST_HEADER": "{}"
   },
   "PLUGINS": {
-    "EXT_MATERIALS_BUMP": {
-      "TYPE": "GLTF MATERIALS BUMP EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "EXT_MATERIALS_BUMP"
-    },
-    "EXT_MESH_GPU_INSTANCING": {
-      "TYPE": "GLTF MESH GPU INSTANCING",
-      "PARSER": "GLTF PARSER",
-      "NAME": "EXT_MESH_GPU_INSTANCING"
-    },
-    "EXT_MESHOPT_COMPRESSION": {
-      "TYPE": "GLTF MESH OPT COMPRESSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "EXT_MESHOPT_COMPRESSION"
-    },
-    "EXT_TEXTURE_AVIF": {
-      "TYPE": "GLTF TEXTURE AVIF EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "EXT_TEXTURE_AVIF",
-      "ISSUPPORTED": "NULL"
-    },
-    "EXT_TEXTURE_WEBP": {
-      "TYPE": "GLTF TEXTURE WEBP EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "EXT_TEXTURE_WEBP",
-      "ISSUPPORTED": "NULL"
-    },
-    "KHR_LIGHTS_PUNCTUAL": {
-      "TYPE": "GLTF LIGHTS EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_LIGHTS_PUNCTUAL",
-      "CACHE": "{}"
-    },
-    "KHR_MATERIALS_ANISOTROPY": {
-      "TYPE": "GLTF MATERIALS ANISOTROPY EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_ANISOTROPY"
-    },
-    "KHR_MATERIALS_CLEARCOAT": {
-      "TYPE": "GLTF MATERIALS CLEARCOAT EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_CLEARCOAT"
-    },
-    "KHR_MATERIALS_DISPERSION": {
-      "TYPE": "GLTF MATERIALS DISPERSION EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_DISPERSION"
-    },
-    "KHR_MATERIALS_EMISSIVE_STRENGTH": {
-      "TYPE": "GLTF MATERIALS EMISSIVE STRENGTH EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_EMISSIVE_STRENGTH"
-    },
-    "KHR_MATERIALS_IOR": {
-      "TYPE": "GLTF MATERIALS IOR EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_IOR"
-    },
-    "KHR_MATERIALS_IRIDESCENCE": {
-      "TYPE": "GLTF MATERIALS IRIDESCENCE EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_IRIDESCENCE"
-    },
-    "KHR_MATERIALS_SHEEN": {
-      "TYPE": "GLTF MATERIALS SHEEN EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_SHEEN"
-    },
-    "KHR_MATERIALS_SPECULAR": {
-      "TYPE": "GLTF MATERIALS SPECULAR EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_SPECULAR"
-    },
-    "KHR_MATERIALS_TRANSMISSION": {
-      "TYPE": "GLTF MATERIALS TRANSMISSION EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_TRANSMISSION"
-    },
-    "KHR_MATERIALS_VOLUME": {
-      "TYPE": "GLTF MATERIALS VOLUME EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_MATERIALS_VOLUME"
-    },
-    "KHR_TEXTURE_BASISU": {
-      "TYPE": "GLTF TEXTURE BASISU EXTENSION",
-      "PARSER": "GLTF PARSER",
-      "NAME": "KHR_TEXTURE_BASISU"
-    }
+    "[[PROTOTYPE]]": "OBJECT"
   },
   "PRIMITIVECACHE": {
-    "DRACO: 0:UNDEFINED; NORMAL:1; POSITION:0; TEXCOORD_0:2;": {
+    "DRACO": {
       "PRIMITIVE": {
         "ATTRIBUTES": {
           "NORMAL": 1,
@@ -179,29 +119,22 @@
       }
     }
   },
+  "SOURCE_CACHE": "{}",
+  "TEXTURE_CACHE": "{}",
   "TEXTURELOADER": {
-    "TYPE": "IMAGEBITMAPLOADER",
+    "TYPE": "IMAGE BIT MAP LOADER",
     "CROSSORIGIN": "ANONYMOUS",
     "ISIMAGEBITMAPLOADER": true,
     "MANAGER": {
-      "TYPE": "LOADINGMANAGER",
-      "ONSTART": "UNDEFINED",
-      "ONPROGRESS": "UNDEFINED",
-      "ONERROR": "UNDEFINED",
-      "ONLOAD": "ƒ",
-      "ITEMSTART": "ƒ",
-      "[[PROTOTYPE]]": "OBJECT"
+      "TYPE": "LOADING MANAGER"
     },
     "OPTIONS": {
-      "PREMULTIPLYALPHA": "NONE",
-      "[[PROTOTYPE]]": "OBJECT"
+      "PREMULTIPLYALPHA": "NONE"
     },
     "PATH": "",
-    "REQUESTHEADER": {
-      "[[PROTOTYPE]]": "OBJECT"
-    },
+    "REQUESTHEADER": "{}",
     "RESOURCEPATH": "",
-    "WITHCREDENTIALS": false,
+    "WITHCREDENTIALS": "FALSE",
     "[[PROTOTYPE]]": "LOADER"
   }
 }
