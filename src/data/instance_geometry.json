@@ -25,12 +25,12 @@
       "[[PROTOTYPE]]": "OBJECT"
     },
     "BUFFER": {
-      "TYPE": "ARRAYBUFFER",
+      "TYPE": "ARRAY BUFFER",
       "BYTE_LENGTH": 8767668,
       "DETACHED": "FALSE",
       "MAX_BYTE_LENGTH": 8767668,
       "RESIZABLE": "FALSE",
-      "[[PROTOTYPE]]": "ARRAYBUFFER",
+      "[[PROTOTYPE]]": "ARRAY BUFFER",
       "INT8_ARRAY(8767668)": {
         "0.": "[0…999999]",
         "1.": "[1000000…1999999]",

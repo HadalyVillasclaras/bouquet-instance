@@ -79,5 +79,6 @@
   "NORMAL_MATRIX": {
     "TYPE": "_MATRIX3",
     "ELEMENTS": [1, 0, 0, 0, 1, 0, 0, 0, 1]
-  }
+  },
+  "[[PROTOTYPE]]": "_OBJECT3D"
 }

@@ -1,0 +1,54 @@
+{
+  "COMPUTATION": {
+    "TYPE": "GPUCOMPUTATIONRENDERER",
+    "ADD_RESOLUTION_DEFINE": "ƒ (MATERIALSHADER)",
+    "ADD_VARIABLE": "ƒ (VARIABLENAME, COMPUTEFRAGMENTSHADER, INITIALVALUETEXTURE)",
+    "COMPUTE": "ƒ ()",
+    "CREATE_RENDER_TARGET": "ƒ (SIZEXTEXTURE, SIZEYTEXTURE, WRAPS, WRAPT, MINFILTER, MAGFILTER)",
+    "CREATE_SHADER_MATERIAL": "ƒ (COMPUTEFRAGMENTSHADER, UNIFORMS)",
+    "CREATE_TEXTURE": "ƒ ()",
+    "CURRENT_TEXTURE_INDEX": 1,
+    "DISPOSE": "ƒ ()",
+    "DO_RENDER_TARGET": "ƒ (MATERIAL, OUTPUT)",
+    "GET_ALTERNATE_RENDER_TARGET": "ƒ (VARIABLE)",
+    "GET_CURRENT_RENDER_TARGET": "ƒ (VARIABLE)",
+    "INIT": "ƒ ()",
+    "RENDER_TEXTURE": "ƒ (INPUT, OUTPUT)",
+    "SET_DATA_TYPE": "ƒ (TYPE)",
+    "SET_VARIABLE_DEPENDENCIES": "ƒ (VARIABLE, DEPENDENCIES)",
+    "VARIABLES": [
+      {
+        "[[PROTOTYPE]]": "OBJECT"
+      }
+    ],
+    "VARIABLES1": [
+      {
+        "DEPENDENCIES": [
+          {
+            "DEPENDENCIES": []
+          }
+        ],
+        "INITIAL_VALUE_TEXTURE": {
+         "[[PROTOTYPE]]": "_TEXTURE"
+        },
+        "MAG_FILTER": 1003,
+        "MATERIAL": {
+          "[[PROTOTYPE]]": "MATERIAL"
+        },
+        "MIN_FILTER": 1003,
+        "NAME": "UPARTICLES",
+        "RENDER_TARGETS": [
+          {
+           "[[PROTOTYPE]]": "RENDER_TARGET"
+          },
+          {
+           "[[PROTOTYPE]]": "RENDER_TARGET"
+          }
+        ],
+        "WRAP_S": "NULL",
+        "WRAP_T": "NULL"
+      }
+    ],
+    "[[PROTOTYPE]]": "OBJECT"
+  }
+}

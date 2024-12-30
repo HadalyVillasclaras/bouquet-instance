@@ -1,0 +1,159 @@
+{
+  "ANISOTROPY": 1,
+  "CENTER": {
+    "X": 0,
+    "Y": 0,
+    "HEIGHT": 0,
+    "WIDTH": 0,
+    "TYPE": "VECTOR2"
+  },
+  "CHANNEL": 0,
+  "COLOR_SPACE": "",
+  "FLIP_Y": "FALSE",
+  "FORMAT": 1023,
+  "GENERATE_MIPMAPS": "FALSE",
+  "INTERNAL_FORMAT": "NULL",
+  "IS_DATA_TEXTURE": "TRUE",
+  "IS_RENDER_TARGET_TEXTURE": "FALSE",
+  "IS_TEXTURE": "TRUE",
+  "MAG_FILTER": 1003,
+  "MAPPING": 300,
+  "MATRIX": {
+    "TYPE": "MATRIX3",
+    "ELEMENTS": [
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "MATRIX_AUTO_UPDATE": "TRUE",
+  "MIN_FILTER": 1003,
+  "MIPMAPS": [],
+  "NAME": "",
+  "OFFSET": {
+    "X": 0,
+    "Y": 0,
+    "HEIGHT": 0,
+    "WIDTH": 0,
+    "TYPE": "VECTOR2"
+  },
+  "ON_UPDATE": "NULL",
+  "PMREM_VERSION": 0,
+  "PREMULTIPLY_ALPHA": "FALSE",
+  "REPEAT": {
+    "X": 1,
+    "Y": 1,
+    "HEIGHT": 0,
+    "WIDTH": 0,
+    "TYPE": "VECTOR2"
+  },
+  "ROTATION": 0,
+  "SOURCE": {
+    "DATA": {
+      "FLOAT32_ARRAY(2924100)": {
+        "0.": "[0…999999]",
+        "1.": "[1000000…1999999]",
+        "2.": "[2000000…2924099]",
+        "BYTE_LENGTH": 11696400,
+        "BYTE_OFFSET": 0,
+        "LENGTH": 2924100,
+        "SYMBOL_TO_STRING": "FLOAT32ARRAY",
+        "[[PROTOTYPE]]": "TYPEDARRAY"
+      },
+      "BUFFER": {
+        "TYPE": "ARRAYBUFFER",
+        "BYTE_LENGTH": 11696400,
+        "DETACHED": "FALSE",
+        "MAX_BYTE_LENGTH": 11696400,
+        "RESIZABLE": "FALSE",
+        "[[PROTOTYPE]]": "ARRAYBUFFER",
+        "INT8_ARRAY(11696400)": {
+          "0.": "[0…999999]",
+          "1.": "[1000000…1999999]",
+          "2.": "[2000000…2999999]",
+          "3.": "[3000000…3999999]",
+          "4.": "[4000000…4999999]",
+          "5.": "[5000000…5999999]",
+          "6.": "[6000000…6999999]",
+          "7.": "[7000000…7999999]",
+          "8.": "[8000000…8999999]",
+          "9.": "[9000000…9999999]",
+          "10.": "[10000000…10999999]",
+          "11.": "[11000000…11696399]",
+          "BYTE_LENGTH": 11696400,
+          "BYTE_OFFSET": 0,
+          "LENGTH": 11696400,
+          "SYMBOL_TO_STRING": "INT8ARRAY",
+          "[[PROTOTYPE]]": "TYPEDARRAY"
+        },
+        "UINT8_ARRAY(11696400)": {
+          "0.": "[0…999999]",
+          "1.": "[1000000…1999999]",
+          "2.": "[2000000…2999999]",
+          "3.": "[3000000…3999999]",
+          "4.": "[4000000…4999999]",
+          "5.": "[5000000…5999999]",
+          "6.": "[6000000…6999999]",
+          "7.": "[7000000…7999999]",
+          "8.": "[8000000…8999999]",
+          "9.": "[9000000…9999999]",
+          "10.": "[10000000…10999999]",
+          "11.": "[11000000…11696399]",
+          "BYTE_LENGTH": 11696400,
+          "BYTE_OFFSET": 0,
+          "LENGTH": 11696400,
+          "SYMBOL_TO_STRING": "UINT8ARRAY",
+          "[[PROTOTYPE]]": "TYPEDARRAY"
+        },
+        "INT16_ARRAY(5848200)": {
+          "0.": "[0…999999]",
+          "1.": "[1000000…1999999]",
+          "2.": "[2000000…2999999]",
+          "3.": "[3000000…3999999]",
+          "4.": "[4000000–4999999]",
+          "5.": "[5000000–5848199]",
+          "BYTE_LENGTH": 11696400,
+          "BYTE_OFFSET": 0,
+          "LENGTH": 5848200,
+          "SYMBOL_TO_STRING": "INT16ARRAY",
+          "[[PROTOTYPE]]": "TYPEDARRAY"
+        },
+        "INT32_ARRAY(2924100)": {
+          "0.": "[0…999999]",
+          "1.": "[1000000…1999999]",
+          "2.": "[2000000…2924099]",
+          "BYTE_LENGTH": 11696400,
+          "BYTE_OFFSET": 0,
+          "LENGTH": 2924100,
+          "SYMBOL_TO_STRING": "INT32ARRAY",
+          "[[PROTOTYPE]]": "TYPEDARRAY"
+        }
+      },
+      "HEIGHT": 855,
+      "WIDTH": 855,
+      "DATA_READY": "TRUE",
+      "IS_SOURCE": "TRUE",
+      "UUID": "6792830D-246F-40BF-9E02-6DFD5EFDC3ED",
+      "VERSION": 1,
+      "ID": 5
+    }
+  },
+  "TYPE": 1015,
+  "UNPACK_ALIGNMENT": 1,
+  "USER_DATA": {},
+  "UUID": "F1EE8D5C-76C2-481C-BBC6-CE1E44F0FF20",
+  "VERSION": 1,
+  "WRAP_S": 1001,
+  "WRAP_T": 1001,
+  "LISTENERS": {
+    "DISPOSE": "ARRAY(1)"
+  },
+  "ID": 5,
+  "[[PROTOTYPE]]": ":TEXTURE"
+}
