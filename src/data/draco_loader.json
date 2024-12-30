@@ -22,7 +22,7 @@
     "UV": "FLOAT32ARRAY"
   },
   "MANAGER": {
-    "[[Prototype]]": "OBJECT"
+    "[[PROTOTYPE]]": "OBJECT"
   },
   "REQUEST_HEADER": "{}",
   "WORKER_LIMIT": 4,

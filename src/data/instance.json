@@ -1,0 +1,22 @@
+{
+  "ANIMATIONS": "ARRAY(0)",
+  "ASSET": {
+    "GENERATOR": "Khronos glTF Blender I/O v4.2.70",
+    "VERSION": "2.0"
+  },
+  "CAMERAS": "ARRAY(0)",
+  "PARSER": {
+    "TYPE": "GLTF_PARSER"
+  },
+  "SCENE": {
+    "[[PROTOTYPE]]": "_OBJECT3D"
+  },
+  "SCENES": [
+    {
+      "0": {
+        "[[PROTOTYPE]]": "_OBJECT3D"
+      }
+    }
+  ],
+  "USERDATA": "{}"
+}

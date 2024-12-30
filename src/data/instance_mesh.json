@@ -1,0 +1,83 @@
+{
+  "TYPE": "MESH",
+  "ANIMATIONS": "[]",
+  "CAST_SHADOW": "FALSE",
+  "CHILDREN": "[]",
+  "FRUSTUM_CULLED": "TRUE",
+  "GEOMETRY": {
+    "TYPE": "BUFFER_GEOMETRY"
+  },
+  "IS_MESH": "TRUE",
+  "IS_OBJECT3D": "TRUE",
+  "LAYERS": {
+    "MASK": 1
+  },
+  "MATERIAL": {
+    "TYPE": "MESH_STANDARD_MATERIAL"
+  },
+  "MATRIX": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+  },
+  "MATRIX_AUTO_UPDATE": "TRUE",
+  "MATRIX_WORLD": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+  },
+  "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
+  "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
+  "NAME": "mfs",
+  "PARENT": {
+   "[[PROTOTYPE]]": "_OBJECT3D"
+  },
+  "POSITION": {
+    "TYPE": "_VECTOR3",
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "QUATERNION": {
+    "TYPE": "QUATERNION",
+    "IS_QUATERNION": "TRUE",
+    "W": 1,
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "RECEIVE_SHADOW": "FALSE",
+  "RENDER_ORDER": 0,
+  "ROTATION": {
+    "TYPE": "_EULER",
+    "IS_EULER": "TRUE",
+    "ORDER": "XYZ",
+    "X": 0,
+    "Y": 0,
+    "Z": 0
+  },
+  "SCALE": {
+    "TYPE": "_VECTOR3",
+    "X": 1,
+    "Y": 1,
+    "Z": 1
+  },
+  "UP": {
+    "TYPE": "_VECTOR3",
+    "X": 0,
+    "Y": 1,
+    "Z": 0
+  },
+  "USER_DATA": {
+    "NAME": "mfs"
+  },
+  "UUID": "4708fe3b-f90e-4cf2-9ebc-aae612fbe29d",
+  "VISIBLE": "TRUE",
+  "ID": 8,
+  "MODEL_VIEW_MATRIX": {
+    "TYPE": "_MATRIX4",
+    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+  },
+  "NORMAL_MATRIX": {
+    "TYPE": "_MATRIX3",
+    "ELEMENTS": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+  }
+}

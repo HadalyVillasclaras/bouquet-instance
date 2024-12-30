@@ -65,11 +65,11 @@ function formatObjectStyle(obj, indentLevel) {
     const formattedKey = key;
 
     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.7)}${indent}}\n`;
+      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.5)}${indent}}\n`;
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 1.3); 
+          const objectContent = formatObjectStyle(v, indentLevel + 1.7); 
           return `${indent}  {\n${objectContent}${indent}  }`; 
         } else {
           return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
