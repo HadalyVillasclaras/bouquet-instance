@@ -1,0 +1,123 @@
+{
+  "TYPE": "SHADER MATERIAL",
+  "ALPHA_HASH": "FALSE",
+  "ALPHA_TO_COVERAGE": "FALSE",
+  "BLEND_ALPHA": 0,
+  "BLEND_COLOR": {
+    "B": 0,
+    "G": 0,
+    "IS_COLOR": "TRUE",
+    "R": 0,
+    "TYPE": "COLOR"
+  },
+  "BLEND_DST": 205,
+  "BLEND_DST_ALPHA": "NULL",
+  "BLEND_EQUATION": 100,
+  "BLEND_EQUATION_ALPHA": "NULL",
+  "BLEND_SRC": 204,
+  "BLEND_SRC_ALPHA": "NULL",
+  "BLENDING": 1,
+  "CLIP_INTERSECTION": "FALSE",
+  "CLIP_SHADOWS": "FALSE",
+  "CLIPPING": "FALSE",
+  "CLIPPING_PLANES": "NULL",
+  "COLOR_WRITE": "TRUE",
+  "DEFAULT_ATTRIBUTE_VALUES": {
+    "COLOR": "(3) [1, 1, 1]",
+    "UV": "(2) [0, 0]",
+    "UV1": "(2) [0, 0]"
+  },
+  "DEFINES": {
+    "RESOLUTION": "VEC2(855.0, 855.0)"
+  },
+  "DEPTH_FUNC": 3,
+  "DEPTH_TEST": "TRUE",
+  "DEPTH_WRITE": "TRUE",
+  "DITHERING": "FALSE",
+  "EXTENSIONS": {
+    "CLIP_CULL_DISTANCE": "FALSE",
+    "MULTI_DRAW": "FALSE"
+  },
+  "FOG": "FALSE",
+  "FORCE_SINGLE_PASS": "TRUE",
+  "FRAGMENT_SHADER": "\nuniform sampler2D uParticles;\nuniform float uTime;\nuniform float uDeltaTime;\nuniform sampler2D uBase;\nuniform float uFlowFieldInfluence;\nuniform float uFlowFieldStrength;\nuniform float uFlowFieldFrequency;\n\nvec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}\nfloat permute(float x){return floor(mod(((x*34.0)+1.0)*x, 289.0));}\nvec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}\nfloat taylorInvSqrt(float r){return 1.79284291400159 - 0.85373472095314 * r;}\n\nvec4 grad4(float j, vec4 ip){\n  const vec4 ones = vec4(1.0, 1.0, 1.0, -1.0);\n  vec4 p,s;\n\n  p.xyz = floor( fract (vec3(j) * ip.xyz) * 7.0) * ip.z - 1.0;\n  p.w = 1.5 - dot(abs(p.xyz), ones.xyz);\n  s = vec4(lessThan(p, vec4(0.0)));\n  p.xyz = p.xyz + (s.xyz*2.0 - 1.0) * s.www; \n\n  return p;\n}\n\nfloat simplexNoise4d(vec4 v){\n  const vec2  C = vec2( 0.138196601125010504,  \n                        0.309016994374947451); \n\n  vec4 i  = floor(v + dot(v, C.yyyy) );\n  vec4 x0 = v -   i + dot(i, C.xxxx);\n\n  vec4 i0;\n\n  vec3 isX = step( x0.yzw, x0.xxx );\n  vec3 isYZ = step( x0.zww, x0.yyz );\n\n  i0.x = isX.x + isX.y + isX.z;\n  i0.yzw = 1.0 - isX;\n\n  i0.y += isYZ.x + isYZ.y;\n  i0.zw += 1.0 - isYZ.xy;\n\n  i0.z += isYZ.z;\n  i0.w += 1.0 - isYZ.z;\n\n  \n  vec4 i3 = clamp( i0, 0.0, 1.0 );\n  vec4 i2 = clamp( i0-1.0, 0.0, 1.0 );\n  vec4 i1 = clamp( i0-2.0, 0.0, 1.0 );\n\n  \n  vec4 x1 = x0 - i1 + 1.0 * C.xxxx;\n  vec4 x2 = x0 - i2 + 2.0 * C.xxxx;\n  vec4 x3 = x0 - i3 + 3.0 * C.xxxx;\n  vec4 x4 = x0 - 1.0 + 4.0 * C.xxxx;\n\n  i = mod(i, 289.0); \n  float j0 = permute( permute( permute( permute(i.w) + i.z) + i.y) + i.x);\n  vec4 j1 = permute( permute( permute( permute (\n             i.w + vec4(i1.w, i2.w, i3.w, 1.0 ))\n           + i.z + vec4(i1.z, i2.z, i3.z, 1.0 ))\n           + i.y + vec4(i1.y, i2.y, i3.y, 1.0 ))\n           + i.x + vec4(i1.x, i2.x, i3.x, 1.0 ));\n\n  vec4 ip = vec4(1.0/294.0, 1.0/49.0, 1.0/7.0, 0.0) ;\n\n  vec4 p0 = grad4(j0,   ip);\n  vec4 p1 = grad4(j1.x, ip);\n  vec4 p2 = grad4(j1.y, ip);\n  vec4 p3 = grad4(j1.z, ip);\n  vec4 p4 = grad4(j1.w, ip);\n\n  vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));\n  p0 *= norm.x;\n  p1 *= norm.y;\n  p2 *= norm.z;\n  p3 *= norm.w;\n  p4 *= taylorInvSqrt(dot(p4,p4));\n\n  vec3 m0 = max(0.6 - vec3(dot(x0,x0), dot(x1,x1), dot(x2,x2)), 0.0);\n  vec2 m1 = max(0.6 - vec2(dot(x3,x3), dot(x4,x4)            ), 0.0);\n  m0 = m0 * m0;\n  m1 = m1 * m1;\n  return 49.0 * ( dot(m0*m0, vec3( dot( p0, x0 ), dot( p1, x1 ), dot( p2, x2 )))\n               + dot(m1*m1, vec2( dot( p3, x3 ), dot( p4, x4 ) ) ) ) ;\n\n}\n\nvoid main() {\n  float time = uTime * 0.2;\n  vec2 uv = gl_FragCoord.xy / resolution.xy;\n  vec4 particle = texture(uParticles, uv);\n  vec4 base = texture(uBase, uv);\n\n  \n  if (particle.a >= 1.0) {\n    particle.a = mod(particle.a, 1.0); \n    particle.xyz = base.xyz;\n  }\n  \n   else {\n    \n    float strength = simplexNoise4d(vec4(base.xyz * 0.5, time + 1.0)); \n    float influence = (uFlowFieldInfluence - 0.5) * (- 2.0);\n    strength = smoothstep(influence, 1.0, strength);\n\n    \n    vec3 flowField = vec3(\n      simplexNoise4d(vec4(particle.xyz + 0.0, time * uFlowFieldFrequency)),\n      simplexNoise4d(vec4(particle.xyz + 1.0, time * uFlowFieldFrequency)),\n      simplexNoise4d(vec4(particle.xyz + 2.0, time * uFlowFieldFrequency))\n    );\n\n    flowField = normalize(flowField);\n    particle.xyz += flowField * uDeltaTime * strength * uFlowFieldStrength;\n\n    \n    particle.a += uDeltaTime * 0.3;\n  }\n\n  gl_FragColor = particle; \n}",
+  "GLSL_VERSION": "NULL",
+  "INDEX0_ATTRIBUTE_NAME": "UNDEFINED",
+  "IS_MATERIAL": "TRUE",
+  "IS_SHADER_MATERIAL": "TRUE",
+  "LIGHTS": "FALSE",
+  "LINEWIDTH": 1,
+  "NAME": "GPU_COMPUTATION_SHADER",
+  "OPACITY": 1,
+  "POLYGON_OFFSET": "FALSE",
+  "POLYGON_OFFSET_FACTOR": 0,
+  "POLYGON_OFFSET_UNITS": 0,
+  "PRECISION": "NULL",
+  "PREMULTIPLIED_ALPHA": "FALSE",
+  "SHADOW_SIDE": "NULL",
+  "SIDE": 0,
+  "STENCIL_FAIL": 7680,
+  "STENCIL_FUNC": 519,
+  "STENCIL_FUNC_MASK": 255,
+  "STENCIL_REF": 0,
+  "STENCIL_WRITE": "FALSE",
+  "STENCIL_WRITE_MASK": 255,
+  "STENCIL_Z_FAIL": 7680,
+  "STENCIL_Z_PASS": 7680,
+  "TONEMAPPED": "TRUE",
+  "TRANSPARENT": "FALSE",
+  "UNIFORMS": {
+    "UBASE": {
+      "TYPE": "_UNIFORM",
+      "VALUE": {
+        "[[PROTOTYPE]]": "DATATEXTURE"
+      }
+    },
+    "UDELTATIME": {
+      "TYPE": "_UNIFORM",
+      "VALUE": 0.03434999999961974
+    },
+    "UFLOWFIELDFREQUENCY": {
+      "TYPE": "_UNIFORM",
+      "VALUE": 1
+    },
+    "UFLOWFIELDINFLUENCE": {
+      "TYPE": "_UNIFORM",
+      "VALUE": 0.35
+    },
+    "UFLOWFIELDSTRENGTH": {
+      "TYPE": "_UNIFORM",
+      "VALUE": 1.28
+    },
+    "UPARTICLES": {
+      "TYPE": "_UNIFORM",
+      "VALUE": {
+        "[[PROTOTYPE]]": "TEXTURE"
+      }
+    },
+    "UTIME": {
+      "TYPE": "_UNIFORM",
+      "VALUE": 216.7995000000048
+    }
+  },
+  "UNIFORMSGROUPS": "ARRAY(0)",
+  "UNIFORMSNEEDUPDATE": "FALSE",
+  "USERDATA": {},
+  "UUID": "F1394A0D-E20C-42E2-9C71-B641C6C99140",
+  "VERSION": 0,
+  "VERTEXCOLORS": "FALSE",
+  "VERTEXSHADER": "void main()\t{\n\n\tgl_Position = vec4( position, 1.0 );\n\n}\n",
+  "VISIBLE": "TRUE",
+  "WIREFRAME": "FALSE",
+  "WIREFRAMELINEWIDTH": 1,
+  "_ALPHATEST": 0,
+  "_LISTENERS": {
+    "DISPOSE": [
+      {
+        "FUNCTION": "ƒ onMaterialDispose(event)"
+      }
+    ]
+  },
+  "ID": 9,
+  "ALPHA_TEST": 0
+}
