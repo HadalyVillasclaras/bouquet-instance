@@ -1,0 +1,81 @@
+{
+  "INITIAL_VALUE_TEXTURE": {
+    "[[PROTOTYPE]]": "_TEXTURE"
+  },
+  "MAG_FILTER": 1003,
+  "MATERIAL": {
+    "[[PROTOTYPE]]": "MATERIAL"
+  },
+  "MIN_FILTER": 1003,
+  "NAME": "UPARTICLES",
+  "RENDER_TARGETS": [
+    {
+      "DEPTH": 1,
+      "DEPTHBUFFER": "FALSE",
+      "DEPTHTEXTURE": "NULL",
+      "HEIGHT": 855,
+      "ISRENDERTARGET": "TRUE",
+      "ISWEBGLRENDERTARGET": "TRUE",
+      "RESOLVEDEPTHBUFFER": "TRUE",
+      "RESOLVESTENCILBUFFER": "TRUE",
+      "SAMPLES": 0,
+      "SCISSOR": {
+        "W": 855,
+        "X": 0,
+        "Y": 0,
+        "Z": 855,
+        "TYPE": "VECTOR4"
+      },
+      "SCISSORTEST": "FALSE",
+      "STENCILBUFFER": "FALSE",
+      "TEXTURES": [
+        {
+          "[[PROTOTYPE]]": "TEXTURE"
+        }
+      ],
+      "VIEWPORT": {
+        "W": 855,
+        "X": 0,
+        "Y": 0,
+        "Z": 855,
+        "TYPE": "VECTOR4"
+      },
+      "WIDTH": 855
+    },
+    {
+      "DEPTH": 1,
+      "DEPTHBUFFER": "FALSE",
+      "DEPTHTEXTURE": "NULL",
+      "HEIGHT": 855,
+      "ISRENDERTARGET": "TRUE",
+      "ISWEBGLRENDERTARGET": "TRUE",
+      "RESOLVEDEPTHBUFFER": "TRUE",
+      "RESOLVESTENCILBUFFER": "TRUE",
+      "SAMPLES": 0,
+      "SCISSOR": {
+        "W": 855,
+        "X": 0,
+        "Y": 0,
+        "Z": 855,
+        "TYPE": "VECTOR4"
+      },
+      "SCISSORTEST": "FALSE",
+      "STENCILBUFFER": "FALSE",
+      "TEXTURES": [
+        {
+          "[[PROTOTYPE]]": "TEXTURE"
+        }
+      ],
+      "VIEWPORT": {
+        "W": 855,
+        "X": 0,
+        "Y": 0,
+        "Z": 855,
+        "TYPE": "VECTOR4"
+      },
+      "WIDTH": 855
+    }
+  ],
+  "WRAP_S": "NULL",
+  "WRAP_T": "NULL"
+}
