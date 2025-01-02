@@ -1,0 +1,68 @@
+{
+  "0": {
+    "DEPTH": 1,
+    "DEPTH_BUFFER": "FALSE",
+    "DEPTH_TEXTURE": "NULL",
+    "HEIGHT": 855,
+    "IS_RENDER_TARGET": "TRUE",
+    "IS_WEBGL_RENDER_TARGET": "TRUE",
+    "RESOLVE_DEPTH_BUFFER": "TRUE",
+    "RESOLVE_STENCIL_BUFFER": "TRUE",
+    "SAMPLES": 0,
+    "SCISSOR": {
+      "TYPE": "VECTOR4",
+      "W": 855,
+      "X": 0,
+      "Y": 0,
+      "Z": 855
+    },
+    "SCISSOR_TEST": "FALSE",
+    "STENCIL_BUFFER": "FALSE",
+    "TEXTURES": {
+      "PROTOTYPE": "TEXTURE",
+      "TYPE": "DATA_TEXTURE",
+      "UUID": "da8f51ca-9c6f-43bc-bca0-3d4bf3fcee8d"
+    },
+    "VIEWPORT": {
+      "TYPE": "VECTOR4",
+      "W": 855,
+      "X": 0,
+      "Y": 0,
+      "Z": 855
+    },
+    "WIDTH": 855
+  },
+  "1": {
+    "DEPTH": 1,
+    "DEPTH_BUFFER": "FALSE",
+    "DEPTH_TEXTURE": "NULL",
+    "HEIGHT": 855,
+    "IS_RENDER_TARGET": "TRUE",
+    "IS_WEBGL_RENDER_TARGET": "TRUE",
+    "RESOLVE_DEPTH_BUFFER": "TRUE",
+    "RESOLVE_STENCIL_BUFFER": "TRUE",
+    "SAMPLES": 0,
+    "SCISSOR": {
+      "TYPE": "VECTOR4",
+      "W": 855,
+      "X": 0,
+      "Y": 0,
+      "Z": 855
+    },
+    "SCISSOR_TEST": "FALSE",
+    "STENCIL_BUFFER": "FALSE",
+    "TEXTURES": {
+      "PROTOTYPE": "TEXTURE",
+      "TYPE": "DATA_TEXTURE",
+      "UUID": "9c8a27ef-d2a8-4ff1-98ac-b632273ca4d0"
+    },
+    "VIEWPORT": {
+      "TYPE": "VECTOR4",
+      "W": 855,
+      "X": 0,
+      "Y": 0,
+      "Z": 855
+    },
+    "WIDTH": 855
+  }
+}

@@ -29,7 +29,7 @@
   },
   "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
-  "NAME": "",
+  "NAME": "NULL",
   "PARENT": {
     "IS_OBJECT3D": "TRUE",
     "UUID": "473813d1-f16a-4574-abda-aab32363de56",
@@ -82,7 +82,7 @@
     "Y": 1,
     "Z": 0
   },
-  "USER_DATA": {},
+  "USER_DATA": "{}",
   "UUID": "4f16bada-e3ea-45d5-adb0-cd595911b520",
   "VISIBLE": "TRUE",
   "ID": 15,

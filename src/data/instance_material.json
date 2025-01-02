@@ -37,7 +37,7 @@
     },
     "COLOR_WRITE": "TRUE",
     "DEFINES": {
-      "STANDARD": ""
+      "STANDARD": "NULL"
     },
     "DEPTH_FUNC": 3,
     "DEPTH_TEST": "TRUE",
@@ -75,7 +75,7 @@
     "MAP": "NULL",
     "METALNESS": 1,
     "METALNESS_MAP": "NULL",
-    "NAME": "",
+    "NAME": "NULL",
     "NORMAL_MAP": "NULL",
     "NORMAL_MAP_TYPE": 0,
     "NORMAL_SCALE": {

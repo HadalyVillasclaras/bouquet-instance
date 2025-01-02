@@ -109,7 +109,7 @@
         "GET_UNIFORMS": "ƒ GETUNIFORMS()",
         "ID": 2,
         "IS_READY": "ƒ ISREADY()",
-        "NAME": "",
+        "NAME": "NULL",
         "PROGRAM": "WEBGLPROGRAM",
         "TYPE_VALUE": "SHADER_MATERIAL",
         "USED_TIMES": 1,

@@ -30,8 +30,8 @@
     "PROTOTYPE": "OBJECT"
   },
   "CAMERA_CACHE": {
-    "REFS": {},
-    "USES": {},
+    "REFS": "{}",
+    "USES": "{}",
     "PROTOTYPE": "OBJECT"
   },
   "EXTENSIONS": {
@@ -43,9 +43,9 @@
     "MANAGER": {
       "PROTOTYPE": "LOADING MANAGER"
     },
-    "PATH": "",
-    "REQUEST_HEADER": {},
-    "RESOURCE_PATH": "",
+    "PATH": "NULL",
+    "REQUEST_HEADER": "{}",
+    "RESOURCE_PATH": "NULL",
     "RESPONSE_TYPE": "ARRAYBUFFER",
     "WITH_CREDENTIALS": "FALSE",
     "PROTOTYPE": "LOADER"
@@ -131,9 +131,9 @@
     "OPTIONS": {
       "PREMULTIPLYALPHA": "NONE"
     },
-    "PATH": "",
+    "PATH": "NULL",
     "REQUESTHEADER": "{}",
-    "RESOURCEPATH": "",
+    "RESOURCEPATH": "NULL",
     "WITHCREDENTIALS": "FALSE",
     "PROTOTYPE": "LOADER"
   }

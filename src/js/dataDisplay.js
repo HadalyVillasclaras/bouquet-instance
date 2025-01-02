@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // GPU COMPUTATION
-    { url: '../data/gpu_computation.json', elementId: 'obj-gpu-comp' }
+    { url: '../data/gpu_computation.json', elementId: 'obj-gpu-comp' },
+    { url: '../data/gpu_computation_render_targets.json', elementId: 'obj-gpu-render-targets' },
+    { url: '../data/gpu_data_texture.json', elementId: 'obj-gpu-texture' },
+    { url: '../data/gpu_shader_material.json', elementId: 'obj-gpu-material' },
+    { url: '../data/gpu_shader_material_uniforms.json', elementId: 'obj-gpu-material-uniforms' }
+
+
 
 
 

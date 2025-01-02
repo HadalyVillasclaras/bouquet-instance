@@ -41,7 +41,7 @@
     "VALUE": {
       "X": 2880,
       "Y": 1576,
-      "TYPE": "VECTOR2"
+      "TYPE": "_VECTOR2"
     },
     "PROTOTYPE": "OBJECT"
   },

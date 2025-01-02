@@ -1,0 +1,34 @@
+{
+  "UBASE": {
+    "TYPE": "_UNIFORM",
+    "VALUE": {
+      "PROTOTYPE": "DATATEXTURE"
+    }
+  },
+  "UDELTATIME": {
+    "TYPE": "_UNIFORM",
+    "VALUE": 0.03434999999961974
+  },
+  "UFLOWFIELDFREQUENCY": {
+    "TYPE": "_UNIFORM",
+    "VALUE": 1
+  },
+  "UFLOWFIELDINFLUENCE": {
+    "TYPE": "_UNIFORM",
+    "VALUE": 0.35
+  },
+  "UFLOWFIELDSTRENGTH": {
+    "TYPE": "_UNIFORM",
+    "VALUE": 1.28
+  },
+  "UPARTICLES": {
+    "TYPE": "_UNIFORM",
+    "VALUE": {
+      "PROTOTYPE": "TEXTURE"
+    }
+  },
+  "UTIME": {
+    "TYPE": "_UNIFORM",
+    "VALUE": 216.7995000000048
+  }
+}

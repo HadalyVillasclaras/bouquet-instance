@@ -232,7 +232,7 @@
     "GPU_TYPE": 1015,
     "IS_BUFFER_ATTRIBUTE": "TRUE",
     "ITEM_SIZE": 1,
-    "NAME": "",
+    "NAME": "NULL",
     "NORMALIZED": "FALSE",
     "UPDATE_RANGES": [],
     "USAGE": 35044,

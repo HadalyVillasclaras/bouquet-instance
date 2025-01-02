@@ -12,11 +12,11 @@
 
   },
   "MESHOPT_DECODER": "NULL",
-  "PATH": "",
+  "PATH": "NULL",
   "PLUGIN_CALLBACKS": "['ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)']",
   "REQUEST_HEADER": {
     "PROTOTYPE": "OBJECT"
   },
-  "RESOURCE_PATH": "",
+  "RESOURCE_PATH": "NULL",
   "PROTOTYPE": "LOADER"
 }
