@@ -1,113 +1,105 @@
 {
-  "COMPUTATION": {
-    "TYPE": "GPUCOMPUTATIONRENDERER",
-    "ADD_RESOLUTION_DEFINE": "ƒ (MATERIALSHADER)",
-    "ADD_VARIABLE": "ƒ (VARIABLENAME, COMPUTEFRAGMENTSHADER, INITIALVALUETEXTURE)",
-    "COMPUTE": "ƒ ()",
-    "CREATE_RENDER_TARGET": "ƒ (SIZEXTEXTURE, SIZEYTEXTURE, WRAPS, WRAPT, MINFILTER, MAGFILTER)",
-    "CREATE_SHADER_MATERIAL": "ƒ (COMPUTEFRAGMENTSHADER, UNIFORMS)",
-    "CREATE_TEXTURE": "ƒ ()",
-    "CURRENT_TEXTURE_INDEX": 1,
-    "DISPOSE": "ƒ ()",
-    "DO_RENDER_TARGET": "ƒ (MATERIAL, OUTPUT)",
-    "GET_ALTERNATE_RENDER_TARGET": "ƒ (VARIABLE)",
-    "GET_CURRENT_RENDER_TARGET": "ƒ (VARIABLE)",
-    "INIT": "ƒ ()",
-    "RENDER_TEXTURE": "ƒ (INPUT, OUTPUT)",
-    "SET_DATA_TYPE": "ƒ (TYPE)",
-    "SET_VARIABLE_DEPENDENCIES": "ƒ (VARIABLE, DEPENDENCIES)",
-    "VARIABLES": [
+  "PROTOTYPE": "OBJECT",
+  "TYPE": "GPU COMPUTATION RENDERER",
+  "ADD_RESOLUTION_DEFINE": "ƒ (MATERIALSHADER)",
+  "ADD_VARIABLE": "ƒ (VARIABLENAME, COMPUTEFRAGMENTSHADER, INITIALVALUETEXTURE)",
+  "COMPUTE": "ƒ ()",
+  "CREATE_RENDER_TARGET": "ƒ (SIZEXTEXTURE, SIZEYTEXTURE, WRAPS, WRAPT, MINFILTER, MAGFILTER)",
+  "CREATE_SHADER_MATERIAL": "ƒ (COMPUTEFRAGMENTSHADER, UNIFORMS)",
+  "CREATE_TEXTURE": "ƒ ()",
+  "CURRENT_TEXTURE_INDEX": 1,
+  "DISPOSE": "ƒ ()",
+  "DO_RENDER_TARGET": "ƒ (MATERIAL, OUTPUT)",
+  "GET_ALTERNATE_RENDER_TARGET": "ƒ (VARIABLE)",
+  "GET_CURRENT_RENDER_TARGET": "ƒ (VARIABLE)",
+  "INIT": "ƒ ()",
+  "RENDER_TEXTURE": "ƒ (INPUT, OUTPUT)",
+  "SET_DATA_TYPE": "ƒ (TYPE)",
+  "SET_VARIABLE_DEPENDENCIES": "ƒ (VARIABLE, DEPENDENCIES)",
+  "VARIABLES": {
+    "DEPENDENCIES": "[]",
+    "INITIAL_VALUE_TEXTURE": {
+      "TYPE": "DATA_TEXTURE",
+      "PROTOTYPE": "_TEXTURE",
+      "UUID": "d34b0816-8aa9-4446-b041-13c8d5e49ae5"
+    },
+    "MAG_FILTER": 1003,
+    "MATERIAL": {
+      "TYPE": "SHADER_MATERIAL",
+      "PROTOTYPE": "MATERIAL",
+      "UUID": "99b2fff2-a931-4bb8-8b6e-294c084235f0"
+    },
+    "MIN_FILTER": 1003,
+    "NAME": "UPARTICLES",
+    "RENDER_TARGETS": [
       {
-        "[[PROTOTYPE]]": "OBJECT"
+        "DEPTH": 1,
+        "DEPTH_BUFFER": "FALSE",
+        "DEPTH_TEXTURE": "NULL",
+        "HEIGHT": 855,
+        "IS_RENDER_TARGET": "TRUE",
+        "IS_WEBGL_RENDER_TARGET": "TRUE",
+        "RESOLVE_DEPTH_BUFFER": "TRUE",
+        "RESOLVE_STENCIL_BUFFER": "TRUE",
+        "SAMPLES": 0,
+        "SCISSOR": {
+          "TYPE": "VECTOR4",
+          "W": 855,
+          "X": 0,
+          "Y": 0,
+          "Z": 855
+        },
+        "SCISSOR_TEST": "FALSE",
+        "STENCIL_BUFFER": "FALSE",
+        "TEXTURES": {
+          "PROTOTYPE": "TEXTURE",
+          "TYPE": "DATA_TEXTURE",
+          "UUID": "da8f51ca-9c6f-43bc-bca0-3d4bf3fcee8d"
+        },
+        "VIEWPORT": {
+          "TYPE": "VECTOR4",
+          "W": 855,
+          "X": 0,
+          "Y": 0,
+          "Z": 855
+        },
+        "WIDTH": 855
+      },
+      {
+        "DEPTH": 1,
+        "DEPTH_BUFFER": "FALSE",
+        "DEPTH_TEXTURE": "NULL",
+        "HEIGHT": 855,
+        "IS_RENDER_TARGET": "TRUE",
+        "IS_WEBGL_RENDER_TARGET": "TRUE",
+        "RESOLVE_DEPTH_BUFFER": "TRUE",
+        "RESOLVE_STENCIL_BUFFER": "TRUE",
+        "SAMPLES": 0,
+        "SCISSOR": {
+          "TYPE": "VECTOR4",
+          "W": 855,
+          "X": 0,
+          "Y": 0,
+          "Z": 855
+        },
+        "SCISSOR_TEST": "FALSE",
+        "STENCIL_BUFFER": "FALSE",
+        "TEXTURES": {
+          "PROTOTYPE": "TEXTURE",
+          "TYPE": "DATA_TEXTURE",
+          "UUID": "9c8a27ef-d2a8-4ff1-98ac-b632273ca4d0"
+        },
+        "VIEWPORT": {
+          "TYPE": "VECTOR4",
+          "W": 855,
+          "X": 0,
+          "Y": 0,
+          "Z": 855
+        },
+        "WIDTH": 855
       }
     ],
-    "VARIABLES1": [
-      {
-        "DEPENDENCIES": [
-          {
-            "DEPENDENCIES": []
-          }
-        ],
-        "INITIAL_VALUE_TEXTURE": {
-          "[[PROTOTYPE]]": "_TEXTURE"
-        },
-        "MAG_FILTER": 1003,
-        "MATERIAL": {
-          "[[PROTOTYPE]]": "MATERIAL"
-        },
-        "MIN_FILTER": 1003,
-        "NAME": "UPARTICLES",
-        "RENDER_TARGETS": [
-          {
-            "DEPTH": 1,
-            "DEPTHBUFFER": "FALSE",
-            "DEPTHTEXTURE": "NULL",
-            "HEIGHT": 855,
-            "ISRENDERTARGET": "TRUE",
-            "ISWEBGLRENDERTARGET": "TRUE",
-            "RESOLVEDEPTHBUFFER": "TRUE",
-            "RESOLVESTENCILBUFFER": "TRUE",
-            "SAMPLES": 0,
-            "SCISSOR": {
-              "W": 855,
-              "X": 0,
-              "Y": 0,
-              "Z": 855,
-              "TYPE": "VECTOR4"
-            },
-            "SCISSORTEST": "FALSE",
-            "STENCILBUFFER": "FALSE",
-            "TEXTURES": [
-              {
-                "[[PROTOTYPE]]": "TEXTURE"
-              }
-            ],
-            "VIEWPORT": {
-              "W": 855,
-              "X": 0,
-              "Y": 0,
-              "Z": 855,
-              "TYPE": "VECTOR4"
-            },
-            "WIDTH": 855
-          },
-          {
-            "DEPTH": 1,
-            "DEPTHBUFFER": "FALSE",
-            "DEPTHTEXTURE": "NULL",
-            "HEIGHT": 855,
-            "ISRENDERTARGET": "TRUE",
-            "ISWEBGLRENDERTARGET": "TRUE",
-            "RESOLVEDEPTHBUFFER": "TRUE",
-            "RESOLVESTENCILBUFFER": "TRUE",
-            "SAMPLES": 0,
-            "SCISSOR": {
-              "W": 855,
-              "X": 0,
-              "Y": 0,
-              "Z": 855,
-              "TYPE": "VECTOR4"
-            },
-            "SCISSORTEST": "FALSE",
-            "STENCILBUFFER": "FALSE",
-            "TEXTURES": [
-              {
-                "[[PROTOTYPE]]": "TEXTURE"
-              }
-            ],
-            "VIEWPORT": {
-              "W": 855,
-              "X": 0,
-              "Y": 0,
-              "Z": 855,
-              "TYPE": "VECTOR4"
-            },
-            "WIDTH": 855
-          }
-        ],
-        "WRAP_S": "NULL",
-        "WRAP_T": "NULL"
-      }
-    ]
+    "WRAP_S": "NULL",
+    "WRAP_T": "NULL"
   }
 }

@@ -1,7 +1,7 @@
 {
   "MATERIAL": {
     "TYPE": "MESH STANDARD MATERIAL",
-    "[[PROTOTYPE]]": "MATERIAL",
+    "PROTOTYPE": "MATERIAL",
     "UUID": "5bf5e678-8882-45ac-8d48-acf365d7beec",
     "ALPHA_HASH": "FALSE",
     "ALPHA_MAP": "NULL",

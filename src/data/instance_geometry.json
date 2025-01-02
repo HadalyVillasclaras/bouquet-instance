@@ -22,7 +22,7 @@
     "_UPDATE_RANGE": {
       "OFFSET": 0,
       "COUNT": -1,
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
     "BUFFER": {
       "TYPE": "ARRAY BUFFER",
@@ -30,7 +30,7 @@
       "DETACHED": "FALSE",
       "MAX_BYTE_LENGTH": 8767668,
       "RESIZABLE": "FALSE",
-      "[[PROTOTYPE]]": "ARRAY BUFFER",
+      "PROTOTYPE": "ARRAY BUFFER",
       "INT8_ARRAY(8767668)": [
         "[0…999999]",
         "[1000000…1999999]",
@@ -113,7 +113,7 @@
     "_UPDATE_RANGE": {
       "OFFSET": 0,
       "COUNT": -1,
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
     "BUFFER": {
       "TYPE": "ARRAY BUFFER",
@@ -121,7 +121,7 @@
       "DETACHED": "FALSE",
       "MAX_BYTE_LENGTH": 8767668,
       "RESIZABLE": "FALSE",
-      "[[PROTOTYPE]]": "ARRAY BUFFER",
+      "PROTOTYPE": "ARRAY BUFFER",
       "INT8_ARRAY(8767668)": [
         "[0…999999]",
         "[1000000…1999999]",
@@ -136,7 +136,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
         "SYMBOL_TO_STRING: INT8ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ],
       "UINT8_ARRAY(8767668)": [
         "[0…999999]",
@@ -152,7 +152,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
         "SYMBOL_TO_STRING: UINT8ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ],
       "INT16_ARRAY(4383834)": [
         "[0…999999]",
@@ -164,7 +164,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 4383834",
         "SYMBOL_TO_STRING: INT16ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ],
       "INT32_ARRAY(2191917)": [
         "[0…999999]",
@@ -174,7 +174,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
         "SYMBOL_TO_STRING: INT32ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ],
       "FLOAT32_ARRAY(2191917)": [
         "[0…999999]",
@@ -184,7 +184,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
         "SYMBOL_TO_STRING: FLOAT32ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ]
     }
   },
@@ -266,7 +266,7 @@
     "_UPDATE_RANGE": {
       "OFFSET": 0,
       "COUNT": -1,
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
     "BUFFER": {
       "TYPE": "ARRAYBUFFER",
@@ -274,7 +274,7 @@
       "DETACHED": "FALSE",
       "MAX_BYTE_LENGTH": 5845112,
       "RESIZABLE": "FALSE",
-      "[[PROTOTYPE]]": "ARRAYBUFFER",
+      "PROTOTYPE": "ARRAYBUFFER",
       "INT8_ARRAY(5845112)": {
         "0.": "[0…999999]",
         "1.": "[1000000…1999999]",

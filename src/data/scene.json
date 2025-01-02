@@ -1,5 +1,5 @@
 {
-  "[[PROTOTYPE]]": "_OBJECT3D",
+  "PROTOTYPE": "_OBJECT3D",
   "IS_OBJECT3D": "TRUE",
   "VISIBLE": "TRUE",
   "ID": 6,
@@ -21,12 +21,12 @@
   "CAST_SHADOW": "FALSE",
   "CHILDREN": {
     "0": {
-      "[[PROTOTYPE]]": "CAMERA",
+      "PROTOTYPE": "CAMERA",
       "TYPE": "PERSPECTIVE_CAMERA",
       "UUID": "44767c2c-6f79-474c-9d17-73af69974c56"
     },
     "1": {
-      "[[PROTOTYPE]]": "_OBJECT3D",
+      "PROTOTYPE": "_OBJECT3D",
       "TYPE": "POINTS",
       "UUID": "99b04799-40eb-4c4e-8c91-0b318f52f838"
     }

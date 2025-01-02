@@ -17,9 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/instance_parser_extensions.json', elementId: 'obj-inst-ext' },
     { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },
     { url: '../data/instance_material.json', elementId: 'obj-inst-mat' },
-    { url: '../data/instance_parser.json', elementId: 'obj-inst-parser' }
+    { url: '../data/instance_parser.json', elementId: 'obj-inst-parser' },
 
 
+    // GPU COMPUTATION
+    { url: '../data/gpu_computation.json', elementId: 'obj-gpu-comp' }
 
 
 

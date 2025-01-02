@@ -28,7 +28,7 @@
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
   "NAME": "BOUQUET",
   "PARENT": {
-   "[[PROTOTYPE]]": "_OBJECT3D"
+   "PROTOTYPE": "_OBJECT3D"
   },
   "POSITION": {
     "TYPE": "_VECTOR3",
@@ -80,5 +80,5 @@
     "TYPE": "_MATRIX3",
     "ELEMENTS": [1, 0, 0, 0, 1, 0, 0, 0, 1]
   },
-  "[[PROTOTYPE]]": "_OBJECT3D"
+  "PROTOTYPE": "_OBJECT3D"
 }

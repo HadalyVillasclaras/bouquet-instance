@@ -3,20 +3,20 @@
   "WITH_CREDENTIALS": "FALSE",
   "DRACO_LOADER": {
     "TYPE": "DRACO_LOADER",
-   "[[PROTOTYPE]]": "LOADER"
+   "PROTOTYPE": "LOADER"
   },
   "KTX2_LOADER": "NULL",
   "MANAGER": {
     "TYPE": "LOADING MANAGER",
-    "[[PROTOTYPE]]": "LOADER"
+    "PROTOTYPE": "LOADER"
 
   },
   "MESHOPT_DECODER": "NULL",
   "PATH": "",
   "PLUGIN_CALLBACKS": "['ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)', 'ƒ (PARSER)']",
   "REQUEST_HEADER": {
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "RESOURCE_PATH": "",
-  "[[PROTOTYPE]]": "LOADER"
+  "PROTOTYPE": "LOADER"
 }

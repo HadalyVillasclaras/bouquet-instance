@@ -54,15 +54,15 @@
         "VERSION": 2
       },
       "NAME": "KHR_BINARY_GLTF",
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
   "KHR_DRACO_MESH_COMPRESSION": {
     "NAME": "KHR_DRACO_MESH_COMPRESSION",
     "JSON": {
-    "[[PROTOTYPE]]": "DESERIALIZED DATA"
+    "PROTOTYPE": "DESERIALIZED DATA"
     },
     "DRACO_LOADER": {
-      "[[PROTOTYPE]]": "LOADER"
+      "PROTOTYPE": "LOADER"
     }
   },
   "KHR_LIGHTS_PUNCTUAL": 1,

@@ -46,7 +46,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 285747",
         "SYMBOL_TO_STRING: INT8ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ]
     },
     {
@@ -84,7 +84,7 @@
         "BYTE_OFFSET: 0",
         "LENGTH: 285747",
         "SYMBOL_TO_STRING: UINT8ARRAY",
-        "[[PROTOTYPE]]: TYPEDARRAY"
+        "PROTOTYPE: TYPEDARRAY"
       ]
     },
     "[[ARRAY_BUFFER_BYTE_LENGTH]]: 285747",
@@ -106,7 +106,7 @@
     "UV": "FLOAT32ARRAY"
   },
   "MANAGER": {
-    "[[PROTOTYPE]]": "LOADING MANAGER"
+    "PROTOTYPE": "LOADING MANAGER"
   },
   "REQUEST_HEADER": "{}",
   "WORKER_LIMIT": 4,
@@ -121,5 +121,5 @@
     }
   ],
   "WORKER_SOURCE_URL": "BLOB:HTTP://LOCALHOST:5173/496AC8D5-7C26-48C1-86ED-2B7CF16F962B",
-  "[[PROTOTYPE]]": "LOADER"
+  "PROTOTYPE": "LOADER"
 }

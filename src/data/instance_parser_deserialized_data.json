@@ -14,7 +14,7 @@
         -3.0325753688812256
       ],
       "TYPE": "VEC3",
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
     "1": {
       "COMPONENTTYPE": 5126,
@@ -31,12 +31,12 @@
       "COUNT": 2097183,
       "TYPE": "SCALAR"
     },
-    "[[PROTOTYPE]]": "ARRAY"
+    "PROTOTYPE": "ARRAY"
   },
   "ASSET": {
     "GENERATOR": "Khronos glTF Blender I/O v4.2.70",
     "VERSION": "2.0",
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "BUFFERVIEWS": {
     "0": {
@@ -44,7 +44,7 @@
       "BYTELENGTH": 4330065,
       "BYTEOFFSET": 0
     },
-    "[[PROTOTYPE]]": "ARRAY"
+    "PROTOTYPE": "ARRAY"
   },
   "BUFFERS": {
     "0": {
@@ -77,15 +77,15 @@
         }
       }
     },
-    "[[PROTOTYPE]]": "ARRAY"
+    "PROTOTYPE": "ARRAY"
   },
   "NODES": {
     "0": {
       "MESH": 0,
       "NAME": "BOUQUET",
-      "[[PROTOTYPE]]": "OBJECT"
+      "PROTOTYPE": "OBJECT"
     },
-    "[[PROTOTYPE]]": "ARRAY"
+    "PROTOTYPE": "ARRAY"
   },
   "SCENE": 0,
   "SCENES": {

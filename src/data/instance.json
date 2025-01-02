@@ -9,12 +9,12 @@
     "TYPE": "GLTF_PARSER"
   },
   "SCENE": {
-    "[[PROTOTYPE]]": "_OBJECT3D"
+    "PROTOTYPE": "_OBJECT3D"
   },
   "SCENES": [
     {
       "0": {
-        "[[PROTOTYPE]]": "_OBJECT3D"
+        "PROTOTYPE": "_OBJECT3D"
       }
     }
   ],

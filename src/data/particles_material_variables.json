@@ -7,7 +7,7 @@
       "R": 0.004391442035325718,
       "TYPE": "COLOR"
     },
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "UCOLOR2": {
     "VALUE": {
@@ -17,7 +17,7 @@
       "R": 0.008568125615105716,
       "TYPE": "COLOR"
     },
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "UCOLOR3": {
     "VALUE": {
@@ -27,15 +27,15 @@
       "R": 0.004391442035325718,
       "TYPE": "COLOR"
     },
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "UPARTICLES_TEXTURE": {
     "VALUE": {
       "IS_TEXTURE": "TRUE",
       "UUID": "734b2cce-f7ce-4c7c-a822-f69f2936def6",
-      "[[PROTOTYPE]]": "_TEXTURE"
+      "PROTOTYPE": "_TEXTURE"
     },
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "URESOLUTION": {
     "VALUE": {
@@ -43,10 +43,10 @@
       "Y": 1576,
       "TYPE": "VECTOR2"
     },
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "USIZE": {
     "VALUE": 0.018,
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   }
 }

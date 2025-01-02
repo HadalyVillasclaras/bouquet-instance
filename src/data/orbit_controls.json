@@ -1,5 +1,5 @@
 {
-  "[[PROTOTYPE]]": "EVENT_DISPATCHER",
+  "PROTOTYPE": "EVENT_DISPATCHER",
   "TYPE": "ORBIT_CONTROLS",
   "AUTO_ROTATE": "TRUE",
   "AUTO_ROTATE_SPEED": 0.2,
@@ -45,7 +45,7 @@
   },
   "OBJECT": {
     "TYPE": "PERSECTIVE_CAMERA",
-    "[[PROTOTYPE]]": "CAMERA",
+    "PROTOTYPE": "CAMERA",
     "UUID": "189b5eb6-90ca-4b1d-b1cc-5cb20c6d5429"
   },
   "PAN_SPEED": 1,
@@ -80,6 +80,6 @@
   "ZOOM_SPEED": 1,
   "ZOOM_TO_CURSOR": "FALSE",
   "_DOM_ELEMENT_KEY_EVENTS": {
-    "[[PROTOTYPE]]": "WINDOW"
+    "PROTOTYPE": "WINDOW"
   }
 }

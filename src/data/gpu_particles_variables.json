@@ -2,7 +2,7 @@
   "UBASE": {
     "TYPE": "_UNIFORM",
     "VALUE": {
-      "[[PROTOTYPE]]": "DATATEXTURE"
+      "PROTOTYPE": "DATATEXTURE"
     }
   },
   "UDELTATIME": {
@@ -24,7 +24,7 @@
   "UPARTICLES": {
     "TYPE": "_UNIFORM",
     "VALUE": {
-      "[[PROTOTYPE]]": "TEXTURE"
+      "PROTOTYPE": "TEXTURE"
     }
   },
   "UTIME": {

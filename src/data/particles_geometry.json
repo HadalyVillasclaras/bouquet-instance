@@ -16,7 +16,7 @@
         "DETACHED": "FALSE",
         "MAX_BYTE_LENGTH": 5845112,
         "RESIZABLE": "FALSE",
-        "[[PROTOTYPE]]": "ARRAYBUFFER",
+        "PROTOTYPE": "ARRAYBUFFER",
         "INT8_ARRAY(5845112)": {
           "0.": "[0…999999]",
           "1.": "[1000000…1999999]",
@@ -28,7 +28,7 @@
           "BYTE_OFFSET": 0,
           "LENGTH": 5845112,
           "SYMBOL_TO_STRING": "INT8ARRAY",
-          "[[PROTOTYPE]]": "TYPEDARRAY"
+          "PROTOTYPE": "TYPEDARRAY"
         },
         "UINT8_ARRAY(5845112)": {
           "0.": "[0…999999]",
@@ -41,7 +41,7 @@
           "BYTE_OFFSET": 0,
           "LENGTH": 5845112,
           "SYMBOL_TO_STRING": "UINT8ARRAY",
-          "[[PROTOTYPE]]": "TYPEDARRAY"
+          "PROTOTYPE": "TYPEDARRAY"
         },
         "INT16_ARRAY(2922556)": {
           "0.": "[0…999999]",
@@ -51,7 +51,7 @@
           "BYTE_OFFSET": 0,
           "LENGTH": 2922556,
           "SYMBOL_TO_STRING": "INT16ARRAY",
-          "[[PROTOTYPE]]": "TYPEDARRAY"
+          "PROTOTYPE": "TYPEDARRAY"
         },
         "INT32_ARRAY(1461278)": {
           "0.": "[0…999999]",
@@ -60,7 +60,7 @@
           "BYTE_OFFSET": 0,
           "LENGTH": 1461278,
           "SYMBOL_TO_STRING": "INT32ARRAY",
-          "[[PROTOTYPE]]": "TYPEDARRAY"
+          "PROTOTYPE": "TYPEDARRAY"
         }
       },
       "COUNT": 730639,
@@ -74,7 +74,7 @@
       "_UPDATE_RANGE": {
         "OFFSET": 0,
         "COUNT": -1,
-        "[[PROTOTYPE]]": "OBJECT"
+        "PROTOTYPE": "OBJECT"
       }
     },
     "ASIZE_ARRAY": {
@@ -164,7 +164,7 @@
       "BYTE_OFFSET": 0,
       "LENGTH": 730639,
       "SYMBOL_TO_STRING": "FLOAT32ARRAY",
-      "[[PROTOTYPE]]": "ARRAYBUFFER"
+      "PROTOTYPE": "ARRAYBUFFER"
     }
   }
   },
@@ -194,5 +194,5 @@
   "USER_DATA": {},
   "UUID": "c7bb8b7f-5d48-48a3-9dd4-8bb23b9c8a0c",
   "ID": 5,
-  "[[PROTOTYPE]]": "EVENT_DISPATCHER"
+  "PROTOTYPE": "EVENT_DISPATCHER"
 }

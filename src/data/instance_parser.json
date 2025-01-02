@@ -2,13 +2,13 @@
   "ASSOCIATIONS MAP(2)": {
     "ENTRY 1": {
       "KEY": {
-        "[[PROTOTYPE]]": "MESH MATERIAL"
+        "PROTOTYPE": "MESH MATERIAL"
       },
       "VALUE": "UNDEFINED"
     },
     "ENTRY 2": {
       "KEY": {
-        "[[PROTOTYPE]]": "MESH OBJECT"
+        "PROTOTYPE": "MESH OBJECT"
       },
       "VALUE": {
         "MESHES": 0,
@@ -17,41 +17,41 @@
       }
     },
     "SIZE": 2,
-    "[[PROTOTYPE]]": "MAP"
+    "PROTOTYPE": "MAP"
   },
   "CACHE": {
     "DEFAULT_MATERIAL": {
-      "[[PROTOTYPE]]": "MESH MATERIAL"
+      "PROTOTYPE": "MESH MATERIAL"
     },
     "ADD": "ƒ (KEY, OBJECT)",
     "GET": "ƒ (KEY)",
     "REMOVE": "ƒ (KEY)",
     "REMOVE_ALL": "ƒ ()",
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "CAMERA_CACHE": {
     "REFS": {},
     "USES": {},
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "EXTENSIONS": {
-    "[[PROTOTYPE]]": "EXTENSIONS"
+    "PROTOTYPE": "EXTENSIONS"
   },
   "FILE_LOADER": {
     "TYPE": "FILELOADER",
     "CROSS_ORIGIN": "ANONYMOUS",
     "MANAGER": {
-      "[[PROTOTYPE]]": "LOADING MANAGER"
+      "PROTOTYPE": "LOADING MANAGER"
     },
     "PATH": "",
     "REQUEST_HEADER": {},
     "RESOURCE_PATH": "",
     "RESPONSE_TYPE": "ARRAYBUFFER",
     "WITH_CREDENTIALS": "FALSE",
-    "[[PROTOTYPE]]": "LOADER"
+    "PROTOTYPE": "LOADER"
   },
   "JSON": {
-    "[[PROTOTYPE]]": "DESERIALIZED DATA"
+    "PROTOTYPE": "DESERIALIZED DATA"
   },
   "LIGHT_CACHE": {
     "REFS": "{}",
@@ -65,7 +65,7 @@
   },
   "NODE_CACHE": {
     "0": {
-      "[[PROTOTYPE]]": "PROMISE",
+      "PROTOTYPE": "PROMISE",
       "[[PROMISE_STATE]]": "FULFILLED",
       "[[PROMISE_RESULT]]": {
         "TYPE": "MESH"
@@ -76,20 +76,20 @@
     "OBJECT_4": 0,
     "SCENE": 0,
     "BOUQUET": 0,
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "OPTIONS": {
     "CROSS_ORIGIN": "ANONYMOUS",
     "KTX2_LOADER": "NULL",
     "MANAGER": {
-      "[[PROTOTYPE]]": "LOADING MANAGER"
+      "PROTOTYPE": "LOADING MANAGER"
     },
     "MESHOPT_DECODER": "NULL",
     "PATH": "./assets/models/",
     "REQUEST_HEADER": "{}"
   },
   "PLUGINS": {
-    "[[PROTOTYPE]]": "OBJECT"
+    "PROTOTYPE": "OBJECT"
   },
   "PRIMITIVECACHE": {
     "DRACO": {
@@ -113,7 +113,7 @@
         "MODE": 4
       },
       "PROMISE": {
-        "[[PROTOTYPE]]": "PROMISE",
+        "PROTOTYPE": "PROMISE",
         "[[PROMISESTATE]]": "FULFILLED",
         "[[PROMISERESULT]]": "_BUFFERGEOMETRY"
       }
@@ -135,6 +135,6 @@
     "REQUESTHEADER": "{}",
     "RESOURCEPATH": "",
     "WITHCREDENTIALS": "FALSE",
-    "[[PROTOTYPE]]": "LOADER"
+    "PROTOTYPE": "LOADER"
   }
 }
