@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/gpu_computation_render_targets.json', elementId: 'obj-gpu-render-targets' },
     { url: '../data/gpu_data_texture.json', elementId: 'obj-gpu-texture' },
     { url: '../data/gpu_shader_material.json', elementId: 'obj-gpu-material' },
-    { url: '../data/gpu_shader_material_uniforms.json', elementId: 'obj-gpu-material-uniforms' }
+    { url: '../data/gpu_particles_variables.json', elementId: 'obj-particles-uniforms' }
 
 
 
