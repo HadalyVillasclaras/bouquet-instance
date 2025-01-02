@@ -1,16 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dataSources = [
+    { url: '../data/globals.json', elementId: 'obj-globals' },
+
+
     { url: '../data/scene.json', elementId: 'obj-scene' },
     { url: '../data/camera.json', elementId: 'obj-camera' },
     { url: '../data/orbit_controls.json', elementId: 'obj-orbit' },
     { url: '../data/webgl_render.json', elementId: 'obj-render' },
+    { url: '../data/loading_manager.json', elementId: 'obj-manager' },
 
     
+    { url: '../data/loader_draco.json', elementId: 'obj-draco' },
+    { url: '../data/loader_gltf.json', elementId: 'obj-gltf' }, 
     
-    { url: '../data/draco_loader.json', elementId: 'obj-draco' },
-    { url: '../data/gltf_loader.json', elementId: 'obj-gltf' }, 
-    
-    { url: '../data/loading_manager.json', elementId: 'obj-manager' },
 
     { url: '../data/instance_parser_extensions.json', elementId: 'obj-inst-ext' },
     { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },

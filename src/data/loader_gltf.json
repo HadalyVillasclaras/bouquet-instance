@@ -2,11 +2,14 @@
   "CROSS_ORIGIN": "ANONYMOUS",
   "WITH_CREDENTIALS": "FALSE",
   "DRACO_LOADER": {
+    "TYPE": "DRACO_LOADER",
    "[[PROTOTYPE]]": "LOADER"
   },
   "KTX2_LOADER": "NULL",
   "MANAGER": {
-    "[[PROTOTYPE]]": "LOADING MANAGER"
+    "TYPE": "LOADING MANAGER",
+    "[[PROTOTYPE]]": "LOADER"
+
   },
   "MESHOPT_DECODER": "NULL",
   "PATH": "",
@@ -14,5 +17,6 @@
   "REQUEST_HEADER": {
     "[[PROTOTYPE]]": "OBJECT"
   },
-  "RESOURCE_PATH": ""
+  "RESOURCE_PATH": "",
+  "[[PROTOTYPE]]": "LOADER"
 }

@@ -1,0 +1,29 @@
+{
+  "MIN_PAN": {
+    "TYPE": "_VECTOR3",
+    "X": -2,
+    "Y": -2,
+    "Z": -2,
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "MAX_PAN": {
+    "TYPE": "_VECTOR3",
+    "X": 2,
+    "Y": 2,
+    "Z": 2,
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+  "SIZES": {
+    "TYPE": "OBJECT",
+    "WIDTH": 1440,
+    "HEIGHT": 788,
+    "PIXELRATIO": 2,
+    "[[PROTOTYPE]]": "OBJECT"
+  },
+    "COLORS": {
+      "BG_COLOR": "#f4f4f4",
+      "COLOR_1": "#0e083a",
+      "COLOR_2": "#172574",
+      "COLOR_3": "#0e083a"
+    }
+}

@@ -1,9 +1,10 @@
 {
   "[[PROTOTYPE]]": "CAMERA",
-  "ANIMATIONS":  "[]",
+  "TYPE": "PERSPECTIVE_CAMERA",
+  "ANIMATIONS":  "ARRAY(0)",
   "ASPECT": 1.8274111675126903,
   "CAST_SHADOW": "FALSE",
-  "CHILDREN":  "[]",
+  "CHILDREN":  "ARRAY(0)",
   "COORDINATE_SYSTEM": 2000,
   "FAR": 100,
   "FILM_GAUGE": 35,
@@ -164,7 +165,6 @@
     "Y": 1,
     "Z": 1
   },
-  "TYPE": "PERSPECTIVE_CAMERA",
   "UP": {
     "TYPE": "_VECTOR3",
     "X": 0,

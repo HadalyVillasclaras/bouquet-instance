@@ -1,4 +1,6 @@
 {
+  "[[PROTOTYPE]]": "EVENT_DISPATCHER",
+  "TYPE": "ORBIT_CONTROLS",
   "AUTO_ROTATE": "TRUE",
   "AUTO_ROTATE_SPEED": 0.2,
   "CURSOR": {
@@ -42,7 +44,9 @@
     "RIGHT": 2
   },
   "OBJECT": {
-    "[[PROTOTYPE]]": "CAMERA"
+    "TYPE": "PERSECTIVE_CAMERA",
+    "[[PROTOTYPE]]": "CAMERA",
+    "UUID": "189b5eb6-90ca-4b1d-b1cc-5cb20c6d5429"
   },
   "PAN_SPEED": 1,
   "POSITION0": {

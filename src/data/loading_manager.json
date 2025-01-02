@@ -1,5 +1,6 @@
 {
-  "[[PROTOTYPE]]": "LOADER",
+  "TYPE": "LOADING_MANAGER",
+  "[[PROTOTYPE]]": "OBJECT",
   "ONSTART": "NULL",
   "ONPROGRESS": "NULL",
   "ONERROR": "NULL",

@@ -6,7 +6,7 @@
   "UUID": "7D74DBF7-416E-41B5-8C61-FCC4FBA5158F",
   "TYPE": "SCENE",
   "PARENT": "NULL",
-  "ANIMATIONS": "[]",
+  "ANIMATIONS": "ARRAY(0)",
   "BACKGROUND": "NULL",
   "BACKGROUND_BLURRINESS": 0,
   "BACKGROUND_INTENSITY": 1,
@@ -19,10 +19,18 @@
     "_Z": 0
   },
   "CAST_SHADOW": "FALSE",
-  "CHILDREN": [
-    "PERSPECTIVE_CAMERA [OBJECT]",
-    "POINTS [OBJECT]"
-  ],
+  "CHILDREN": {
+    "0": {
+      "[[PROTOTYPE]]": "CAMERA",
+      "TYPE": "PERSPECTIVE_CAMERA",
+      "UUID": "44767c2c-6f79-474c-9d17-73af69974c56"
+    },
+    "1": {
+      "[[PROTOTYPE]]": "_OBJECT3D",
+      "TYPE": "POINTS",
+      "UUID": "99b04799-40eb-4c4e-8c91-0b318f52f838"
+    }
+  },
   "ENVIRONMENT": "NULL",
   "ENVIRONMENT_INTENSITY": 1,
   "ENVIRONMENT_ROTATION": {

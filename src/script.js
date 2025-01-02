@@ -11,6 +11,7 @@ import DataUpdater from './js/DataUpdater.js';
 import { getRotation, getFPS } from './js/helpers.js';
 import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './js/animationSetUp.js';
 import './js/dataDisplay.js';
+
 /**
  * Globals
  */
@@ -36,7 +37,6 @@ const canvas = document.querySelector('canvas.webgl')
 /**
  * Base
  */
-
 // Scene
 const scene = new THREE.Scene();
 
@@ -68,7 +68,6 @@ scene.add(camera);
 // Controls
 const controls = new OrbitControls(camera, canvas);
 controlsSetUp(controls);
-
 
 /**
  * Renderer

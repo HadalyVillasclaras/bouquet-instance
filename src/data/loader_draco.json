@@ -1,0 +1,125 @@
+{
+  "CROSS_ORIGIN": "ANONYMOUS",
+  "WITH_CREDENTIALS": "FALSE",
+  "PATH": "",
+  "RESOURCE_PATH": "",
+  "DECODER_BINARY": "NULL",
+  "DECODER_CONFIG": {
+    "WASM_BINARY": [
+    "TYPE: ARRAYBUFFER",
+    "BYTE_LENGTH: 285747",
+    "DETACHED: FALSE",
+    "MAX_BYTE_LENGTH: 285747",
+    "RESIZABLE: FALSE",
+    {
+      "INT8_ARRAY(285747)": [
+        "[0…9999]",
+        "[10000…19999]",
+        "[20000…29999]",
+        "[30000…39999]",
+        "[40000…49999]",
+        "[50000…59999]",
+        "[60000…69999]",
+        "[70000…79999]",
+        "[80000…89999]",
+        "[90000…99999]",
+        "[100000…109999]",
+        "[110000…119999]",
+        "[120000…129999]",
+        "[130000…139999]",
+        "[140000…149999]",
+        "[150000…159999]",
+        "[160000…169999]",
+        "[170000…179999]",
+        "[180000…189999]",
+        "[190000…199999]",
+        "[200000…209999]",
+        "[210000…219999]",
+        "[220000…229999]",
+        "[230000…239999]",
+        "[240000…249999]",
+        "[250000…259999]",
+        "[260000…269999]",
+        "[270000…279999]",
+        "[280000…285746]",
+        "BYTE_LENGTH: 285747",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 285747",
+        "SYMBOL_TO_STRING: INT8ARRAY",
+        "[[PROTOTYPE]]: TYPEDARRAY"
+      ]
+    },
+    {
+      "UINT8_ARRAY(285747)": [
+        "[0…9999]",
+        "[10000…19999]",
+        "[20000…29999]",
+        "[30000…39999]",
+        "[40000…49999]",
+        "[50000…59999]",
+        "[60000…69999]",
+        "[70000…79999]",
+        "[80000…89999]",
+        "[90000…99999]",
+        "[100000…109999]",
+        "[110000…119999]",
+        "[120000…129999]",
+        "[130000…139999]",
+        "[140000…149999]",
+        "[150000…159999]",
+        "[160000…169999]",
+        "[170000…179999]",
+        "[180000…189999]",
+        "[190000…199999]",
+        "[200000…209999]",
+        "[210000…219999]",
+        "[220000…229999]",
+        "[230000…239999]",
+        "[240000…249999]",
+        "[250000…259999]",
+        "[260000…269999]",
+        "[270000…279999]",
+        "[280000…285746]",
+        "BYTE_LENGTH: 285747",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 285747",
+        "SYMBOL_TO_STRING: UINT8ARRAY",
+        "[[PROTOTYPE]]: TYPEDARRAY"
+      ]
+    },
+    "[[ARRAY_BUFFER_BYTE_LENGTH]]: 285747",
+    "[[ARRAY_BUFFER_DATA]]: 1718"
+  ]
+  },
+  "DECODER_PATH": "/DRACO/",
+  "DECODER_PENDING": "PROMISE {<FULFILLED>: UNDEFINED}",
+  "DEFAULT_ATTRIBUTE_IDS": {
+    "COLOR": "COLOR",
+    "NORMAL": "NORMAL",
+    "POSITION": "POSITION",
+    "UV": "TEX_COORD"
+  },
+  "DEFAULT_ATTRIBUTE_TYPES": {
+    "COLOR": "FLOAT32ARRAY",
+    "NORMAL": "FLOAT32ARRAY",
+    "POSITION": "FLOAT32ARRAY",
+    "UV": "FLOAT32ARRAY"
+  },
+  "MANAGER": {
+    "[[PROTOTYPE]]": "LOADING MANAGER"
+  },
+  "REQUEST_HEADER": "{}",
+  "WORKER_LIMIT": 4,
+  "WORKER_NEXT_TASK_ID": 2,
+  "WORKER_POOL": [
+    {
+      "_CALLBACKS": "{}",
+      "_TASK_COSTS": "{}",
+      "_TASK_LOAD": 0,
+      "ON_ERROR": "NULL",
+      "ON_MESSAGE": "ƒ (E)"
+    }
+  ],
+  "WORKER_SOURCE_URL": "BLOB:HTTP://LOCALHOST:5173/496AC8D5-7C26-48C1-86ED-2B7CF16F962B",
+  "[[PROTOTYPE]]": "LOADER"
+}
