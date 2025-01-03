@@ -1,5 +1,7 @@
 {
   "ASSOCIATIONS MAP(2)": {
+    "TYPE": "MAP",
+    "PROTOTYPE": "MAP",
     "0": {
       "KEY": {
         "TYPE": "MESH_STANDARD_MATERIAL",
@@ -10,7 +12,9 @@
     },
     "1": {
       "KEY": {
-        "PROTOTYPE": "MESH OBJECT"
+        "TYPE": "MESH",
+        "PROTOTYPE": "_OBJECT3D",
+        "UUID": "181dbfaa-75f9-4e66-8d7d-062ae91164b9"
       },
       "VALUE": {
         "MESHES": 0,
@@ -18,8 +22,7 @@
         "NODES": 0
       }
     },
-    "SIZE": 2,
-    "PROTOTYPE": "MAP"
+    "SIZE": 2
   },
   "CACHE": {
     "DEFAULT_MATERIAL": {
@@ -57,7 +60,8 @@
     "WITH_CREDENTIALS": "FALSE"
   },
   "JSON": {
-    "PROTOTYPE": "DESERIALIZED DATA"
+    "TYPE": "DESERIALIZED DATA",
+    "PROTOTYPE": "OBJECT"
   },
   "LIGHT_CACHE": {
     "REFS": "{}",
@@ -88,13 +92,15 @@
     "CROSS_ORIGIN": "ANONYMOUS",
     "KTX2_LOADER": "NULL",
     "MANAGER": {
-      "PROTOTYPE": "LOADING MANAGER"
+      "TYPE": "LOADING_MANAGER",
+      "PROTOTYPE": "LOADER"
     },
     "MESHOPT_DECODER": "NULL",
     "PATH": "./assets/models/",
     "REQUEST_HEADER": "{}"
   },
   "PLUGINS": {
+    "TYPE": "PLUGINS",
     "PROTOTYPE": "OBJECT"
   },
   "PRIMITIVECACHE": {
@@ -128,11 +134,13 @@
   "SOURCE_CACHE": "{}",
   "TEXTURE_CACHE": "{}",
   "TEXTURELOADER": {
-    "TYPE": "IMAGE BIT MAP LOADER",
+    "TYPE": "IMAGE_BIT_MAP_LOADER",
+    "PROTOTYPE": "LOADER",
     "CROSSORIGIN": "ANONYMOUS",
-    "ISIMAGEBITMAPLOADER": true,
+    "ISIMAGEBITMAPLOADER": "TRUE",
     "MANAGER": {
-      "TYPE": "LOADING MANAGER"
+      "TYPE": "LOADING MANAGER",
+      "PROTOTYPE": "LOADER"
     },
     "OPTIONS": {
       "PREMULTIPLYALPHA": "NONE"
@@ -140,7 +148,6 @@
     "PATH": "NULL",
     "REQUESTHEADER": "{}",
     "RESOURCEPATH": "NULL",
-    "WITHCREDENTIALS": "FALSE",
-    "PROTOTYPE": "LOADER"
+    "WITHCREDENTIALS": "FALSE"
   }
 }

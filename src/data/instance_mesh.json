@@ -1,5 +1,6 @@
 {
   "TYPE": "MESH",
+  "PROTOTYPE": "_OBJECT3D",
   "ANIMATIONS": "[]",
   "CAST_SHADOW": "FALSE",
   "CHILDREN": "[]",
@@ -13,16 +14,17 @@
     "MASK": 1
   },
   "MATERIAL": {
-    "TYPE": "MESH_STANDARD_MATERIAL"
+    "TYPE": "MESH_STANDARD_MATERIAL",
+    "PROTOTYPE": "MATERIAL"
   },
   "MATRIX": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
   },
   "MATRIX_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
   },
   "MATRIX_WORLD_AUTO_UPDATE": "TRUE",
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
@@ -74,11 +76,10 @@
   "ID": 8,
   "MODEL_VIEW_MATRIX": {
     "TYPE": "_MATRIX4",
-    "ELEMENTS": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]
+    "ELEMENTS": "[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1]"
   },
   "NORMAL_MATRIX": {
     "TYPE": "_MATRIX3",
-    "ELEMENTS": [1, 0, 0, 0, 1, 0, 0, 0, 1]
-  },
-  "PROTOTYPE": "_OBJECT3D"
+    "ELEMENTS": "[1, 0, 0, 0, 1, 0, 0, 0, 1]"
+  }
 }

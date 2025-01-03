@@ -218,7 +218,7 @@
   "GROUPS": "[]",
   "ID": 3,
   "INDEX": {
-    "TYPE": "BUFFERATTRIBUTE",
+    "TYPE": "BUFFER_ATTRIBUTE",
     "UINT32ARRAY(2097183)": [
       "[0…999999]",
       "[1000000…1999999]",

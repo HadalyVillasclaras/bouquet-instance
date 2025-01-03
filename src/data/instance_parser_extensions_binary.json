@@ -1,0 +1,53 @@
+{
+  "TYPE": "GLTF_BINARY_EXTENSION",
+  "NAME": "KHR_BINARY_GLTF",
+  "PROTOTYPE": "OBJECT",
+  "BODY": {
+    "INT8_ARRAY(4330068)": {
+      "0.": "[0…999999]",
+      "1.": "[1000000…1999999]",
+      "2.": "[2000000…2999999]",
+      "3.": "[3000000…3999999]",
+      "4.": "[4000000…4330067]",
+      "BYTE_LENGTH": 4330068,
+      "BYTE_OFFSET": 0,
+      "LENGTH": 4330068,
+      "SYMBOL_TO_STRING": "INT8ARRAY"
+    },
+    "UINT8_ARRAY(4330068)": {
+      "0.": "[0…999999]",
+      "1.": "[1000000…1999999]",
+      "2.": "[2000000…2999999]",
+      "3.": "[3000000…3999999]",
+      "4.": "[4000000…4330067]",
+      "BYTE_LENGTH": 4330068,
+      "BYTE_OFFSET": 0,
+      "LENGTH": 4330068,
+      "SYMBOL_TO_STRING": "UINT8ARRAY"
+    },
+    "INT16_ARRAY(2165034)": {
+      "0.": "[0…999999]",
+      "1.": "[1000000…1999999]",
+      "2.": "[2000000…2165033]",
+      "BYTE_LENGTH": 4330068,
+      "BYTE_OFFSET": 0,
+      "LENGTH": 2165034,
+      "SYMBOL_TO_STRING": "INT16ARRAY"
+    },
+    "INT32_ARRAY(1082517)": {
+      "0.": "[0…999999]",
+      "1.": "[1000000…1082516]",
+      "BYTE_LENGTH": 4330068,
+      "BYTE_OFFSET": 0,
+      "LENGTH": 1082517,
+      "SYMBOL_TO_STRING": "INT32ARRAY"
+    }
+  },
+  "CONTENT": "{\"asset\":{\"generator\":\"Khronos glTF Blender I/O v4.2.70\", \"version\":\"2.0\"}, \"extensionsUsed\":[\"KHR_draco_mesh_compression\"], \"extensionsRequired\":[\"KHR_draco_mesh_compression\"], \"scene\":0, \"scenes\":[{\"name\":\"Scene\", \"nodes\":[0]}], \"nodes\":[{\"mesh\":0, \"name\":\"mfs\"}], \"meshes\":[{\"name\":\"Object_4\", \"primitives\":[{\"attributes\":{\"POSITION\":0, \"NORMAL\":1, \"TEXCOORD_0\":2}, \"extensions\":{\"KHR_draco_mesh_compression\":{\"bufferView\":0, \"attributes\":{\"POSITION\":0, \"NORMAL\":1, \"TEXCOORD_0\":2}}}, \"indices\":3, \"mode\":4}]}], \"accessors\":[{\"componentType\":5126, \"count\":730639, \"max\":[7.690277576446533, 4.18904447555542, 4.861597061157227], \"min\":[-9.838533401489258, -8.054879188537598, -3.0325753688812256], \"type\":\"VEC3\"}, {\"componentType\":5126, \"count\":730639, \"type\":\"VEC3\"}, {\"componentType\":5126, \"count\":730639, \"type\":\"VEC2\"}, {\"componentType\":5125, \"count\":2097183, \"type\":\"SCALAR\"}], \"bufferViews\":[{\"buffer\":0, \"byteLength\":4330065, \"byteOffset\":0}], \"buffers\":[{\"byteLength\":4330068}]}",
+  "HEADER": {
+    "LENGTH": 4331044,
+    "MAGIC": "GLTF",
+    "VERSION": 2
+  }
+  
+}
