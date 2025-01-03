@@ -6,15 +6,19 @@
   },
   "CAMERAS": "ARRAY(0)",
   "PARSER": {
-    "TYPE": "GLTF_PARSER"
+    "TYPE": "GLTF_PARSER",
+    "PROTOTYPE": "OBJECT"
   },
   "SCENE": {
+    "TYPE": "SCENE",
     "PROTOTYPE": "_OBJECT3D"
   },
   "SCENES": [
     {
       "0": {
-        "PROTOTYPE": "_OBJECT3D"
+        "TYPE": "GROUP",
+        "PROTOTYPE": "_OBJECT3D",
+        "UUID": "eaacc745-3b19-4d9e-85b6-6ff86ba9dfd0"
       }
     }
   ],

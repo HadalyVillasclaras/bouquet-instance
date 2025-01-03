@@ -1,12 +1,14 @@
 {
   "ASSOCIATIONS MAP(2)": {
-    "ENTRY 1": {
+    "0": {
       "KEY": {
-        "PROTOTYPE": "MESH MATERIAL"
+        "TYPE": "MESH_STANDARD_MATERIAL",
+        "PROTOTYPE": "MATERIAL",
+        "UUID": "a09fbee6-5764-473a-ad52-b2abd7e8f3fd"
       },
       "VALUE": "UNDEFINED"
     },
-    "ENTRY 2": {
+    "1": {
       "KEY": {
         "PROTOTYPE": "MESH OBJECT"
       },
@@ -21,7 +23,9 @@
   },
   "CACHE": {
     "DEFAULT_MATERIAL": {
-      "PROTOTYPE": "MESH MATERIAL"
+      "TYPE": "MESH_STANDARD_MATERIAL",
+      "PROTOTYPE": "MATERIAL",
+      "UUID": "e2d55431-b9d6-4a94-8067-45250548dcb3"
     },
     "ADD": "ƒ (KEY, OBJECT)",
     "GET": "ƒ (KEY)",
@@ -30,25 +34,27 @@
     "PROTOTYPE": "OBJECT"
   },
   "CAMERA_CACHE": {
+    "PROTOTYPE": "OBJECT",
     "REFS": "{}",
-    "USES": "{}",
-    "PROTOTYPE": "OBJECT"
+    "USES": "{}"
   },
   "EXTENSIONS": {
-    "PROTOTYPE": "EXTENSIONS"
+    "TYPE": "EXTENSIONS",
+    "PROTOTYPE": "OBJECT"
   },
   "FILE_LOADER": {
     "TYPE": "FILELOADER",
+    "PROTOTYPE": "LOADER",
     "CROSS_ORIGIN": "ANONYMOUS",
     "MANAGER": {
-      "PROTOTYPE": "LOADING MANAGER"
+      "TYPE": "LOADING_MANAGER",
+      "PROTOTYPE": "LOADER"
     },
     "PATH": "NULL",
     "REQUEST_HEADER": "{}",
     "RESOURCE_PATH": "NULL",
     "RESPONSE_TYPE": "ARRAYBUFFER",
-    "WITH_CREDENTIALS": "FALSE",
-    "PROTOTYPE": "LOADER"
+    "WITH_CREDENTIALS": "FALSE"
   },
   "JSON": {
     "PROTOTYPE": "DESERIALIZED DATA"

@@ -1,24 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dataSources = [
+    // GLOBALS
     { url: '../data/globals.json', elementId: 'obj-globals' },
 
-
+    // THREE.JS
     { url: '../data/scene.json', elementId: 'obj-scene' },
     { url: '../data/camera.json', elementId: 'obj-camera' },
     { url: '../data/orbit_controls.json', elementId: 'obj-orbit' },
     { url: '../data/webgl_render.json', elementId: 'obj-render' },
+    { url: '../data/webgl_render_programs.json', elementId: 'obj-render-programs' },
+    { url: '../data/webgl_render_state.json', elementId: 'obj-render-state' },
     { url: '../data/loading_manager.json', elementId: 'obj-manager' },
 
-    
+    // LOADERS
     { url: '../data/loader_draco.json', elementId: 'obj-draco' },
     { url: '../data/loader_gltf.json', elementId: 'obj-gltf' }, 
     
-
+    // MODEL GLTF // INSTANCE
     { url: '../data/instance_parser_extensions.json', elementId: 'obj-inst-ext' },
     { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },
     { url: '../data/instance_material.json', elementId: 'obj-inst-mat' },
     { url: '../data/instance_parser.json', elementId: 'obj-inst-parser' },
-
 
     // GPU COMPUTATION
     { url: '../data/gpu_computation.json', elementId: 'obj-gpu-comp' },
@@ -32,12 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/particles_material.json', elementId: 'obj-particles-material' },
     { url: '../data/particles_material_variables.json', elementId: 'obj-particles-material-uni' },
     { url: '../data/particles_points.json', elementId: 'obj-particles-points' },
-
-
-
-
-
-
   ];
 
   dataSources.forEach(source => {

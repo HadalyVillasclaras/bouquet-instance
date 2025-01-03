@@ -1,0 +1,47 @@
+[
+  {
+    "TYPE": "SHADER_MATERIAL",
+    "CACHE_KEY": "0,1, resolution, vec2( 855.0,  855.0 ), highp, srgb-linear, false, , false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, , false, false, 0, , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 65536, srgb, onBeforeCompile() ",
+    "DESTROY": "ƒ DESTROY()",
+    "FRAGMENT_SHADER": "WEBGLSHADER",
+    "GET_ATTRIBUTES": "ƒ GETATTRIBUTES()",
+    "GET_UNIFORMS": "ƒ GETUNIFORMS()",
+    "ID": 0,
+    "IS_READY": "ƒ ISREADY()",
+    "NAME": "GPU_COMPUTATION_SHADER",
+    "PROGRAM": "WEBGLPROGRAM",
+    "TYPE_VALUE": "SHADER_MATERIAL",
+    "USED_TIMES": 1,
+    "VERTEX_SHADER": "WEBGLSHADER"
+  },
+  {
+    "TYPE": "SHADER_MATERIAL",
+    "CACHE_KEY": "0,2, resolution, vec2( 855.0,  855.0 ), highp, srgb-linear, false, , false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, , false, false, 0, , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 65536, srgb, onBeforeCompile() ",
+    "DESTROY": "ƒ DESTROY()",
+    "FRAGMENT_SHADER": "WEBGLSHADER",
+    "GET_ATTRIBUTES": "ƒ GETATTRIBUTES()",
+    "GET_UNIFORMS": "ƒ GETUNIFORMS()",
+    "ID": 1,
+    "IS_READY": "ƒ ISREADY()",
+    "NAME": "GPU_COMPUTATION_SHADER",
+    "PROGRAM": "WEBGLPROGRAM",
+    "TYPE_VALUE": "SHADER_MATERIAL",
+    "USED_TIMES": 1,
+    "VERTEX_SHADER": "WEBGLSHADER"
+  },
+  {
+    "TYPE": "SHADER_MATERIAL",
+    "CACHE_KEY": "3,4, highp, srgb, false, , false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, , false, false, 0, , 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 65536, srgb, onBeforeCompile() ",
+    "DESTROY": "ƒ DESTROY()",
+    "FRAGMENT_SHADER": "WEBGLSHADER",
+    "GET_ATTRIBUTES": "ƒ GETATTRIBUTES()",
+    "GET_UNIFORMS": "ƒ GETUNIFORMS()",
+    "ID": 2,
+    "IS_READY": "ƒ ISREADY()",
+    "NAME": "NULL",
+    "PROGRAM": "WEBGLPROGRAM",
+    "TYPE_VALUE": "SHADER_MATERIAL",
+    "USED_TIMES": 1,
+    "VERTEX_SHADER": "WEBGLSHADER"
+  }
+]
