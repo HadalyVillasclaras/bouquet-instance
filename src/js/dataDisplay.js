@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // PARTICLES 
     { url: '../data/particles_geometry.json', elementId: 'obj-particles-geo' },
+    { url: '../data/particles_geometry_attributes.json', elementId: 'obj-particles-geo-att' },
+
     { url: '../data/particles_material.json', elementId: 'obj-particles-material' },
     { url: '../data/particles_material_variables.json', elementId: 'obj-particles-material-uni' },
     { url: '../data/particles_points.json', elementId: 'obj-particles-points' },
