@@ -1,12 +1,14 @@
 {
-  "ANIMATIONS": [],
+  "TYPE": "POINTS",
+  "PROTOTYPE": "_OBJECT3D",
+  "ANIMATIONS": "ARRAY(0)",
   "CAST_SHADOW": "FALSE",
-  "CHILDREN": [],
+  "CHILDREN": "ARRAY(0)",
   "FRUSTUM_CULLED": "TRUE",
   "GEOMETRY": {
-    "IS_BUFFER_GEOMETRY": "TRUE",
-    "UUID": "24686e05-20f6-4ba9-8506-70af37b2b01d",
-    "PROTOTYPE": "BUFFER_GEOMETRY"
+    "TYPE": "BUFFER_GEOMETRY",
+    "PROTOTYPE": "EVENT_DISPATCHER",
+    "UUID": "24686e05-20f6-4ba9-8506-70af37b2b01d"
   },
   "IS_OBJECT3D": "TRUE",
   "IS_POINTS": "TRUE",
@@ -14,9 +16,9 @@
     "MASK": 1
   },
   "MATERIAL": {
-    "IS_MATERIAL": "TRUE",
-    "UUID": "a3a1e160-3c9c-4963-9877-b18f21c74e7d",
-    "PROTOTYPE": "SHADER_MATERIAL"
+    "TYPE": "SHADER_MATERIAL",
+    "PROTOTYPE": "MATERIAL",
+    "UUID": "a3a1e160-3c9c-4963-9877-b18f21c74e7d"
   },
   "MATRIX": {
     "TYPE": "_MATRIX4",
@@ -31,9 +33,9 @@
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
   "NAME": "NULL",
   "PARENT": {
-    "IS_OBJECT3D": "TRUE",
-    "UUID": "473813d1-f16a-4574-abda-aab32363de56",
-    "PROTOTYPE": "SCENE"
+    "TYPE": "SCENE",
+    "PROTOTYPE": "_OBJECT3D",
+    "UUID": "473813d1-f16a-4574-abda-aab32363de56"
   },
   "POSITION": {
     "TYPE": "_VECTOR3",
@@ -44,30 +46,22 @@
   "QUATERNION": {
     "IS_QUATERNION": "TRUE",
     "_ON_CHANGE_CALLBACK": "ƒ ON_QUATERNION_CHANGE()",
-    "_W": 1,
-    "_X": 0,
-    "_Y": 0,
-    "_Z": 0,
-    "W": "(...)",
-    "X": "(...)",
-    "Y": "(...)",
-    "Z": "(...)",
+    "W": 1,
+    "X": 0,
+    "Y": 0,
+    "Z": 0,
     "TYPE": "QUATERNION"
   },
   "RECEIVE_SHADOW": "FALSE",
   "RENDER_ORDER": 0,
   "ROTATION": {
+    "TYPE": "EULER",
     "IS_EULER": "TRUE",
     "_ON_CHANGE_CALLBACK": "ƒ ON_ROTATION_CHANGE()",
-    "_ORDER": "XYZ",
-    "_X": 0,
-    "_Y": 0,
-    "_Z": 0,
-    "ORDER": "(...)",
-    "X": "(...)",
-    "Y": "(...)",
-    "Z": "(...)",
-    "TYPE": "EULER"
+    "ORDER": "XYZ",
+    "X": 0,
+    "Y": 0,
+    "Z": 0
   },
   "SCALE": {
     "TYPE": "_VECTOR3",
@@ -75,7 +69,6 @@
     "Y": 1,
     "Z": 1
   },
-  "TYPE": "POINTS",
   "UP": {
     "TYPE": "_VECTOR3",
     "X": 0,
@@ -93,6 +86,5 @@
   "NORMAL_MATRIX": {
     "TYPE": "_MATRIX3",
     "ELEMENTS": "[0.6293946165396509, 0.2814272610684818, -0.7243349455869146, -2.7755575615628914e-17, 0.9321170196910771, 0.36215723325956695, 0.7770858489709526, -0.22793981295446605, 0.5866694341785477]"
-  },
-  "PROTOTYPE": "_OBJECT3D"
+  }
 }

@@ -1,31 +1,31 @@
 {
   "UCOLOR1": {
     "VALUE": {
+      "TYPE": "COLOR",
+      "IS_COLOR": "TRUE",
       "B": 0.04231141061442144,
       "G": 0.002428215868235294,
-      "IS_COLOR": "TRUE",
-      "R": 0.004391442035325718,
-      "TYPE": "COLOR"
+      "R": 0.004391442035325718
     },
     "PROTOTYPE": "OBJECT"
   },
   "UCOLOR2": {
     "VALUE": {
+      "TYPE": "COLOR",
+      "IS_COLOR": "TRUE",
       "B": 0.17464740364527903,
       "G": 0.018500220124016656,
-      "IS_COLOR": "TRUE",
-      "R": 0.008568125615105716,
-      "TYPE": "COLOR"
+      "R": 0.008568125615105716
     },
     "PROTOTYPE": "OBJECT"
   },
   "UCOLOR3": {
     "VALUE": {
+      "TYPE": "COLOR",
+      "IS_COLOR": "TRUE",
       "B": 0.04231141061442144,
       "G": 0.002428215868235294,
-      "IS_COLOR": "TRUE",
-      "R": 0.004391442035325718,
-      "TYPE": "COLOR"
+      "R": 0.004391442035325718
     },
     "PROTOTYPE": "OBJECT"
   },

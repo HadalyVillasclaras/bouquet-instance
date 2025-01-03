@@ -25,7 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/gpu_computation_render_targets.json', elementId: 'obj-gpu-render-targets' },
     { url: '../data/gpu_data_texture.json', elementId: 'obj-gpu-texture' },
     { url: '../data/gpu_shader_material.json', elementId: 'obj-gpu-material' },
-    { url: '../data/gpu_particles_variables.json', elementId: 'obj-particles-uniforms' }
+    { url: '../data/gpu_particles_variables.json', elementId: 'obj-particles-uniforms' },
+
+    // PARTICLES 
+    { url: '../data/particles_geometry.json', elementId: 'obj-particles-geo' },
+    { url: '../data/particles_material.json', elementId: 'obj-particles-material' },
+    { url: '../data/particles_material_variables.json', elementId: 'obj-particles-material-uni' },
+    { url: '../data/particles_points.json', elementId: 'obj-particles-points' },
+
 
 
 

@@ -1,11 +1,13 @@
 {
+  "PROTOTYPE": "MATERIAL",
+  "TYPE": "SHADER_MATERIAL",
   "ALPHA_HASH": "FALSE",
   "ALPHA_TO_COVERAGE": "FALSE",
   "BLEND_ALPHA": 0,
   "BLEND_COLOR": {
+    "IS_COLOR": "TRUE",
     "B": 0,
     "G": 0,
-    "IS_COLOR": "TRUE",
     "R": 0
   },
   "BLEND_DST": 205,
@@ -21,9 +23,9 @@
   "CLIPPING_PLANES": "NULL",
   "COLOR_WRITE": "TRUE",
   "DEFAULT_ATTRIBUTE_VALUES": {
-    "COLOR": "(3) [1, 1, 1]",
-    "UV": "(2) [0, 0]",
-    "UV1": "(2) [0, 0]"
+    "COLOR": "[1, 1, 1]",
+    "UV": "[0, 0]",
+    "UV1": "[0, 0]"
   },
   "DEFINES": "{}",
   "DEPTH_FUNC": 3,
@@ -62,11 +64,11 @@
   "STENCIL_Z_PASS": 7680,
   "TONE_MAPPED": "TRUE",
   "TRANSPARENT": "FALSE",
-  "TYPE": "SHADER_MATERIAL",
   "UNIFORMS": {
-    "PROTOTYPE": "PARTICLES_MATERIAL_UNIFORMS"
+    "PROTOTYPE": "OBJECT",
+    "TYPE": "UNIFORMS"
   },
-  "UNIFORMS_GROUPS": [],
+  "UNIFORMS_GROUPS": "ARRAY(0)",
   "UNIFORMS_NEED_UPDATE": "FALSE",
   "USER_DATA": "{}",
   "UUID": "8c5820fe-5814-4c8b-a525-60e672066f54",
@@ -79,11 +81,10 @@
   "_ALPHA_TEST": 0,
   "_LISTENERS": {
     "DISPOSE": [
-      "ƒ ON_MATERIAL_DISPOSE(EVENT)"
+      "ƒ ON_MATERIAL_DISPOSE(E)"
     ],
     "PROTOTYPE": "ARRAY"
   },
   "ID": 10,
-  "ALPHA_TEST": "(...)",
-  "PROTOTYPE": "MATERIAL"
+  "ALPHA_TEST": "(...)"
 }
