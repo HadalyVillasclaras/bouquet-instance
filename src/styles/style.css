@@ -136,6 +136,14 @@ pre {
 	margin-bottom: 2px;
 }
 
+.data-tgl {
+	display: block;
+}
+
+.data-tgl.visible {
+	display: block;
+}
+
 /* Data Containers */
 .s-data-grid {
 	padding: 0 var(--spc-default);

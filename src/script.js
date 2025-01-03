@@ -191,7 +191,6 @@ const animate = (time) => {
 	if (time < lastTime + interval) {
 		return;
 	}
-
 	
 	// ZOOM 
 	const distance = Math.round(camera.position.distanceTo(controls.target));
@@ -240,7 +239,7 @@ const animate = (time) => {
 }
 
 animate();
-scene.visible = false;
+// scene.visible = false;
 // Objects
 console.log(manager);
 

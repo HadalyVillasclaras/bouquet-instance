@@ -49,7 +49,57 @@ document.addEventListener("DOMContentLoaded", function () {
   dataSources.forEach(source => {
     fetchJsonData(source.url, source.elementId);
   });
+
+  // Toggle data button
+  // const button = document.getElementById('btn-toggle-data');
+  // if (button) {
+  //   button.addEventListener('click', toggleData);
+  // }
+
+  // auto scroll
+  setTimeout(() => {
+    autoScroll(); 
+    
+  }, 5000);
+
+  
 });
+
+function autoScroll() {
+  const scrollContainers = document.querySelectorAll('.s-data-cnt');
+
+  scrollContainers.forEach(container => {
+    let scrollAmount = 0;
+    const step = 0.5;
+    const minDelay = 50;
+    const maxDelay = 100;
+    const delay = Math.random() * (maxDelay - minDelay) + minDelay;
+
+    const interval = setInterval(() => {
+      container.scrollTop += step;
+      scrollAmount += step;
+
+      if (scrollAmount >= container.scrollHeight - container.clientHeight) {
+        clearInterval(interval);
+      }
+    }, delay);
+  });
+}
+
+
+function toggleData() {
+  const elements = document.querySelectorAll('.data-tgl');
+  
+  elements.forEach(element => {
+    if (element.classList.contains('visible')) {
+      element.classList.remove('visible');
+      element.style.display = 'none';  
+    } else {
+      element.classList.add('visible');
+      element.style.display = 'block'; 
+    }
+  });
+}
 
 function fetchJsonData(url, elementId) {
   fetch(url)
