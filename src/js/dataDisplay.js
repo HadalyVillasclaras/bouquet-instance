@@ -66,25 +66,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function autoScroll() {
-  const scrollContainers = document.querySelectorAll('.s-data-cnt');
+  const scrollContainers = document.querySelectorAll('.scroll-cnt');
 
-  scrollContainers.forEach(container => {
-    let scrollAmount = 0;
+  scrollContainers.forEach((container, index) => {
+    let isActive = true;
     const step = 0.5;
-    const minDelay = 50;
-    const maxDelay = 100;
+    const minDelay = 60;
+    const maxDelay = 120;
     const delay = Math.random() * (maxDelay - minDelay) + minDelay;
 
-    const interval = setInterval(() => {
-      container.scrollTop += step;
-      scrollAmount += step;
+    const articlesContainer = container.firstElementChild;
+    articlesContainer.id = `articles-1-${index}`; 
 
-      if (scrollAmount >= container.scrollHeight - container.clientHeight) {
-        clearInterval(interval);
+    const clonedArticlesContainer = articlesContainer.cloneNode(true);
+    clonedArticlesContainer.id = `articles-2-${index}`; 
+    container.appendChild(clonedArticlesContainer);
+
+    const interval = setInterval(() => {
+      if (isActive) {
+        container.scrollTop += step;
+
+        const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
+        if (secondDivTop <= 0) {
+          container.scrollTop = articlesContainer.offsetTop;
+        }
       }
     }, delay);
+
+    container.addEventListener('mouseenter', () => {
+      isActive = false;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isActive = true;
+    });
   });
 }
+
+
+
 
 
 function toggleData() {
