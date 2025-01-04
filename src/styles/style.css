@@ -152,8 +152,12 @@ pre {
 	text-transform: uppercase;
 
 }
-.data-tgl.visible {
+.visible {
 	display: block;
+}
+
+.hide {
+	display: none;
 }
 
 /* Data Containers */
@@ -161,6 +165,8 @@ pre {
 	padding: 0 var(--spc-default);
 	position: relative;
 	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s;
 		/* position: relative;
 	z-index: 2;
 	pointer-events: none; */

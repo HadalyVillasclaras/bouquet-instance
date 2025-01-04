@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Toggle data button
+  const button = document.getElementById('btn-toggle-data');
+  if (button) {
+    button.addEventListener('click', toggleData);
+  }
+
   const dataSources = [
     // GLOBALS
     { url: '../data/globals.json', elementId: 'obj-globals' },
@@ -46,31 +53,33 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/particles_points.json', elementId: 'obj-particles-points' },
   ];
 
-  dataSources.forEach(source => {
-    fetchJsonData(source.url, source.elementId);
+  const fetchPromises = dataSources.map(source => {
+    return fetchJsonData(source.url, source.elementId);
   });
 
-  // Toggle data button
-  // const button = document.getElementById('btn-toggle-data');
-  // if (button) {
-  //   button.addEventListener('click', toggleData);
-  // }
+  Promise.all(fetchPromises).then(() => {
 
+    setTimeout(() => {
+      setVisibleData();
+    }, 500);
 
-
-  // auto scroll
-  function setupAutoScroll() {
-    const classSelector = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
-    autoScroll(classSelector);
-  }
-
-  setTimeout(setupAutoScroll, 3000);
-
-  window.addEventListener('resize', () => {
-    clearTimeout(autoScrollTimeout);
-    autoScrollTimeout = setTimeout(setupAutoScroll, 5000);
+    setTimeout(() => {
+      setupAutoScroll();
+    }, 6000);
   });
+
 });
+
+window.addEventListener('resize', () => {
+  clearTimeout(autoScrollTimeout);
+  autoScrollTimeout = setTimeout(setupAutoScroll, 5000);
+});
+
+// auto scroll
+function setupAutoScroll() {
+  const classSelector = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
+  autoScroll(classSelector);
+}
 
 let autoScrollInterval;
 let autoScrollTimeout;
@@ -120,29 +129,11 @@ function manageCloning(container, articlesContainer, index) {
   if (window.innerWidth >= 1225 && !existingClone) {
     const clonedArticlesContainer = articlesContainer.cloneNode(true);
     clonedArticlesContainer.id = `ch-b-${index}`;
+    clonedArticlesContainer.classList.add("s-data-clnd");
     container.appendChild(clonedArticlesContainer);
   } else if (window.innerWidth < 1225 && existingClone) {
     existingClone.remove();
   }
-}
-
-
-
-
-
-
-function toggleData() {
-  const elements = document.querySelectorAll('.data-tgl');
-
-  elements.forEach(element => {
-    if (element.classList.contains('visible')) {
-      element.classList.remove('visible');
-      element.style.display = 'none';
-    } else {
-      element.classList.add('visible');
-      element.style.display = 'block';
-    }
-  });
 }
 
 function fetchJsonData(url, elementId) {
@@ -165,6 +156,30 @@ function fetchJsonData(url, elementId) {
     });
 }
 
+function toggleData() {
+  const elements = document.querySelectorAll('.data-tgl');
+  const clonedContainers = document.querySelectorAll('.s-data-clnd');
+
+
+  elements.forEach(element => {
+    if (element.classList.contains('hide')) {
+      element.classList.remove('hide');
+    } else {
+      element.classList.add('hide');
+      // element.classList.add('visible');
+    }
+  });
+
+  clonedContainers.forEach(container => {
+    if (container.classList.contains('hide')) {
+      container.classList.remove('hide');
+    } else {
+      container.classList.add('hide');
+      // container.classList.add('visible');
+    }
+  } );
+}
+
 function displayObjectStyleJson(obj, elementId) {
   const element = document.getElementById(elementId);
   if (!element) return;
@@ -182,34 +197,35 @@ function formatObjectStyle(obj, indentLevel) {
     const formattedKey = key;
 
     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 1)}${indent}}\n`;
+      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.5)}${indent}}\n`;
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 2);
-          return `${indent}  {\n${objectContent}${indent}  }`;
+          const objectContent = formatObjectStyle(v, indentLevel + 1.7); 
+          return `${indent}  {\n${objectContent}${indent}  }`; 
         } else {
-          return `${indent}  ${formatStringWithIndents(JSON.stringify(v), indentLevel + 2)}`;
+          return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
         }
       }).join(',\n');
       result += `${indent}${formattedKey}: [\n${arrayContent}\n${indent}]\n`;
     } else {
-      result += `${indent}${formattedKey}: ${formatStringWithIndents(JSON.stringify(value), indentLevel)}\n`;
+      result += `${indent}${formattedKey}: ${removeQuotes(JSON.stringify(value))}\n`;
     }
   }
 
   return result;
 }
 
-function formatStringWithIndents(str, indentLevel) {
-  const indent = ' '.repeat(indentLevel * 2);
-  return str.replace(/\n/g, '\n' + indent);
-}
-
-
 function removeQuotes(value) {
   if (typeof value === 'string' && value.startsWith('"') && value.endsWith('"')) {
     return value.slice(1, -1);
   }
   return value;
+}
+
+function setVisibleData() {
+  const element = document.querySelector('.s-data-grid');
+  if (element) {
+    element.style.opacity = '1';
+  }
 }
