@@ -45,7 +45,7 @@
         "BYTE_LENGTH: 285747",
         "BYTE_OFFSET: 0",
         "LENGTH: 285747",
-        "SYMBOL_TO_STRING: INT8ARRAY",
+        "SYMBOL_TO_STRING: INT8",
         "PROTOTYPE: TYPEDARRAY"
       ]
     },
@@ -83,11 +83,11 @@
         "BYTE_LENGTH: 285747",
         "BYTE_OFFSET: 0",
         "LENGTH: 285747",
-        "SYMBOL_TO_STRING: UINT8ARRAY",
+        "SYMBOL_TO_STRING: UINT8",
         "PROTOTYPE: TYPEDARRAY"
       ]
     },
-    "[[ARRAY_BUFFER_BYTE_LENGTH]]: 285747",
+    "[[ARRAY_BYTE_LENGTH]]: 285747",
     "[[ARRAY_BUFFER_DATA]]: 1718"
   ]
   },

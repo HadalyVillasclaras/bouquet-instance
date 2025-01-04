@@ -7,8 +7,7 @@
   "FRUSTUM_CULLED": "TRUE",
   "GEOMETRY": {
     "TYPE": "BUFFER_GEOMETRY",
-    "PROTOTYPE": "EVENT_DISPATCHER",
-    "UUID": "24686e05-20f6-4ba9-8506-70af37b2b01d"
+    "PROTOTYPE": "EVENT_DISPATCHER"
   },
   "IS_OBJECT3D": "TRUE",
   "IS_POINTS": "TRUE",
@@ -17,8 +16,7 @@
   },
   "MATERIAL": {
     "TYPE": "SHADER_MATERIAL",
-    "PROTOTYPE": "MATERIAL",
-    "UUID": "a3a1e160-3c9c-4963-9877-b18f21c74e7d"
+    "PROTOTYPE": "MATERIAL"
   },
   "MATRIX": {
     "TYPE": "_MATRIX4",
@@ -34,8 +32,7 @@
   "NAME": "NULL",
   "PARENT": {
     "TYPE": "SCENE",
-    "PROTOTYPE": "_OBJECT3D",
-    "UUID": "473813d1-f16a-4574-abda-aab32363de56"
+    "PROTOTYPE": "_OBJECT3D"
   },
   "POSITION": {
     "TYPE": "_VECTOR3",
@@ -76,7 +73,6 @@
     "Z": 0
   },
   "USER_DATA": "{}",
-  "UUID": "4f16bada-e3ea-45d5-adb0-cd595911b520",
   "VISIBLE": "TRUE",
   "ID": 15,
   "MODEL_VIEW_MATRIX": {

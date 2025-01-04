@@ -3,7 +3,6 @@
   "IS_OBJECT3D": "TRUE",
   "VISIBLE": "TRUE",
   "ID": 6,
-  "UUID": "7D74DBF7-416E-41B5-8C61-FCC4FBA5158F",
   "TYPE": "SCENE",
   "PARENT": "NULL",
   "ANIMATIONS": "ARRAY(0)",
@@ -22,13 +21,11 @@
   "CHILDREN": {
     "0": {
       "PROTOTYPE": "CAMERA",
-      "TYPE": "PERSPECTIVE_CAMERA",
-      "UUID": "44767c2c-6f79-474c-9d17-73af69974c56"
+      "TYPE": "PERSPECTIVE_CAMERA"
     },
     "1": {
       "PROTOTYPE": "_OBJECT3D",
-      "TYPE": "POINTS",
-      "UUID": "99b04799-40eb-4c4e-8c91-0b318f52f838"
+      "TYPE": "POINTS"
     }
   },
   "ENVIRONMENT": "NULL",

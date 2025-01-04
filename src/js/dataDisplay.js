@@ -182,25 +182,29 @@ function formatObjectStyle(obj, indentLevel) {
     const formattedKey = key;
 
     if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 0.5)}${indent}}\n`;
+      result += `${indent}${formattedKey}: {\n${formatObjectStyle(value, indentLevel + 1)}${indent}}\n`;
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 1.7);
+          const objectContent = formatObjectStyle(v, indentLevel + 2);
           return `${indent}  {\n${objectContent}${indent}  }`;
         } else {
-          return `${indent}  ${removeQuotes(JSON.stringify(v))}`;
+          return `${indent}  ${formatStringWithIndents(JSON.stringify(v), indentLevel + 2)}`;
         }
       }).join(',\n');
       result += `${indent}${formattedKey}: [\n${arrayContent}\n${indent}]\n`;
     } else {
-      result += `${indent}${formattedKey}: ${removeQuotes(JSON.stringify(value))}\n`;
+      result += `${indent}${formattedKey}: ${formatStringWithIndents(JSON.stringify(value), indentLevel)}\n`;
     }
   }
 
   return result;
 }
 
+function formatStringWithIndents(str, indentLevel) {
+  const indent = ' '.repeat(indentLevel * 2);
+  return str.replace(/\n/g, '\n' + indent);
+}
 
 
 function removeQuotes(value) {

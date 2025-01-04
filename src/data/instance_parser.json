@@ -5,16 +5,14 @@
     "0": {
       "KEY": {
         "TYPE": "MESH_STANDARD_MATERIAL",
-        "PROTOTYPE": "MATERIAL",
-        "UUID": "a09fbee6-5764-473a-ad52-b2abd7e8f3fd"
+        "PROTOTYPE": "MATERIAL"
       },
       "VALUE": "UNDEFINED"
     },
     "1": {
       "KEY": {
         "TYPE": "MESH",
-        "PROTOTYPE": "_OBJECT3D",
-        "UUID": "181dbfaa-75f9-4e66-8d7d-062ae91164b9"
+        "PROTOTYPE": "_OBJECT3D"
       },
       "VALUE": {
         "MESHES": 0,
@@ -27,8 +25,7 @@
   "CACHE": {
     "DEFAULT_MATERIAL": {
       "TYPE": "MESH_STANDARD_MATERIAL",
-      "PROTOTYPE": "MATERIAL",
-      "UUID": "e2d55431-b9d6-4a94-8067-45250548dcb3"
+      "PROTOTYPE": "MATERIAL"
     },
     "ADD": "ƒ (KEY, OBJECT)",
     "GET": "ƒ (KEY)",

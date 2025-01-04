@@ -74,7 +74,6 @@
   "UNIFORMSGROUPS": "ARRAY(0)",
   "UNIFORMSNEEDUPDATE": "FALSE",
   "USERDATA": "{}",
-  "UUID": "F1394A0D-E20C-42E2-9C71-B641C6C99140",
   "VERSION": 0,
   "VERTEXCOLORS": "FALSE",
   "VERTEXSHADER": "void main()\t{\n\n\tgl_Position = vec4( position, 1.0 );\n\n}\n",

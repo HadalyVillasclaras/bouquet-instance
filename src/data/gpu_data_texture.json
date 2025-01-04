@@ -64,7 +64,7 @@
         "BYTE_LENGTH: 11696400",
         "BYTE_OFFSET: 0",
         "LENGTH: 2924100",
-        "SYMBOL_TO_STRING: FLOAT32ARRAY"
+        "SYMBOL_TO_STRING: FLOAT32"
       ],
       "BUFFER": {
         "TYPE": "ARRAYBUFFER",
@@ -89,7 +89,7 @@
           "BYTE_LENGTH: 11696400",
           "BYTE_OFFSET: 0",
           "LENGTH: 11696400",
-          "SYMBOL_TO_STRING: INT8ARRAY",
+          "SYMBOL_TO_STRING: INT8",
           "PROTOTYPE: TYPEDARRAY"
         ],
         "UINT8_ARRAY(11696400)": [
@@ -108,7 +108,7 @@
           "BYTE_LENGTH: 11696400",
           "BYTE_OFFSET: 0",
           "LENGTH: 11696400",
-          "SYMBOL_TO_STRING: UINT8ARRAY",
+          "SYMBOL_TO_STRING: UINT8",
           "PROTOTYPE: TYPEDARRAY"
         ],
         "INT16_ARRAY(5848200)": [
@@ -121,7 +121,7 @@
           "BYTE_LENGTH: 11696400",
           "BYTE_OFFSET: 0",
           "LENGTH: 5848200",
-          "SYMBOL_TO_STRING: INT16ARRAY",
+          "SYMBOL_TO_STRING: INT16",
           "PROTOTYPE: TYPEDARRAY"
         ],
         "INT32_ARRAY(2924100)": [
@@ -131,7 +131,7 @@
           "BYTE_LENGTH: 11696400",
           "BYTE_OFFSET: 0",
           "LENGTH: 2924100",
-          "SYMBOL_TO_STRING: INT32ARRAY",
+          "SYMBOL_TO_STRING: INT32",
           "PROTOTYPE: TYPEDARRAY"
         ]
       },
@@ -139,7 +139,6 @@
       "WIDTH": 855,
       "DATA_READY": "TRUE",
       "IS_SOURCE": "TRUE",
-      "UUID": "6792830D-246F-40BF-9E02-6DFD5EFDC3ED",
       "VERSION": 1,
       "ID": 5
     }
@@ -147,7 +146,6 @@
   "TYPE": 1015,
   "UNPACK_ALIGNMENT": 1,
   "USER_DATA": "{}",
-  "UUID": "F1EE8D5C-76C2-481C-BBC6-CE1E44F0FF20",
   "VERSION": 1,
   "WRAP_S": 1001,
   "WRAP_T": 1001,

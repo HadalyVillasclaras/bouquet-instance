@@ -7,7 +7,7 @@
       "BYTE_LENGTH: 5845112",
       "BYTE_OFFSET: 0",
       "LENGTH: 1461278",
-      "SYMBOL_TO_STRING: FLOAT32ARRAY"
+      "SYMBOL_TO_STRING: FLOAT32"
     ],
     "BUFFER": {
       "TYPE": "ARRAY_BUFFER",
@@ -26,7 +26,7 @@
         "BYTE_LENGTH: 5845112",
         "BYTE_OFFSET: 0",
         "LENGTH: 5845112",
-        "SYMBOL_TO_STRING: INT8ARRAY"
+        "SYMBOL_TO_STRING: INT8"
       ],
       "UINT8_ARRAY(5845112)": [
         "[0…999999]",
@@ -38,7 +38,7 @@
         "BYTE_LENGTH: 5845112",
         "BYTE_OFFSET: 0",
         "LENGTH: 5845112",
-        "SYMBOL_TO_STRING: UINT8ARRAY"
+        "SYMBOL_TO_STRING: UINT8"
       ],
       "INT16_ARRAY(2922556)": [
         "[0…999999]",
@@ -47,7 +47,7 @@
         "BYTE_LENGTH: 5845112",
         "BYTE_OFFSET: 0",
         "LENGTH: 2922556",
-        "SYMBOL_TO_STRING: INT16ARRAY"
+        "SYMBOL_TO_STRING: INT16"
       ],
       "INT32_ARRAY(1461278)": [
         "[0…999999]",
@@ -55,7 +55,7 @@
         "BYTE_LENGTH: 5845112",
         "BYTE_OFFSET: 0",
         "LENGTH: 1461278",
-        "SYMBOL_TO_STRING: INT32ARRAY"
+        "SYMBOL_TO_STRING: INT32"
       ]
     },
     "COUNT": 730639,
@@ -151,14 +151,14 @@
       "BYTE_LENGTH: 2922556",
       "BYTE_OFFSET: 0",
       "LENGTH: 730639",
-      "SYMBOL_TO_STRING: FLOAT32ARRAY"
+      "SYMBOL_TO_STRING: FLOAT32"
     ],
     "BUFFER": {
       "TYPE": "ARRAY_BUFFER",
       "BYTE_LENGTH": 2922556,
       "BYTE_OFFSET": 0,
       "LENGTH": 730639,
-      "SYMBOL_TO_STRING": "FLOAT32ARRAY",
+      "SYMBOL_TO_STRING": "FLOAT32",
       "PROTOTYPE": "ARRAY_BUFFER"
     }
   }

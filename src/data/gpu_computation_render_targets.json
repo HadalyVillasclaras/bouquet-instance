@@ -20,8 +20,7 @@
     "STENCIL_BUFFER": "FALSE",
     "TEXTURES": {
       "PROTOTYPE": "TEXTURE",
-      "TYPE": "DATA_TEXTURE",
-      "UUID": "da8f51ca-9c6f-43bc-bca0-3d4bf3fcee8d"
+      "TYPE": "DATA_TEXTURE"
     },
     "VIEWPORT": {
       "TYPE": "VECTOR4",
@@ -53,8 +52,7 @@
     "STENCIL_BUFFER": "FALSE",
     "TEXTURES": {
       "PROTOTYPE": "TEXTURE",
-      "TYPE": "DATA_TEXTURE",
-      "UUID": "9c8a27ef-d2a8-4ff1-98ac-b632273ca4d0"
+      "TYPE": "DATA_TEXTURE"
     },
     "VIEWPORT": {
       "TYPE": "VECTOR4",

@@ -17,8 +17,7 @@
     {
       "0": {
         "TYPE": "GROUP",
-        "PROTOTYPE": "_OBJECT3D",
-        "UUID": "eaacc745-3b19-4d9e-85b6-6ff86ba9dfd0"
+        "PROTOTYPE": "_OBJECT3D"
       }
     }
   ],

@@ -1,6 +1,5 @@
 {
   "TYPE": "BUFFER_GEOMETRY",
-  "UUID": "31ca6f9e-709a-4460-b25e-ade7503490af",
   "BUFFER_ATTRIBUTE_NORMAL": {
     "FLOAT32_ARRAY(2191917)": [
       "[0…999999]",
@@ -9,7 +8,7 @@
       "BYTE_LENGTH: 8767668",
       "BYTE_OFFSET: 0",
       "LENGTH: 2191917",
-      "SYMBOL_TO_STRING: FLOAT32ARRAY"
+      "SYMBOL_TO_STRING: FLOAT32"
     ],
     "COUNT": 730639,
     "GPU_TYPE": 1015,
@@ -44,7 +43,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
-        "SYMBOL_TO_STRING: INT8ARRAY"
+        "SYMBOL_TO_STRING: INT8"
       ],
       "UINT8_ARRAY(8767668)": [
         "[0…999999]",
@@ -59,7 +58,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
-        "SYMBOL_TO_STRING: UINT8ARRAY"
+        "SYMBOL_TO_STRING: UINT8"
       ],
       "INT16_ARRAY(4383834)": [
         "[0…999999]",
@@ -70,7 +69,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 4383834",
-        "SYMBOL_TO_STRING: INT16ARRAY"
+        "SYMBOL_TO_STRING: INT16"
       ],
       "INT32_ARRAY(2191917)": [
         "[0…999999]",
@@ -79,7 +78,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
-        "SYMBOL_TO_STRING: INT32ARRAY"
+        "SYMBOL_TO_STRING: INT32"
       ],
       "FLOAT32_ARRAY(2191917)": [
         "[0…999999]",
@@ -88,7 +87,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
-        "SYMBOL_TO_STRING: FLOAT32ARRAY"
+        "SYMBOL_TO_STRING: FLOAT32"
       ]
     }
   },
@@ -100,7 +99,7 @@
       "BYTE_LENGTH: 8767668",
       "BYTE_OFFSET: 0",
       "LENGTH: 2191917",
-      "SYMBOL_TO_STRING: FLOAT32ARRAY"
+      "SYMBOL_TO_STRING: FLOAT32"
     ],
     "COUNT": 730639,
     "GPU_TYPE": 1015,
@@ -135,7 +134,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
-        "SYMBOL_TO_STRING: INT8ARRAY",
+        "SYMBOL_TO_STRING: INT8",
         "PROTOTYPE: TYPEDARRAY"
       ],
       "UINT8_ARRAY(8767668)": [
@@ -151,7 +150,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 8767668",
-        "SYMBOL_TO_STRING: UINT8ARRAY",
+        "SYMBOL_TO_STRING: UINT8",
         "PROTOTYPE: TYPEDARRAY"
       ],
       "INT16_ARRAY(4383834)": [
@@ -163,7 +162,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 4383834",
-        "SYMBOL_TO_STRING: INT16ARRAY",
+        "SYMBOL_TO_STRING: INT16",
         "PROTOTYPE: TYPEDARRAY"
       ],
       "INT32_ARRAY(2191917)": [
@@ -173,7 +172,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
-        "SYMBOL_TO_STRING: INT32ARRAY",
+        "SYMBOL_TO_STRING: INT32",
         "PROTOTYPE: TYPEDARRAY"
       ],
       "FLOAT32_ARRAY(2191917)": [
@@ -183,7 +182,7 @@
         "BYTE_LENGTH: 8767668",
         "BYTE_OFFSET: 0",
         "LENGTH: 2191917",
-        "SYMBOL_TO_STRING: FLOAT32ARRAY",
+        "SYMBOL_TO_STRING: FLOAT32",
         "PROTOTYPE: TYPEDARRAY"
       ]
     }
@@ -226,7 +225,7 @@
       "BYTE_LENGTH: 8767668",
       "BYTE_OFFSET: 0",
       "LENGTH: 2191917",
-      "SYMBOL_TO_STRING: UINT32ARRAY"
+      "SYMBOL_TO_STRING: UINT32"
     ],
     "COUNT": 2097183,
     "GPU_TYPE": 1015,
@@ -253,7 +252,7 @@
       "BYTE_LENGTH: 5845112",
       "BYTE_OFFSET: 0",
       "LENGTH: 1461278",
-      "SYMBOL_TO_STRING: FLOAT32ARRAY"
+      "SYMBOL_TO_STRING: FLOAT32"
     ],
     "COUNT": 730639,
     "GPU_TYPE": 1015,

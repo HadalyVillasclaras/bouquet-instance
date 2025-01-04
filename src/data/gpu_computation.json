@@ -20,14 +20,12 @@
     "DEPENDENCIES": "[]",
     "INITIAL_VALUE_TEXTURE": {
       "TYPE": "DATA_TEXTURE",
-      "PROTOTYPE": "_TEXTURE",
-      "UUID": "d34b0816-8aa9-4446-b041-13c8d5e49ae5"
+      "PROTOTYPE": "_TEXTURE"
     },
     "MAG_FILTER": 1003,
     "MATERIAL": {
       "TYPE": "SHADER_MATERIAL",
-      "PROTOTYPE": "MATERIAL",
-      "UUID": "99b2fff2-a931-4bb8-8b6e-294c084235f0"
+      "PROTOTYPE": "MATERIAL"
     },
     "MIN_FILTER": 1003,
     "NAME": "UPARTICLES",

@@ -88,8 +88,7 @@
   "NEAR": 0.1,
   "PARENT": {
     "PROTOTYPE": "_OBJECT3D",
-    "TYPE": "SCENE",
-    "UUID": "7198A6D3-01AA-403D-A81F-341AAB4186F1"
+    "TYPE": "SCENE"
   },
   "POSITION": {
     "TYPE": "_VECTOR3",
@@ -172,7 +171,6 @@
     "Z": 0
   },
   "USER_DATA": "{}",
-  "UUID": "9CC5BDE5-5307-4DD5-9D00-FC5EAE215B5C",
   "VIEW": "NULL",
   "VISIBLE": "TRUE",
   "ZOOM": 1,
