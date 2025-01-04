@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // LOADERS
     { url: '../data/loader_draco.json', elementId: 'obj-draco' },
-    { url: '../data/loader_gltf.json', elementId: 'obj-gltf' }, 
-    
+    { url: '../data/loader_gltf.json', elementId: 'obj-gltf' },
+
     // MODEL GLTF // INSTANCE
     { url: '../data/instance.json', elementId: 'obj-inst' },
 
@@ -56,17 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
   //   button.addEventListener('click', toggleData);
   // }
 
-  // auto scroll
-  setTimeout(() => {
-    autoScroll(); 
-    
-  }, 5000);
 
-  
+
+  // auto scroll
+  function setupAutoScroll() {
+    const classSelector = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
+    autoScroll(classSelector);
+  }
+
+  setTimeout(setupAutoScroll, 3000);
+
+  window.addEventListener('resize', () => {
+    clearTimeout(autoScrollTimeout);
+    autoScrollTimeout = setTimeout(setupAutoScroll, 5000);
+  });
 });
 
-function autoScroll() {
-  const scrollContainers = document.querySelectorAll('.scroll-cnt');
+let autoScrollInterval;
+let autoScrollTimeout;
+
+function autoScroll(classSelector) {
+  if (autoScrollInterval) clearInterval(autoScrollInterval);
+
+  const scrollContainers = document.querySelectorAll(classSelector);
 
   scrollContainers.forEach((container, index) => {
     let isActive = true;
@@ -76,19 +88,19 @@ function autoScroll() {
     const delay = Math.random() * (maxDelay - minDelay) + minDelay;
 
     const articlesContainer = container.firstElementChild;
-    articlesContainer.id = `articles-1-${index}`; 
+    articlesContainer.id = `ch-a-${index}`;
 
-    const clonedArticlesContainer = articlesContainer.cloneNode(true);
-    clonedArticlesContainer.id = `articles-2-${index}`; 
-    container.appendChild(clonedArticlesContainer);
+    manageCloning(container, articlesContainer, index);
 
-    const interval = setInterval(() => {
+    autoScrollInterval = setInterval(() => {
       if (isActive) {
         container.scrollTop += step;
-
-        const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
-        if (secondDivTop <= 0) {
-          container.scrollTop = articlesContainer.offsetTop;
+        const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
+        if (clonedArticlesContainer) {
+          const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
+          if (secondDivTop <= 0) {
+            container.scrollTop = articlesContainer.offsetTop;
+          }
         }
       }
     }, delay);
@@ -103,20 +115,32 @@ function autoScroll() {
   });
 }
 
+function manageCloning(container, articlesContainer, index) {
+  const existingClone = document.getElementById(`ch-b-${index}`);
+  if (window.innerWidth >= 1225 && !existingClone) {
+    const clonedArticlesContainer = articlesContainer.cloneNode(true);
+    clonedArticlesContainer.id = `ch-b-${index}`;
+    container.appendChild(clonedArticlesContainer);
+  } else if (window.innerWidth < 1225 && existingClone) {
+    existingClone.remove();
+  }
+}
+
+
 
 
 
 
 function toggleData() {
   const elements = document.querySelectorAll('.data-tgl');
-  
+
   elements.forEach(element => {
     if (element.classList.contains('visible')) {
       element.classList.remove('visible');
-      element.style.display = 'none';  
+      element.style.display = 'none';
     } else {
       element.classList.add('visible');
-      element.style.display = 'block'; 
+      element.style.display = 'block';
     }
   });
 }
@@ -162,10 +186,10 @@ function formatObjectStyle(obj, indentLevel) {
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 1.7); 
-          return `${indent}  {\n${objectContent}${indent}  }`; 
+          const objectContent = formatObjectStyle(v, indentLevel + 1.7);
+          return `${indent}  {\n${objectContent}${indent}  }`;
         } else {
-          return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
+          return `${indent}  ${removeQuotes(JSON.stringify(v))}`;
         }
       }).join(',\n');
       result += `${indent}${formattedKey}: [\n${arrayContent}\n${indent}]\n`;

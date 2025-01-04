@@ -159,16 +159,39 @@ pre {
 	/* margin: var(--spc-default); */
 }
 
+@media only screen and (max-width: 1250px) {
+	.o-grid.s-data-grid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 .s-data-cnt {
 	padding-top: var(--spc-default);
 	padding-bottom: var(--spc-default);
-	height: 100%;
 }
 
 .scroll-cnt {
 	overflow-y: scroll;
 	-ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media only screen and (max-width: 1250px) {
+	.scroll-cnt.s-data-cnt {
+		overflow-y: unset;
+	}
+
+	.s-data-cnt {
+		max-width: 225px;
+	}
+}
+
+@media only screen and (min-width: 1250px) {
+	.scroll-cnt.s-data-grid {
+		overflow-y: unset;
+	}
 }
 
 /* Position of data containers */
@@ -185,8 +208,8 @@ pre {
 }
 
 .s-data-cnt--dummy {
-	grid-column: 10 / span 3;
-	grid-row: 1;
+	grid-column: 6 / span 3;
+	grid-row: 2;
 }
 
 .s-data-cnt--rot {
@@ -206,20 +229,73 @@ pre {
 
 .s-data-cnt--fps {
 	grid-column: 23 / 25;
-	justify-self: end;
+	justify-items: self-start;
 	grid-row: 1;
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1250px) {
+	.s-data-cnt--intro {
+		grid-column: 1 / span 4;
+		grid-row: 1;
+		max-width: 230px;
+	}
+	
 	.s-data-cnt--geo {
 		grid-column: 6 / span 3;
-		margin-left: 3rem;
+		grid-row: 1;
 	}
-
 	
 	.s-data-cnt--dummy {
-		grid-column: 11 / span 3;
+		grid-column: 10 / span 3;
 		grid-row: 1;
+	}
+	
+	.s-data-cnt--rot {
+		grid-column: 14 / span 3;
+		grid-row: 1;
+	}
+	
+	.s-data-cnt--zoom {
+		grid-column: 18 / span 2;
+		grid-row: 1;
+	}
+	
+	.s-data-cnt--time {
+		grid-column: 21 / span 3;
+		grid-row: 1;
+	}
+	
+	.s-data-cnt--fps {
+		grid-column: 23 / 25;
+		justify-items: self-end;
+		grid-row: 1;
+	}
+}
+
+@media only screen and (min-width: 1500px) {
+	.s-data-cnt--intro {
+		grid-column: 1 / span 4;
+		max-width: 230px;
+	}
+	
+	.s-data-cnt--geo {
+		grid-column: 5 / span 3;
+	}
+	
+	.s-data-cnt--dummy {
+		grid-column: 9 / span 3;
+	}
+	
+	.s-data-cnt--rot {
+		grid-column: 13 / span 3;
+	}
+	
+	.s-data-cnt--zoom {
+		grid-column: 17 / span 3;
+	}
+	
+	.s-data-cnt--time {
+		grid-column: 21 / span 3;
 	}
 }
 

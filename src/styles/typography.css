@@ -14,12 +14,19 @@
 }
 
 * {
-	font-size: 9px;
+	font-size: 11px;
 	font-family: 'B612Mono', 'Helvetica', "monospace";
 	font-weight: normal;
-	line-height: 12.5px;
+	line-height: 15.5px;
 	text-transform: uppercase;
 	letter-spacing: -0.4px;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1549px) {
+	* {
+		font-size: 9px;
+		line-height: 12.5px;
+	}
 }
 
 p, .p1, p.p1 {
@@ -38,9 +45,16 @@ p, .p1, p.p1 {
 h1,
 h3, .h3,
 h4, .h4, a, button {
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: bold;
 	letter-spacing: -0.2px;
+	line-height: normal;
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1549px) {
+	h1, h3, .h3, h4, .h4, a, button {
+			font-size: 10px;
+	}
 }
 
 button, a {

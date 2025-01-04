@@ -84,7 +84,7 @@
     ]
   },
   "MATRIX_WORLD_NEEDS_UPDATE": "FALSE",
-  "NAME": "",
+  "NAME": "NULL",
   "NEAR": 0.1,
   "PARENT": {
     "PROTOTYPE": "_OBJECT3D",

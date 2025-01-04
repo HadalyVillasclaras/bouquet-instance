@@ -35,7 +35,7 @@
   },
   "MATRIX_AUTO_UPDATE": "TRUE",
   "MIN_FILTER": 1003,
-  "MIPMAPS": [],
+  "MIPMAPS": "[]",
   "NAME": "NULL",
   "OFFSET": {
     "TYPE": "_VECTOR2",
