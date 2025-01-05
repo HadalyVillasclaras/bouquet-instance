@@ -1,4 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+function init() {
+  const scrollContainer = document.querySelector('.scroll-cnt');
+  if (scrollContainer) {
+    scrollContainer.addEventListener('wheel', (event) => { }, true);
+  } 
 
   // Toggle data button
   const button = document.getElementById('btn-toggle-data');
@@ -65,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
 
     setTimeout(() => {
-      // setupAutoScroll();
+      console.log('enter');
+      setupAutoScroll();
     }, 6000);
   });
-
-});
+}
 
 window.addEventListener('resize', () => {
   clearTimeout(autoScrollTimeout);
@@ -86,44 +96,51 @@ let autoScrollInterval;
 let autoScrollTimeout;
 
 function autoScroll(classSelector) {
-  if (autoScrollInterval) clearInterval(autoScrollInterval);
-
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  const intervals = new Map();
+  const step = isSafari ? 1 : 0.5;
+  const minDelay = isSafari ? 60 : 30;
+  const maxDelay = isSafari ? 100 : 80;
   const scrollContainers = document.querySelectorAll(classSelector);
 
-  scrollContainers.forEach((container, index) => {
-    let isActive = true;
-    const step = 0.5;
-    const minDelay = 60;
-    const maxDelay = 120;
-    const delay = Math.random() * (maxDelay - minDelay) + minDelay;
-
-    const articlesContainer = container.firstElementChild;
-    articlesContainer.id = `ch-a-${index}`;
-
-    manageCloning(container, articlesContainer, index);
-
-    autoScrollInterval = setInterval(() => {
-      if (isActive) {
-        container.scrollTop += step;
-        const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
-        if (clonedArticlesContainer) {
-          const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
-          if (secondDivTop <= 0) {
-            container.scrollTop = articlesContainer.offsetTop;
-          }
+  const manageScroll = (container, isActiveRef, articlesContainer, index, delay, lastTime) => {
+    const now = performance.now();
+    if (isActiveRef.isActive && now - lastTime >= delay) {
+      container.scrollTop += step;
+      const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
+      if (clonedArticlesContainer) {
+        const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
+        if (secondDivTop <= 0) {
+          container.scrollTop = articlesContainer.offsetTop;
         }
       }
-    }, delay);
+      lastTime = now;
+    }
+    if (intervals.has(container)) {
+      requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, lastTime));
+    }
+  };
 
-    container.addEventListener('mouseenter', () => {
-      isActive = false;
-    });
+  scrollContainers.forEach((container, index) => {
+    const delay = Math.random() * (maxDelay - minDelay) + minDelay;
+    const articlesContainer = container.firstElementChild;
+    articlesContainer.id = `ch-a-${index}`;
+    manageCloning(container, articlesContainer, index);
+    console.log(delay);
 
-    container.addEventListener('mouseleave', () => {
-      isActive = true;
-    });
+    let isActiveRef = { isActive: true }; 
+
+    if (intervals.has(container)) {
+      cancelAnimationFrame(intervals.get(container));
+    }
+    intervals.set(container, requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, performance.now())));
+
+    container.addEventListener('mouseenter', () => { isActiveRef.isActive = false; });
+    container.addEventListener('mouseleave', () => { isActiveRef.isActive = true; });
   });
 }
+
+
 
 function manageCloning(container, articlesContainer, index) {
   const existingClone = document.getElementById(`ch-b-${index}`);
@@ -178,7 +195,7 @@ function toggleData() {
       container.classList.add('hide');
       // container.classList.add('visible');
     }
-  } );
+  });
 }
 
 function displayObjectStyleJson(obj, elementId) {
@@ -202,10 +219,10 @@ function formatObjectStyle(obj, indentLevel) {
     } else if (Array.isArray(value)) {
       const arrayContent = value.map(v => {
         if (typeof v === 'object' && v !== null) {
-          const objectContent = formatObjectStyle(v, indentLevel + 1.7); 
-          return `${indent}  {\n${objectContent}${indent}  }`; 
+          const objectContent = formatObjectStyle(v, indentLevel + 1.7);
+          return `${indent}  {\n${objectContent}${indent}  }`;
         } else {
-          return `${indent}  ${removeQuotes(JSON.stringify(v))}`; 
+          return `${indent}  ${removeQuotes(JSON.stringify(v))}`;
         }
       }).join(',\n');
       result += `${indent}${formattedKey}: [\n${arrayContent}\n${indent}]\n`;

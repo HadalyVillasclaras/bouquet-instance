@@ -77,7 +77,8 @@ export function guiSetUp(gui, uSize, uFlowFieldInfluence, uFlowFieldStrength, uF
 export function controlsSetUp(controls) {
   controls.enableDamping = true;
   controls.enablePan = true;
-
+console.log(controls);
+controls.enableZoom = false;
   controls.autoRotate = false;
   controls.autoRotateSpeed = 0.2;
   controls.dampingFactor = 0.1;

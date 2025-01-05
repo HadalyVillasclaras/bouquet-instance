@@ -34,9 +34,8 @@
 						</header>
 						<div>
 							<p>“Bouquet” mesh as “OBJECT_4”. </p>
-							<p>KHR_draco_mesh_compression</p>
-							<p>Association: Mesh Standard Material</p>
-							<p>Node names: Scene, Bouquet, Object_4</p>
+							<p>GPU COMPUTATION RENDERER.</p>
+							<p>BINARY GLTF & DRACO LOADERS</p>
 						</div>
 					</article>
 
@@ -46,7 +45,6 @@
 						</header>
 						<pre id="obj-inst"></pre>
 					</article>
-
 
 					<!-- instance geometry, mesh and materials -->
 					<article class="s-data data-tgl">
@@ -78,42 +76,7 @@
 						<pre id="obj-inst-mesh"></pre>
 					</article>
 
-					<!-- gltf parser -->
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF_PARSER (Data Attributes)</h3>
-						</header>
-						<pre id="obj-inst-parser"></pre>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF PARSER Extensions</h3>
-						</header>
-						<pre id="obj-inst-ext"></pre>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
-						</header>
-						<pre id="obj-inst-ext-draco"></pre>
-					</article>
-
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF PARSER Extensions BINARY</h3>
-						</header>
-						<pre id="obj-inst-ext-binary"></pre>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF PARSER PLUGINS</h3>
-						</header>
-						<pre id="obj-inst-parser-plugins"></pre>
-					</article>
+				
 
 
 				</div>
@@ -123,14 +86,13 @@
 				<div class="o-list">
 					<article class="s-data">
 						<header>
-							<h3>Base geometRY</h3>
+							<h3>BASE GEOMETRY</h3>
 						</header>
 						<div>
 							<ul class="">
 								<li>BUFFER GEOMETRY INDEXES</li>
 								<li>INSTANCE SOURCE: gltf instance <br>
 									Mesh & PARTICLES GEOMETRY</li>
-							
 								<li>GLTF_INSTANCE:
 									<ul>
 										<li>BUFFER_ATTRIBUTE</li>
@@ -218,23 +180,20 @@
 				<div class="o-list">
 					<article class="s-data">
 						<header>
-							<h3>A. BUFFER (8767668)</h3>
+							<h3>A. BUFFER (8388732)</h3>
 						</header>
 						<div>
-							<p>[23X: 31Y: 047]</p>
-							<p>FLOAT32ARRAY</p>
+							<p>BUFFER ATTRIBUTE</p>
+							<p>Uint32Array</p>
 						</div>
 					</article>
 					<article class="s-data">
 						<header>
-							<h3>_VECTOR3</h3>
+							<h3>_RESOLUTION</h3>
 						</header>
 						<div>
 							<ul>
-								<li>MAX AZIMUTH ANGLE:</li>
-								<li>INFINITY</li>
-								<li>MAX DISTANCE:</li>
-								<li>INFINITY</li>
+								<li>vec2( 855.0, 855.0 )</li>
 							</ul>
 						</div>
 					</article>
@@ -336,7 +295,7 @@
 				</div>
 			</section>
 
-			<section class="o-list s-data-cnt s-data-cnt--zoom">
+			<section class="s-data-cnt scroll-cnt s-data-cnt--zoom">
 				<div class="o-list">
 					<article class="s-data ">
 						<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
@@ -349,6 +308,41 @@
 							<pre id="obj-globals"></pre>
 						</div>
 					</article>
+						<!-- gltf parser -->
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF_PARSER <br>(Data Attributes)</h3>
+							</header>
+							<pre id="obj-inst-parser"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions</h3>
+							</header>
+							<pre id="obj-inst-ext"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
+							</header>
+							<pre id="obj-inst-ext-draco"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions BINARY</h3>
+							</header>
+							<pre id="obj-inst-ext-binary"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER PLUGINS</h3>
+							</header>
+							<pre id="obj-inst-parser-plugins"></pre>
+						</article>
 				</div>
 			</section>
 
@@ -373,9 +367,9 @@
 					</article>
 					<article class="c-transp s-data">
 						<header>
-							<h3>Auto-rotate dir.</h3>
+							<h3>Auto-rotate speed</h3>
 						</header>
-						<p id="dt-toggle-rotate-dir">Right</p>
+						<p id="dt-toggle-rotate-dir">0.2</p>
 					</article>
 					<article class="c-transp s-data">
 						<header>
