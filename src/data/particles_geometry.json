@@ -31,8 +31,11 @@
   "USER_DATA": "{}",
   "ID": 5,
   "_LISTENERS": {
-  "DISPOSE": [
-    "ƒ ONGEOMETRYDISPOSE(EVENT)"
-  ]
+    "DISPOSE": [
+      "ƒ ONGEOMETRYDISPOSE(EVENT)"
+    ]
 }
 }
+
+
+

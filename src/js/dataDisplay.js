@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { url: '../data/instance_parser_plugins.json', elementId: 'obj-inst-parser-plugins' },
 
     { url: '../data/instance_geometry.json', elementId: 'obj-inst-geo' },
+    { url: '../data/instance_geometry_attributes.json', elementId: 'obj-inst-geo-atts' },
     { url: '../data/instance_material.json', elementId: 'obj-inst-mat' },
     { url: '../data/instance_mesh.json', elementId: 'obj-inst-mesh' },
 
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
 
     setTimeout(() => {
-      setupAutoScroll();
+      // setupAutoScroll();
     }, 6000);
   });
 

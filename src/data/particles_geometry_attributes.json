@@ -1,5 +1,5 @@
 {
-  "APARTICLESUV": {
+  "A_PARTICLES_UV": {
     "TYPE": "BUFFER_ATTRIBUTE",
     "FLOAT32_ARRAY(1461278)": [
       "[0…999999]",
@@ -7,7 +7,8 @@
       "BYTE_LENGTH: 5845112",
       "BYTE_OFFSET: 0",
       "LENGTH: 1461278",
-      "SYMBOL_TO_STRING: FLOAT32"
+      "SYMBOL_TO_STRING: FLOAT32",
+      "PROTOTYPE: TYPEDARRAY"
     ],
     "BUFFER": {
       "TYPE": "ARRAY_BUFFER",
@@ -72,7 +73,8 @@
       "PROTOTYPE": "OBJECT"
     }
   },
-  "ASIZE_ARRAY": {
+  "A_SIZE": {
+    "TYPE": "BUFFER_ATTRIBUTE",
     "FLOAT32_ARRAY(730639)": [
       "[0…9999]",
       "[10000…19999]",
@@ -151,7 +153,8 @@
       "BYTE_LENGTH: 2922556",
       "BYTE_OFFSET: 0",
       "LENGTH: 730639",
-      "SYMBOL_TO_STRING: FLOAT32"
+      "SYMBOL_TO_STRING: FLOAT32",
+      "PROTOTYPE: TYPEDARRAY"
     ],
     "BUFFER": {
       "TYPE": "ARRAY_BUFFER",
@@ -160,6 +163,19 @@
       "LENGTH": 730639,
       "SYMBOL_TO_STRING": "FLOAT32",
       "PROTOTYPE": "ARRAY_BUFFER"
+    },
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "IS_BUFFER_ATTRIBUTE": "TRUE",
+    "ITEM_SIZE": 3,
+    "NORMALIZED": "FALSE",
+    "UPDATE_RANGES": "ARRAY(0)",
+    "USAGE": 35044,
+    "VERSION": 0,
+    "_UPDATE_RANGE": {
+      "OFFSET": 0,
+      "COUNT": -1,
+      "PROTOTYPE": "OBJECT"
     }
   }
 }

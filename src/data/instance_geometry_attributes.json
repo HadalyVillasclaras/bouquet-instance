@@ -1,0 +1,272 @@
+{
+  "NORMAL": {
+    "TYPE": "BUFFER_ATTRIBUTE",
+    "FLOAT32_ARRAY(2191917)": [
+      "[0…999999]",
+      "[1000000…1999999]",
+      "[2000000…2191917]",
+      "BYTE_LENGTH: 8767668",
+      "BYTE_OFFSET: 0",
+      "LENGTH: 2191917",
+      "SYMBOL_TO_STRING: FLOAT32",
+      "PROTOTYPE: TYPEDARRAY"
+    ],
+    "BUFFER": {
+      "TYPE": "ARRAY BUFFER",
+      "BYTE_LENGTH": 8767668,
+      "DETACHED": "FALSE",
+      "MAX_BYTE_LENGTH": 8767668,
+      "RESIZABLE": "FALSE",
+      "PROTOTYPE": "ARRAY BUFFER",
+      "INT8_ARRAY(8767668)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5999999]",
+        "[6000000…6999999]",
+        "[7000000…7999999]",
+        "[8000000…8767667]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 8767668",
+        "SYMBOL_TO_STRING: INT8"
+      ],
+      "UINT8_ARRAY(8767668)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5999999]",
+        "[6000000…6999999]",
+        "[7000000…7999999]",
+        "[8000000…8767667]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 8767668",
+        "SYMBOL_TO_STRING: UINT8"
+      ],
+      "INT16_ARRAY(4383834)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000–4383833]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 4383834",
+        "SYMBOL_TO_STRING: INT16"
+      ],
+      "INT32_ARRAY(2191917)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2191916]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 2191917",
+        "SYMBOL_TO_STRING: INT32"
+      ],
+      "FLOAT32_ARRAY(2191917)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2097182]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 2191917",
+        "SYMBOL_TO_STRING: FLOAT32"
+      ]
+    },
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "IS_BUFFER_ATTRIBUTE": "TRUE",
+    "ITEM_SIZE": 3,
+    "NORMALIZED": "FALSE",
+    "UPDATE_RANGES": "ARRAY(0)",
+    "USAGE": 35044,
+    "VERSION": 0,
+    "_UPDATE_RANGE": {
+      "OFFSET": 0,
+      "COUNT": -1,
+      "PROTOTYPE": "OBJECT"
+    }
+   
+  },
+  "POSITION": {
+    "TYPE": "BUFFER_ATTRIBUTE",
+    "FLOAT32_ARRAY(2191917)": [
+      "[0…999999]",
+      "[1000000…1999999]",
+      "[2000000…2191916]",
+      "BYTE_LENGTH: 8767668",
+      "BYTE_OFFSET: 0",
+      "LENGTH: 2191917",
+      "SYMBOL_TO_STRING: FLOAT32",
+      "PROTOTYPE: TYPEDARRAY"
+    ],
+    "BUFFER": {
+      "TYPE": "ARRAY BUFFER",
+      "BYTE_LENGTH": 8767668,
+      "DETACHED": "FALSE",
+      "MAX_BYTE_LENGTH": 8767668,
+      "RESIZABLE": "FALSE",
+      "PROTOTYPE": "ARRAY BUFFER",
+      "INT8_ARRAY(8767668)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5999999]",
+        "[6000000…6999999]",
+        "[7000000…7999999]",
+        "[8000000…8767667]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 8767668",
+        "SYMBOL_TO_STRING: INT8",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "UINT8_ARRAY(8767668)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5999999]",
+        "[6000000…6999999]",
+        "[7000000…7999999]",
+        "[8000000…8767667]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 8767668",
+        "SYMBOL_TO_STRING: UINT8",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "INT16_ARRAY(4383834)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000–4383833]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 4383834",
+        "SYMBOL_TO_STRING: INT16",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "INT32_ARRAY(2191917)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2191916]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 2191917",
+        "SYMBOL_TO_STRING: INT32",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "FLOAT32_ARRAY(2191917)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2097182]",
+        "BYTE_LENGTH: 8767668",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 2191917",
+        "SYMBOL_TO_STRING: FLOAT32",
+        "PROTOTYPE: TYPEDARRAY"
+      ]
+    },
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "IS_BUFFER_ATTRIBUTE": "TRUE",
+    "ITEM_SIZE": 3,
+    "NORMALIZED": "FALSE",
+    "UPDATE_RANGES": "ARRAY(0)",
+    "USAGE": 35044,
+    "VERSION": 0,
+    "_UPDATE_RANGE": {
+      "OFFSET": 0,
+      "COUNT": -1,
+      "PROTOTYPE": "OBJECT"
+    }
+  },
+  "UV": {
+    "TYPE": "BUFFER_ATTRIBUTE",
+    "FLOAT32_ARRAY(1461278)": [
+      "[0…999999]",
+      "[1000000…1461277]",
+      "BYTE_LENGTH: 5845112",
+      "BYTE_OFFSET: 0",
+      "LENGTH: 1461278",
+      "SYMBOL_TO_STRING: FLOAT32",
+      "PROTOTYPE: TYPEDARRAY"
+    ],
+    "BUFFER": {
+      "TYPE": "ARRAY BUFFER",
+      "BYTE_LENGTH": 5845112,
+      "DETACHED": "FALSE",
+      "MAX_BYTE_LENGTH": 5845112,
+      "RESIZABLE": "FALSE",
+      "PROTOTYPE": "ARRAY BUFFER",
+      "INT8_ARRAY(5845112)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5845112]",
+        "BYTE_LENGTH: 5845112",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 5845112",
+        "SYMBOL_TO_STRING: INT8",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "UINT8_ARRAY(5845112)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2999999]",
+        "[3000000…3999999]",
+        "[4000000…4999999]",
+        "[5000000…5845112]",
+        "BYTE_LENGTH: 5845112",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 5845112",
+        "SYMBOL_TO_STRING: UINT8",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "INT16_ARRAY(2922556)": [
+        "[0…999999]",
+        "[1000000…1999999]",
+        "[2000000…2922556]",
+        "BYTE_LENGTH: 5845112",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 2922556",
+        "SYMBOL_TO_STRING: INT16",
+        "PROTOTYPE: TYPEDARRAY"
+      ],
+      "INT32_ARRAY(1461277)": [
+        "[0…999999]",
+        "[1000000…1461277]",
+        "BYTE_LENGTH: 5845112",
+        "BYTE_OFFSET: 0",
+        "LENGTH: 1461277",
+        "SYMBOL_TO_STRING: INT32",
+        "PROTOTYPE: TYPEDARRAY"
+      ]
+    },
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "IS_BUFFER_ATTRIBUTE": "TRUE",
+    "ITEM_SIZE": 3,
+    "NORMALIZED": "FALSE",
+    "UPDATE_RANGES": "ARRAY(0)",
+    "USAGE": 35044,
+    "VERSION": 0,
+    "_UPDATE_RANGE": {
+      "OFFSET": 0,
+      "COUNT": -1,
+      "PROTOTYPE": "OBJECT"
+    }
+  }
+}

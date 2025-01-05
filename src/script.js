@@ -204,7 +204,7 @@ const animate = (time) => {
 		y: parseFloat(camera.rotation.y.toFixed(2)),
 		z: parseFloat(camera.rotation.z.toFixed(2))
 	};
-
+	
 	// UI Setters
 	const rotationValues = getRotation(currentRotation);
 	if (rotationValues) {
@@ -262,6 +262,7 @@ console.log(particles);
 // console.log(particles.material); // new THREE.ShaderMaterial
 
 
+
 window.addEventListener('resize', () => {
 	// Update sizes
 	sizes.width = window.innerWidth
@@ -279,3 +280,5 @@ window.addEventListener('resize', () => {
 	renderer.setSize(sizes.width, sizes.height)
 	renderer.setPixelRatio(sizes.pixelRatio)
 })
+console.log(particles.geometry.attributes.aParticlesUv.array.buffer.byteLength);
+

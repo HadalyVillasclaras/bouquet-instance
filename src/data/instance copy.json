@@ -1,0 +1,58 @@
+{
+  
+
+
+
+  "ATTRIBUTES": {
+    "TYPE": "BUFFER_ATTRIBUTE",
+    "PROTOTYPE": "OBJECT",
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "USAGE": 35044,
+    "GLTF_INSTANCE": {
+      "ITEM_SIZE": 2,
+      "A_PARTICLES_UV": "FLOAT32_ARRAY(1461278)",
+      "A_SIZE": "FLOAT32_ARRAY(730639)"
+    },
+    "PARTICLES_INSTANCE": {
+      "ITEM_SIZE": 3,
+      "NORMAL": "FLOAT32_ARRAY(2191917)",
+      "POSITION": "FLOAT32_ARRAY(2191917)",
+      "UV": "FLOAT32_ARRAY(1461278)"
+    }
+  },
+
+  "ATTRIBUTES_2": {
+    "TYPE": "BUFFER_ATTRIBUTE",
+    "PROTOTYPE": "OBJECT",
+    "COUNT": 730639,
+    "GPU_TYPE": 1015,
+    "USAGE": 35044,
+    "GLTF_INSTANCE": {
+      "ITEM_SIZE": 2,
+      "A_PARTICLES_UV": {  
+        "FLOAT32_ARRAY(1461278)": "[...]",
+        "BYTE_LENGTH": 5845112
+      },
+      "A_SIZE": {  
+        "FLOAT32_ARRAY(730639)": "[...]",
+        "BYTE_LENGTH": 2922556
+      }
+    },
+    "PARTICLES_INSTANCE": {
+      "ITEM_SIZE": 3,
+      "NORMAL": {  
+        "FLOAT32_ARRAY(2191917)": "[...]",
+        "BYTE_LENGTH": 8767668
+      },
+      "POSITION": {  
+        "FLOAT32_ARRAY(2191917)": "[...]",
+        "BYTE_LENGTH": 8767668
+      },
+      "UV": {  
+        "FLOAT32_ARRAY(1461278)": "[...]",
+        "BYTE_LENGTH": 5845112
+      }
+    }
+  }
+}
