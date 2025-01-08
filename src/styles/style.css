@@ -56,11 +56,22 @@ button, .btn {
 	transition: background-color .3s ease;
 }
 
+button.btn.disabled {
+	/* color: rgba(255, 255, 255, 0.517); */
+}
+
+button.btn.selected {
+	background-color: var(--color-black-tr-2);
+}
+
 button.btn:hover {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: var(--color-black-tr-2);
 	transition: background-color .3s ease;
 }
 
+button.btn.disabled:hover {
+	background-color: var(--color-black-tr-1);
+}
 button:focus,
 a:focus {
   outline: none;
@@ -88,7 +99,6 @@ pre {
 	overflow-x: visible;
 }
 
-
 /* Sections */
 .s-menu-panels {
 	opacity: 0;
@@ -97,7 +107,6 @@ pre {
 	left: 0;
 	padding: var(--spc-default);
 	transition: opacity 0.7s ease-out;
-
 }
 
 .s-menu-panels * {
@@ -111,8 +120,6 @@ pre {
 	border-radius: 0;
 }
 
-.highlight-2 {
-}
 
 /* Menu and panels */
 

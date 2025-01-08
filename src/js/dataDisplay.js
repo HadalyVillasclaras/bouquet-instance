@@ -71,9 +71,8 @@ export function init() {
     }, 3000);
 
     setTimeout(() => {
-      console.log('enter');
       setupAutoScroll();
-    }, 3000);
+    }, 4000);
   });
 }
 
