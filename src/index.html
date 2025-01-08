@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GPGPU Flowfield Animation</title>
 	<link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
 	<main>
 		<div class="o-grid s-data-grid scroll-cnt">
@@ -302,41 +304,41 @@
 							<pre id="obj-globals"></pre>
 						</div>
 					</article>
-						<!-- gltf parser -->
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF_PARSER <br>(Data Attributes)</h3>
-							</header>
-							<pre id="obj-inst-parser"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions</h3>
-							</header>
-							<pre id="obj-inst-ext"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
-							</header>
-							<pre id="obj-inst-ext-draco"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions BINARY</h3>
-							</header>
-							<pre id="obj-inst-ext-binary"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER PLUGINS</h3>
-							</header>
-							<pre id="obj-inst-parser-plugins"></pre>
-						</article>
+					<!-- gltf parser -->
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF_PARSER <br>(Data Attributes)</h3>
+						</header>
+						<pre id="obj-inst-parser"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER Extensions</h3>
+						</header>
+						<pre id="obj-inst-ext"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
+						</header>
+						<pre id="obj-inst-ext-draco"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER Extensions BINARY</h3>
+						</header>
+						<pre id="obj-inst-ext-binary"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER PLUGINS</h3>
+						</header>
+						<pre id="obj-inst-parser-plugins"></pre>
+					</article>
 				</div>
 			</section>
 
@@ -414,9 +416,33 @@
 			</section>
 		</div>
 
-		<div class="o-grid s-controls-cnt">
+		<div class="o-grid s-menu-panels">
 			<div class="s-menu-cnt">
-				<section class="s-panel">
+				<section id="panel-info" class="s-panel hide">
+					<header class="mb-4">
+						<h3 class="highlight-1">About</h3>
+					</header>
+					<div class="s-panel__body info highlight-2 s-panel__spc">
+						<h3 class="h3">Instance ii: Bouquet</h3>
+						<p class="p2">Instance ii: Bouquet delves into the nature of a digital entity by exposing its data
+							infrastructure.
+						</p>
+						<p aria-hidden="true">*******************************************************</p>
+						<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh lorem, fringilla
+							fringilla tincidunt vitae, scelerisque in urna. Mauris vitae imperdiet urna. Lorem ipsum dolor sit amet,
+							consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+							ridiculus mus.</p>
+						<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et
+							magnis dis parturient montes, nascetur ridiculus mus.</p>
+						<p class="p2">Fusce vehicula ullamcorper sagittis. In vitae enim enim. Aliquam erat volutpat. Fusce tempus
+							ante eget turpis tristique molestie. Etiam tristique lacus in vehicula finibus. Aliquam erat volutpat.
+							Phasellus cursus, est at viverra egestas, felis neque lacinia magna, et feugiat nibh erat quis sem. Ut
+							convallis, lectus nec imperdiet lobortis, lorem libero convallis purus, a tempus dolor tellus at sem.
+							Curabitur dictum finibus sapien sed rutrum.</p>
+							<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus.</p>
+					</div>
+				</section>
+				<section id="panel-controls" class="s-panel hide">
 					<header>
 						<h3 class="highlight-1">Controls</h3>
 					</header>
@@ -433,13 +459,13 @@
 					</div>
 				</section>
 				<menu class="s-controls-cnt--menu">
-					<button class="btn">Controls</button>
-					<button id="btn-toggle-data" class="btn">Reveal data</button>
-					<button class="btn">About</button>
+					<button id="btn-toggle-ctrl" class="btn">Controls</button>
+					<button id="btn-toggle-info" class="btn">About</button>
+					<button id="btn-toggle-data" class="btn">Hide data</button>
 					<!-- <a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a> -->
 				</menu>
-	
-			
+
+
 
 			</div>
 		</div>

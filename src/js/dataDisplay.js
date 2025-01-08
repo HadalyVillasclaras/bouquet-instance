@@ -10,11 +10,7 @@ export function init() {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
   } 
 
-  // Toggle data button
-  const button = document.getElementById('btn-toggle-data');
-  if (button) {
-    button.addEventListener('click', toggleData);
-  }
+ 
 
   const dataSources = [
     // GLOBALS
@@ -72,11 +68,11 @@ export function init() {
 
     setTimeout(() => {
       setVisibleData();
-    }, 4000);
+    }, 3000);
 
     setTimeout(() => {
       console.log('enter');
-      // setupAutoScroll();
+      setupAutoScroll();
     }, 3000);
   });
 }
@@ -173,29 +169,6 @@ function fetchJsonData(url, elementId) {
     });
 }
 
-function toggleData() {
-  const elements = document.querySelectorAll('.data-tgl');
-  const clonedContainers = document.querySelectorAll('.s-data-clnd');
-
-
-  elements.forEach(element => {
-    if (element.classList.contains('hide')) {
-      element.classList.remove('hide');
-    } else {
-      element.classList.add('hide');
-      // element.classList.add('visible');
-    }
-  });
-
-  clonedContainers.forEach(container => {
-    if (container.classList.contains('hide')) {
-      container.classList.remove('hide');
-    } else {
-      container.classList.add('hide');
-      // container.classList.add('visible');
-    }
-  });
-}
 
 function displayObjectStyleJson(obj, elementId) {
   const element = document.getElementById(elementId);
@@ -245,4 +218,11 @@ function setVisibleData() {
   if (element) {
     element.style.opacity = '1';
   }
+
+  setTimeout(() => {
+    const menuAndPanels = document.querySelector('.s-menu-panels');
+    if (menuAndPanels) {
+      menuAndPanels.style.opacity = '1';
+    }
+  }, 1000);
 }

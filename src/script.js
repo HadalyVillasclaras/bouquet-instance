@@ -11,6 +11,8 @@ import DataUpdater from './js/DataUpdater.js';
 import { getRotation, getFPS } from './js/helpers.js';
 import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './js/animationSetUp.js';
 import './js/dataDisplay.js';
+import './js/elementsDisplay.js';
+
 
 /**
  * Globals
