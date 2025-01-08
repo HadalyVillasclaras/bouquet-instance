@@ -1,10 +1,10 @@
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
-}
+// if (document.readyState === 'loading') {
+//   document.addEventListener('DOMContentLoaded', init);
+// } else {
+//   init();
+// }
 
-function init() {
+export function init() {
   const scrollContainer = document.querySelector('.scroll-cnt');
   if (scrollContainer) {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
@@ -72,12 +72,12 @@ function init() {
 
     setTimeout(() => {
       setVisibleData();
-    }, 500);
+    }, 4000);
 
     setTimeout(() => {
       console.log('enter');
-      setupAutoScroll();
-    }, 6000);
+      // setupAutoScroll();
+    }, 3000);
   });
 }
 
@@ -126,7 +126,6 @@ function autoScroll(classSelector) {
     const articlesContainer = container.firstElementChild;
     articlesContainer.id = `ch-a-${index}`;
     manageCloning(container, articlesContainer, index);
-    console.log(delay);
 
     let isActiveRef = { isActive: true }; 
 

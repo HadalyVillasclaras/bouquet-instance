@@ -5,6 +5,8 @@
 
 :root {
 	--color-black: #1e1e1e;
+	--color-black-tr-1: rgba(70, 70, 72, 0.847);
+	--color-black-tr-2: rgba(115, 115, 120, 0.8);
 	--color-white: #ededed;
 	--spc-m: 12px;
 	--spc-default: var(--spc-m);
@@ -45,18 +47,23 @@ main {
 button, .btn {
 	text-transform: uppercase;
 	border: none;
-	font-size: 10px;
-	padding: 2px 4px 1px;
-	background-color: rgba(0, 0, 0, 0.573);
+	padding: 5px 7px 4px;
+	background-color: var(--color-black-tr-1);
 	color: var(--color-white);
 	border-radius: 0;
-	text-align: left;
+	text-align: center;
 	width: fit-content;
+	transition: background-color .3s ease;
+}
+
+button.btn:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background-color .3s ease;
 }
 
 button:focus,
 a:focus {
-  outline: var(--color-black) auto 1px;
+  outline: none;
   box-shadow: none;
 }
 
@@ -94,38 +101,58 @@ pre {
 	pointer-events: all;
 }
 
-/* Control positioning */
-.s-controls-cnt--menu {
-	grid-column: 1 / span 3;
-	grid-row: 1;
+.highlight-1 {
+	padding: 5px 4px;
+	background-color: rgba(3, 3, 3, 0.599);
+	color: var(--color-white);
+	border-radius: 0;
 }
-.s-controls-cnt--ctr {
-	grid-column: 18 / span 5;
+
+.highlight-2 {
+}
+
+/* Menu and panels */
+
+.s-menu-cnt {
+	position: relative;
+	grid-column: 1 / span 5;
 	grid-row: 1;
 }
 
-.s-controls-cnt--ctr > div{
+.s-panel {
+	margin-bottom: 1px;
+	color: white;
 	
 }
-.s-controls-cnt--menu *{
-	text-decoration: underline;
+
+.s-panel > header {
+	display: none;
 }
 
-.s-controls-cnt--ctr {
-	width: fit-content;
+.s-panel__spc {
+	padding: 5px 7px 4px;
+	background: var(--color-black-tr-2);
+
 }
 
-.s-controls-cnt--ctr .o-list .highlight-2 {
+.s-panel-ctrls {
+
+}
+
+
+.s-panel__body {
 	display: flex;
+	flex-direction: column;
+	gap: 1px;
 }
 
-.s-controls-cnt--ctr header {
-	margin-bottom: 1px!important;
+/* Control styling */
+.s-controls-cnt--menu  {
+	display: flex;
+	gap: 1px;
+	height: fit-content;
 }
-.s-controls-cnt--ctr p {
-	font-size: 11px;
-	font-weight: normal;
-}
+
 
 /* Data containers and sections */
 .s-data {
@@ -166,14 +193,11 @@ pre {
 	position: relative;
 	height: 100%;
 	opacity: 0;
-	transition: opacity 0.3s;
+	transition: opacity 0.7s ease-out;
 		/* position: relative;
 	z-index: 2;
 	pointer-events: none; */
 	/* margin: var(--spc-default); */
-
-
-
 }
 
 @media only screen and (max-width: 1250px) {
@@ -386,16 +410,3 @@ pre {
 	gap: 1px;
 }
 
-.highlight-1 {
-	padding: 5px 4px;
-	background-color: rgba(3, 3, 3, 0.599);
-	color: var(--color-white);
-	border-radius: 0;
-}
-
-.highlight-2 {
-	padding: 5px 4px;
-	color: white;
-	background: #00000075;
-	padding-right: 9px;
-}

@@ -1,9 +1,12 @@
-
+import { init } from "./dataDisplay";
 // Manager set up
 export function managerSetUp(manager) {
   manager.onLoad = function () {
     console.log('Loaded');
     document.querySelector('.webgl').classList.add('loaded');
+    setTimeout(() => {
+      init();
+    }, 0);
   };
 }
 
@@ -79,7 +82,7 @@ export function controlsSetUp(controls) {
   controls.enablePan = true;
 console.log(controls);
 controls.enableZoom = false;
-  controls.autoRotate = false;
+  controls.autoRotate = true;
   controls.autoRotateSpeed = 0.2;
   controls.dampingFactor = 0.1;
   controls.keyPanSpeed = 1.2;

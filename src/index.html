@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GPGPU Flowfield Animation</title>
 	<link rel="stylesheet" href="./styles/style.css">
 </head>
-
 <body>
 	<main>
 		<div class="o-grid s-data-grid scroll-cnt">
@@ -75,10 +73,6 @@
 						</header>
 						<pre id="obj-inst-mesh"></pre>
 					</article>
-
-				
-
-
 				</div>
 			</section>
 
@@ -421,30 +415,32 @@
 		</div>
 
 		<div class="o-grid s-controls-cnt">
-			<menu class="o-list s-controls-cnt--menu o-list--xs">
-				<button id="btn-toggle-data" class="btn">Clear data</button>
-				<button class="btn">About</button>
-				<a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a>
-			</menu>
+			<div class="s-menu-cnt">
+				<section class="s-panel">
+					<header>
+						<h3 class="highlight-1">Controls</h3>
+					</header>
+					<div class="s-panel__body ">
+						<div class="highlight-2 s-panel__spc">
+							<p class="p2">camera panning: arrow keys (↑ ↓ ← →)</p>
+						</div>
+						<div class="highlight-2 s-panel__spc">
+							<p class="p2">zoom: Mouse wheel (+ -)</p>
+						</div>
+						<div class="highlight-2 s-panel__spc">
+							<p class="p2">rotate model: drag & move (⤴)</p>
+						</div>
+					</div>
+				</section>
+				<menu class="s-controls-cnt--menu">
+					<button class="btn">Controls</button>
+					<button id="btn-toggle-data" class="btn">Reveal data</button>
+					<button class="btn">About</button>
+					<!-- <a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a> -->
+				</menu>
+	
+			
 
-			<div class="s-controls-cnt--ctr">
-				<header>
-					<h3 class="highlight-1">Controls</h3>
-				</header>
-				<div class="o-list o-list--sm ">
-					<div class="highlight-2">
-						<p>camera panning:</p>
-						<p>arrow keys (↑ ↓ ← →)</p>
-					</div>
-					<div class="highlight-2">
-						<p>zoom:</p>
-						<p>Mouse wheel (+ -)</p>
-					</div>
-					<div class="highlight-2">
-						<p>rotate model</p>
-						<p>drag & move (⤴)</p>
-					</div>
-				</div>
 			</div>
 		</div>
 		<!-- <img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt=""> -->
