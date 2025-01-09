@@ -80,8 +80,7 @@ export function guiSetUp(gui, uSize, uFlowFieldInfluence, uFlowFieldStrength, uF
 export function controlsSetUp(controls) {
   controls.enableDamping = true;
   controls.enablePan = true;
-console.log(controls);
-controls.enableZoom = false;
+  controls.enableZoom = true;
   controls.autoRotate = true;
   controls.autoRotateSpeed = 0.2;
   controls.dampingFactor = 0.1;
@@ -90,6 +89,9 @@ controls.enableZoom = false;
   controls.minDistance = 8;
   controls.rotateSpeed = 0.4;
 
+  controls.maxPolarAngle = Math.PI / 1.2;  
+  // controls.minPolarAngle = Math.PI / 4;
+  
   controls.keys = {
     LEFT: 'ArrowRight',
     UP: 'ArrowDown',

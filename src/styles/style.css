@@ -6,7 +6,9 @@
 :root {
 	--color-black: #1e1e1e;
 	--color-black-tr-1: rgba(70, 70, 72, 0.847);
-	--color-black-tr-2: rgba(115, 115, 120, 0.8);
+	--color-black-tr-2: rgba(91, 91, 94, 0.8);
+	--color-black-tr-3: rgba(91, 91, 94, 0.8);
+
 	--color-white: #ededed;
 	--spc-m: 12px;
 	--spc-default: var(--spc-m);
@@ -61,7 +63,8 @@ button.btn.disabled {
 }
 
 button.btn.selected {
-	background-color: var(--color-black-tr-2);
+	background-color: var(--color-black-tr-3);
+	/* text-decoration: underline!important; */
 }
 
 button.btn:hover {
@@ -125,7 +128,7 @@ pre {
 
 .s-menu-cnt {
 	position: relative;
-	grid-column: 1 / span 5;
+	grid-column: 18 / span 5;
 	grid-row: 1;
 }
 
