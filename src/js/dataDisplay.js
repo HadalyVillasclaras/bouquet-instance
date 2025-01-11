@@ -3,6 +3,7 @@ let autoScrollTimeout;
 
 export function init() {
   const scrollContainer = document.querySelector('.scroll-cnt');
+  const scrollContainerClass = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
 
   if (scrollContainer) {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
@@ -20,7 +21,7 @@ export function init() {
     }, 3000);
 
     setTimeout(() => {
-      setupAutoScroll()
+       setupAutoScroll()
     }, 4000);
   });
 }
@@ -115,7 +116,23 @@ function autoScroll(scrollContainerClass) {
   const maxDelay = isSafari ? 100 : 80;
   const scrollContainers = document.querySelectorAll(scrollContainerClass);
 
-  
+  const manageScroll = (container, isActiveRef, articlesContainer, index, delay, lastTime) => {
+    const now = performance.now();
+    if (isActiveRef.isActive && now - lastTime >= delay) {
+      container.scrollTop += step;
+      const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
+      if (clonedArticlesContainer) {
+        const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
+        if (secondDivTop <= 0) {
+          container.scrollTop = articlesContainer.offsetTop;
+        }
+      }
+      lastTime = now;
+    }
+    if (intervals.has(container)) {
+      requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, lastTime));
+    }
+  };
 
   scrollContainers.forEach((container, index) => {
     const delay = Math.random() * (maxDelay - minDelay) + minDelay;
@@ -134,24 +151,6 @@ function autoScroll(scrollContainerClass) {
     container.addEventListener('mouseleave', () => { isActiveRef.isActive = true; });
   });
 }
-
-const manageScroll = (container, isActiveRef, articlesContainer, index, delay, lastTime) => {
-  const now = performance.now();
-  if (isActiveRef.isActive && now - lastTime >= delay) {
-    container.scrollTop += step;
-    const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
-    if (clonedArticlesContainer) {
-      const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
-      if (secondDivTop <= 0) {
-        container.scrollTop = articlesContainer.offsetTop;
-      }
-    }
-    lastTime = now;
-  }
-  if (intervals.has(container)) {
-    requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, lastTime));
-  }
-};
 
 function setVisibleData() {
   const element = document.querySelector('.s-data-grid');
