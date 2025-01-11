@@ -51,7 +51,7 @@
     "ITEM_SIZE": 1,
     "NAME": "NULL",
     "NORMALIZED": "FALSE",
-    "UPDATE_RANGES": [],
+    "UPDATE_RANGES": "[]",
     "USAGE": 35044,
     "VERSION": 0,
     "_UPDATE_RANGE": {

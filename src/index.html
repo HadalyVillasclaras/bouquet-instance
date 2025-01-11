@@ -12,7 +12,7 @@
 	<main>
 		<div class="o-grid s-data-grid scroll-cnt">
 			<section class="scroll-cnt s-data-cnt s-data-cnt--intro">
-				<div class="o-list">
+				<div id="ch-a-0" class="o-list">
 					<article class="s-data">
 						<header>
 							<h1 class="">Instance II: Bouquet</h1>
@@ -20,10 +20,8 @@
 						<div>
 							<p class="txt-no-transform">
 								glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
-								I/O v4.2.70. Version: "2.0".
-								GLTF Parser.
-
-								KHR Draco Mesh Compression.
+								I/O v4.2.70. Version:2.0.
+								<!-- GLTF Parser. -->
 							</p>
 						</div>
 					</article>
@@ -33,12 +31,81 @@
 							<h3>_GLTF_Parser</h3>
 						</header>
 						<div>
-							<p>“Bouquet” mesh as “OBJECT_4”. </p>
-							<p>GPU COMPUTATION RENDERER.</p>
-							<p>BINARY GLTF & DRACO LOADERS</p>
+							<p>Associations: Mesh Standard Material & Mesh(_object3d)</p>
+
 						</div>
 					</article>
 
+						<!-- gltf parser -->
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF_PARSER <br>(Data Attributes)</h3>
+							</header>
+							<pre id="obj-inst-parser"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions</h3>
+							</header>
+							<pre id="obj-inst-ext"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
+							</header>
+							<pre id="obj-inst-ext-draco"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER Extensions BINARY</h3>
+							</header>
+							<pre id="obj-inst-ext-binary"></pre>
+						</article>
+	
+						<article class="s-data data-tgl">
+							<header>
+								<h3>GLTF PARSER PLUGINS</h3>
+							</header>
+							<pre id="obj-inst-parser-plugins"></pre>
+						</article>
+
+				
+				</div>
+			</section>
+
+			<section class="scroll-cnt s-data-cnt s-data-cnt--geo">
+				<div class="o-list">
+					<article class="s-data">
+						<header>
+							<h3>Geometry I.(730639)</h3>
+						</header>
+						<div>
+							<ul>
+								<li>TYPE: BUFFER_GEOMETRY </li>
+								<li>INDEX: {
+									<ul>
+										<li>TYPE: BUFFER_ATTRIBUTE</li>
+										<li>UINT32ARRAY(2097183): [
+											<ul>
+												<li>[0…999999]</li>
+												<li>[1000000…1999999]</li>
+												<li>[2000000…2097182]</li>
+												<li>BYTE_LENGTH: 8767668</li>
+												<li>SYMBOL_TO_STRING: UINT32</li>
+											</ul>
+											]
+										</li>
+										<li>GPU_TYPE: 1015</li>
+										<li>USAGE: 35044</li>
+									</ul>
+									}
+								</li>
+							</ul>
+						</div>
+					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF INSTANCE </h3>
@@ -75,100 +142,7 @@
 						</header>
 						<pre id="obj-inst-mesh"></pre>
 					</article>
-				</div>
-			</section>
-
-			<section class="scroll-cnt s-data-cnt s-data-cnt--geo">
-				<div class="o-list">
-					<article class="s-data">
-						<header>
-							<h3>BASE GEOMETRY</h3>
-						</header>
-						<div>
-							<ul class="">
-								<li>BUFFER GEOMETRY INDEXES</li>
-								<li>INSTANCE SOURCE: gltf instance <br>
-									Mesh & PARTICLES GEOMETRY</li>
-								<li>GLTF_INSTANCE:
-									<ul>
-										<li>BUFFER_ATTRIBUTE</li>
-										<li>ARRAY: UINT32ARRAY(2097183)
-											<ul class="txt-no-transform">
-												<li>[0…999999]</li>
-												<li>[1000000…1999999]</li>
-												<li>[2000000…2097182]</li>
-												<li>BUFFER: ARRAY_BUFFER(8767668)</li>
-												<li>BYTELENGTH: 8767668</li>
-												<li>BYTEOFFSET: 0</li>
-												<li>LENGTH: 2191917</li>
-												<li>SYMBOL (SYMBOL. TOSTRINGTAG): [*UINT32ARRAY*]</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li>
-									PARTICLES_INSTANCE:
-									<ul>
-										<li>DATA: NULL</li>
-									</ul>
-								</li>
-								<li>COUNT: 2097183</li>
-								<li>GPU_TYPE: 1015</li>
-								<li>NORMALIZED: FALSE</li>
-								<li>USAGE: 39044</li>
-								<li>VERSION: 0</li>
-								<li>UPDATERANGE:
-									<ul>
-										<li>COUNT: -1</li>
-										<li>OFFSET: O Cu/loeishift</li>
-									</ul>
-								</li>
-								</li>
-								<li>PROTOTYPE: TYPEDARRAY</li>
-							</ul>
-						</div>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>PARTICLES BUFFER GEOMETRY</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-geo"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>PARTICLES BUFFER GEOMETRY ATTRIBUTES</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-geo-att"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>PARTICLES MATERIAL</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-material"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>PARTICLES MATERIAL UNIFORMS</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-material-uni"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>PARTICLES POINTS</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-points"></pre>
-						</div>
-					</article>
+					
 				</div>
 			</section>
 
@@ -176,11 +150,11 @@
 				<div class="o-list">
 					<article class="s-data">
 						<header>
-							<h3>A. BUFFER (8388732)</h3>
+							<h3>GPU_COMPUTATION_RENDER</h3>
 						</header>
 						<div>
-							<p>BUFFER ATTRIBUTE</p>
-							<p>Uint32Array</p>
+							<p>RGBA float textures </p>
+							<p>Data_Texture / WEBGL</p>
 						</div>
 					</article>
 					<article class="s-data">
@@ -304,41 +278,47 @@
 							<pre id="obj-globals"></pre>
 						</div>
 					</article>
-					<!-- gltf parser -->
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF_PARSER <br>(Data Attributes)</h3>
+							<h3>PARTICLES BUFFER GEOMETRY</h3>
 						</header>
-						<pre id="obj-inst-parser"></pre>
+						<div>
+							<pre id="obj-particles-geo"></pre>
+						</div>
 					</article>
-
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF PARSER Extensions</h3>
+							<h3>PARTICLES BUFFER GEOMETRY ATTRIBUTES</h3>
 						</header>
-						<pre id="obj-inst-ext"></pre>
+						<div>
+							<pre id="obj-particles-geo-att"></pre>
+						</div>
 					</article>
-
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
+							<h3>PARTICLES MATERIAL</h3>
 						</header>
-						<pre id="obj-inst-ext-draco"></pre>
+						<div>
+							<pre id="obj-particles-material"></pre>
+						</div>
 					</article>
-
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF PARSER Extensions BINARY</h3>
+							<h3>PARTICLES MATERIAL UNIFORMS</h3>
 						</header>
-						<pre id="obj-inst-ext-binary"></pre>
+						<div>
+							<pre id="obj-particles-material-uni"></pre>
+						</div>
 					</article>
-
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF PARSER PLUGINS</h3>
+							<h3>PARTICLES POINTS</h3>
 						</header>
-						<pre id="obj-inst-parser-plugins"></pre>
+						<div>
+							<pre id="obj-particles-points"></pre>
+						</div>
 					</article>
+				
 				</div>
 			</section>
 
@@ -416,59 +396,52 @@
 			</section>
 		</div>
 
-		<div class="o-grid s-menu-panels">
-			<div class="s-menu-cnt">
-				<section id="panel-info" class="s-panel hide">
-					<header class="mb-4">
-						<h3 class="highlight-1">About</h3>
-					</header>
-					<div class="s-panel__body info highlight-2 s-panel__spc">
-						<h3 class="h3">Instance ii: Bouquet</h3>
-						<p class="p2">Instance ii: Bouquet delves into the nature of a digital entity by exposing its data
-							infrastructure.
-						</p>
-						<p aria-hidden="true">*******************************************************</p>
-						<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh lorem, fringilla
-							fringilla tincidunt vitae, scelerisque in urna. Mauris vitae imperdiet urna. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
-							ridiculus mus.</p>
-						<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et
-							magnis dis parturient montes, nascetur ridiculus mus.</p>
-						<p class="p2">Fusce vehicula ullamcorper sagittis. In vitae enim enim. Aliquam erat volutpat. Fusce tempus
-							ante eget turpis tristique molestie. Etiam tristique lacus in vehicula finibus. Aliquam erat volutpat.
-							Phasellus cursus, est at viverra egestas, felis neque lacinia magna, et feugiat nibh erat quis sem. Ut
-							convallis, lectus nec imperdiet lobortis, lorem libero convallis purus, a tempus dolor tellus at sem.
-							Curabitur dictum finibus sapien sed rutrum.</p>
-							<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus.</p>
-					</div>
-				</section>
-				<section id="panel-controls" class="s-panel hide">
-					<header>
-						<h3 class="highlight-1">Controls</h3>
-					</header>
-					<div class="s-panel__body ">
-						<div class="highlight-2 s-panel__spc">
-							<p class="p2">camera panning: arrow keys (↑ ↓ ← →)</p>
-						</div>
-						<div class="highlight-2 s-panel__spc">
-							<p class="p2">zoom: Mouse wheel (+ -)</p>
-						</div>
-						<div class="highlight-2 s-panel__spc">
-							<p class="p2">rotate model: drag & move (⤴)</p>
-						</div>
-					</div>
-				</section>
-				<menu class="s-controls-cnt--menu">
-					<button disabled id="btn-toggle-ctrl" class="btn disabled">Controls</button>
-					<button id="btn-toggle-info" class="btn">About</button>
-					<button id="btn-toggle-data" class="btn">Hide data</button>
-					<!-- <a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a> -->
-				</menu>
-
-
-
+		<section id="panel-info" class="s-panel hide">
+			<header class="mb-4">
+				<h3 class="highlight-1">About</h3>
+			</header>
+			<div class="s-panel__body info highlight-2 s-panel__spc">
+				<h3 class="h3">Instance ii: Bouquet</h3>
+				<p class="p2">Instance ii: Bouquet delves into the nature of a digital entity by exposing its data
+					infrastructure.
+				</p>
+				<p aria-hidden="true">*******************************************************</p>
+				<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh lorem, fringilla
+					fringilla tincidunt vitae, scelerisque in urna. Mauris vitae imperdiet urna. Lorem ipsum dolor sit amet,
+					consectetur adipiscing elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+					ridiculus mus.</p>
+				<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus et
+					magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<p class="p2">Fusce vehicula ullamcorper sagittis. In vitae enim enim. Aliquam erat volutpat. Fusce tempus
+					ante eget turpis tristique molestie. Etiam tristique lacus in vehicula finibus. Aliquam erat volutpat.
+					Phasellus cursus, est at viverra egestas, felis neque lacinia magna, et feugiat nibh erat quis sem. Ut
+					convallis, lectus nec imperdiet lobortis, lorem libero convallis purus, a tempus dolor tellus at sem.
+					Curabitur dictum finibus sapien sed rutrum.</p>
+				<p class="p2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci varius natoque penatibus.</p>
 			</div>
-		</div>
+		</section>
+		<section id="panel-controls" class="s-panel hide">
+			<header>
+				<h3 class="highlight-1">Controls</h3>
+			</header>
+			<div class="s-panel__body ">
+				<div class="highlight-2 s-panel__spc">
+					<p class="p2">camera panning: arrow keys (↑ ↓ ← →)</p>
+				</div>
+				<div class="highlight-2 s-panel__spc">
+					<p class="p2">zoom: Mouse wheel (+ -)</p>
+				</div>
+				<div class="highlight-2 s-panel__spc">
+					<p class="p2">rotate model: drag & move (⤴)</p>
+				</div>
+			</div>
+		</section>
+		<menu class="s-controls-cnt--menu s-menu-panels">
+			<button disabled id="btn-toggle-ctrl" class="btn disabled">Controls</button>
+			<button id="btn-toggle-info" class="btn">About</button>
+			<button id="btn-toggle-data" class="btn">Hide data</button>
+			<!-- <a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a> -->
+		</menu>
 		<!-- <img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt=""> -->
 		<canvas class="webgl"></canvas>
 	</main>
