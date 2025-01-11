@@ -19,8 +19,8 @@
 	color: #172574;
 	color: #132276;
 	color: black;
-
 }
+
 * {
 	margin: 0;
 	padding: 0;
@@ -38,6 +38,15 @@ main {
 	height: 100vh;
 	width: 100%;
 }
+
+@media only screen and (max-width: 1250px) {
+	main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 
 .webgl, .canvas-poster {
 	position: absolute;
@@ -227,15 +236,23 @@ pre {
 
 @media only screen and (max-width: 1250px) {
 	.o-grid.s-data-grid {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		display: block;
+		width: fit-content;
 	}
 }
 
 .s-data-cnt {
-	padding-top: var(--spc-default);
 	padding-bottom: var(--spc-default);
+}
+
+@media only screen and (min-width: 1250px) {
+	.s-data-cnt {
+		padding-top: var(--spc-default);
+	}
+}
+
+.s-data-clnd {
+	/* margin-top: 16px; */
 }
 
 .scroll-cnt {
@@ -352,6 +369,10 @@ pre {
 @media only screen and (min-width: 1500px) {
 	.s-data-cnt--intro {
 		grid-column: 1 / span 4;
+	}
+
+	.s-data-cnt--intro #ch-a-0{
+		max-width: 236px;
 	}
 	
 	.s-data-cnt--geo {

@@ -241,7 +241,7 @@ const animate = (time) => {
 }
 
 animate();
-// scene.visible = false;
+scene.visible = false;
 // Objects
 console.log(manager);
 
