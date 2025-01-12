@@ -3,7 +3,6 @@ let autoScrollTimeout;
 
 export function init() {
   const scrollContainer = document.querySelector('.scroll-cnt');
-  const scrollContainerClass = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
 
   if (scrollContainer) {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
@@ -159,11 +158,9 @@ function setVisibleData() {
   }
 
   setTimeout(() => {
-    const menuAndPanels = document.querySelector('.s-menu-panels');
+    const menuAndPanels = document.querySelector('.c-menu');
     if (menuAndPanels) {
       menuAndPanels.style.opacity = '1';
     }
   }, 1000);
 }
-
-

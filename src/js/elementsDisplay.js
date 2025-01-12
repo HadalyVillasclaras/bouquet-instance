@@ -8,7 +8,7 @@ const panelControls = document.getElementById('panel-controls');
 
 
 function init() {
-  document.addEventListener('click', clickOutsideHandler);
+  // document.addEventListener('click', closeIfClickOutside);
 
   if (dataButton) {
     dataButton.addEventListener('click', toggleData);
@@ -73,7 +73,7 @@ function toggleData() {
   }
 }
 
-function clickOutsideHandler(event) {
+function closeIfClickOutside(event) {
   if (!panelInfo.contains(event.target) && !panelControls.contains(event.target) &&
     !dataButton.contains(event.target) && !ctrlButton.contains(event.target) && !infoButton.contains(event.target)) {
     if (!panelInfo.classList.contains('hide')) {

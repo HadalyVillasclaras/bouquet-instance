@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GPGPU Flowfield Animation</title>
+	<title>BOUQUET</title>
 	<link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
+	<header class="c-hdr">
+		<menu class="c-menu">
+			<button id="btn-toggle-data" class="btn">Hide data</button>
+			<button id="btn-toggle-info" class="btn">About</button>
+			<button id="btn-toggle-ctrl" class="btn">Controls</button>
+		</menu>
+	</header>
 	<main>
 		<div class="o-grid s-data-grid scroll-cnt">
 			<section class="scroll-cnt s-data-cnt s-data-cnt--intro">
@@ -36,47 +42,45 @@
 						</div>
 					</article>
 
-						<!-- gltf parser -->
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF_PARSER <br>(Data Attributes)</h3>
-							</header>
-							<pre id="obj-inst-parser"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions</h3>
-							</header>
-							<pre id="obj-inst-ext"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions DRACO (DESERIALIZED DATA)</h3>
-							</header>
-							<pre id="obj-inst-ext-draco"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER Extensions BINARY</h3>
-							</header>
-							<pre id="obj-inst-ext-binary"></pre>
-						</article>
-	
-						<article class="s-data data-tgl">
-							<header>
-								<h3>GLTF PARSER PLUGINS</h3>
-							</header>
-							<pre id="obj-inst-parser-plugins"></pre>
-						</article>
+					<!-- gltf parser -->
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER <br>(Data Attributes)</h3>
+						</header>
+						<pre id="obj-inst-parser"></pre>
+					</article>
 
-				
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER Extensions</h3>
+						</header>
+						<pre id="obj-inst-ext"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF Draco Mesh Compression Extension</h3>
+						</header>
+						<pre id="obj-inst-ext-draco"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF Binary Extension</h3>
+						</header>
+						<pre id="obj-inst-ext-binary"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF PARSER Plugins</h3>
+						</header>
+						<pre id="obj-inst-parser-plugins"></pre>
+					</article>
 				</div>
 			</section>
 
-			<section class="scroll-cnt s-data-cnt s-data-cnt--geo">
+			<section class="scroll-cnt s-data-cnt s-data-cnt--gltf">
 				<div class="o-list">
 					<article class="s-data">
 						<header>
@@ -108,7 +112,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF INSTANCE </h3>
+							<h3>GLTF Instance </h3>
 						</header>
 						<pre id="obj-inst"></pre>
 					</article>
@@ -116,7 +120,7 @@
 					<!-- instance geometry, mesh and materials -->
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF INSTANCE Geometry</h3>
+							<h3>GLTF Instance Geometry</h3>
 						</header>
 						<div>
 							<pre id="obj-inst-geo"></pre>
@@ -124,7 +128,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF INSTANCE Geometry ATTRIBUTES</h3>
+							<h3>GLTF Instance Geometry Attributes</h3>
 						</header>
 						<div>
 							<pre id="obj-inst-geo-atts"></pre>
@@ -132,28 +136,28 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF INSTANCE Mesh standard material</h3>
+							<h3>GLTF Instance Mesh Standard Material</h3>
 						</header>
 						<pre id="obj-inst-mat"></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF INSTANCE Mesh </h3>
+							<h3>GLTF Instance Mesh </h3>
 						</header>
 						<pre id="obj-inst-mesh"></pre>
 					</article>
-					
+
 				</div>
 			</section>
 
-			<section class="scroll-cnt s-data-cnt s-data-cnt--dummy">
+			<section class="scroll-cnt s-data-cnt s-data-cnt--gpu">
 				<div class="o-list">
 					<article class="s-data">
 						<header>
-							<h3>GPU_COMPUTATION_RENDER</h3>
+							<h3>GPU Computation Render</h3>
 						</header>
 						<div>
-							<p>RGBA float textures </p>
+							<p>RGBA Float Textures </p>
 							<p>Data_Texture / WEBGL</p>
 						</div>
 					</article>
@@ -169,7 +173,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>_GPU_DATA_TEXTURE</h3>
+							<h3>GPU Data Texture</h3>
 						</header>
 						<div>
 							<pre id="obj-gpu-texture"></pre>
@@ -177,7 +181,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>_GPU_SHADER_MATERIAL</h3>
+							<h3>GPU Shader Material</h3>
 						</header>
 						<div>
 							<pre id="obj-gpu-material"></pre>
@@ -185,7 +189,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>_GPU PARTICLES_VARIABLES (UNIFORMS)</h3>
+							<h3>GPU Particles Variables (UNIFORMS)</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-uniforms"></pre>
@@ -193,7 +197,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>_GPU_COMPUTATION</h3>
+							<h3>GPU Computation</h3>
 						</header>
 						<div>
 							<pre id="obj-gpu-comp"></pre>
@@ -201,7 +205,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>_GPU_COMPUTATION RENDER TARGETS</h3>
+							<h3>GPU Render Targets</h3>
 						</header>
 						<div>
 							<pre id="obj-gpu-render-targets"></pre>
@@ -240,15 +244,10 @@
 							<h3>Loading Manager</h3>
 						</header>
 						<pre id="obj-manager"></pre>
-						<div>
-							<p>environment Intensity: 1 </p>
-							<p>visible: true</p>
-							<p>dynamic env. mapping: null</p>
-						</div>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>GLTF loader</h3>
+							<h3>GLTF Loader</h3>
 						</header>
 						<div>
 							<pre id="obj-gltf"></pre>
@@ -256,7 +255,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>Draco loader</h3>
+							<h3>Draco Loader</h3>
 						</header>
 						<div>
 							<pre id="obj-draco"></pre>
@@ -280,7 +279,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>PARTICLES BUFFER GEOMETRY</h3>
+							<h3>Particles Buffer Geometry</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-geo"></pre>
@@ -288,7 +287,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>PARTICLES BUFFER GEOMETRY ATTRIBUTES</h3>
+							<h3>Particles Buffer Geometry Attributes</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-geo-att"></pre>
@@ -296,7 +295,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>PARTICLES MATERIAL</h3>
+							<h3>Particles Material</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-material"></pre>
@@ -304,7 +303,7 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>PARTICLES MATERIAL UNIFORMS</h3>
+							<h3>Particles Material Uniforms</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-material-uni"></pre>
@@ -312,13 +311,13 @@
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>PARTICLES POINTS</h3>
+							<h3>Particles Points</h3>
 						</header>
 						<div>
 							<pre id="obj-particles-points"></pre>
 						</div>
 					</article>
-				
+
 				</div>
 			</section>
 
@@ -349,7 +348,7 @@
 					</article>
 					<article class="c-transp s-data">
 						<header>
-							<h3>_Uposition</h3>
+							<h3>_UPosition</h3>
 						</header>
 						<p id="dt-cam-pos">-10.0x,5.0y,8.1z</p>
 						<div>
@@ -361,28 +360,23 @@
 							<h3>_scene</h3>
 						</header>
 						<pre id="obj-scene"></pre>
-						<div>
-							<p>environment Intensity: 1 </p>
-							<p>visible: true</p>
-							<p>dynamic env. mapping: null</p>
-						</div>
 					</article>
 
 					<article class="s-data data-tgl">
 						<header>
-							<h3>WEBGL RENDER PROGRAMS</h3>
+							<h3>WEBGL Render Programs</h3>
 						</header>
 						<pre id="obj-render-programs"></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>WEBGL RENDER</h3>
+							<h3>WEBGL Render</h3>
 						</header>
 						<pre id="obj-render"></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
-							<h3>WEBGL RENDER STATE</h3>
+							<h3>WEBGL Render State</h3>
 						</header>
 						<pre id="obj-render-state"></pre>
 					</article>
@@ -395,9 +389,8 @@
 				</header>
 			</section>
 		</div>
-
 		<section id="panel-info" class="s-panel hide">
-			<header class="mb-4">
+			<header class="">
 				<h3 class="highlight-1">About</h3>
 			</header>
 			<div class="s-panel__body info highlight-2 s-panel__spc">
@@ -426,30 +419,18 @@
 			</header>
 			<div class="s-panel__body ">
 				<div class="highlight-2 s-panel__spc">
-					<p class="p2">camera panning: arrow keys (↑ ↓ ← →)</p>
+					<p class="p2">Camera panning: arrow keys (↑ ↓ ← →)</p>
 				</div>
 				<div class="highlight-2 s-panel__spc">
-					<p class="p2">zoom: Mouse wheel (+ -)</p>
+					<p class="p2">Zoom: Mouse wheel (+ -)</p>
 				</div>
 				<div class="highlight-2 s-panel__spc">
-					<p class="p2">rotate model: drag & move (⤴)</p>
+					<p class="p2">Rotate model: drag & move (⤴)</p>
 				</div>
 			</div>
 		</section>
-		<menu class="s-controls-cnt--menu s-menu-panels">
-			<button id="btn-toggle-ctrl" class="btn">Controls</button>
-			<button id="btn-toggle-info" class="btn">About</button>
-			<button id="btn-toggle-data" class="btn">Hide data</button>
-			<!-- <a class="btn" target="_blank" href="https://www.instagram.com/hahahada.dev/">@hada.dev</a> -->
-		</menu>
-		<!-- <img class="canvas-poster bg-cover" src="./assets/media/poster.png" alt=""> -->
 		<canvas class="webgl"></canvas>
 	</main>
-	<footer class="p-12 c-footer o-clrw">
-		<div class="c-footer__rg">
-		</div>
-	</footer>
 	<script type="module" src="./script.js"></script>
 </body>
-
 </html>
