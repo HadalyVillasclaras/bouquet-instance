@@ -12,6 +12,7 @@ function init() {
 
   if (dataButton) {
     dataButton.addEventListener('click', toggleData);
+
   }
 
   if (ctrlButton) {
@@ -51,6 +52,8 @@ function togglePanel(currentPanel, otherPanel) {
       currentPanel.classList.add('hide');
     }
   }
+
+
 }
 
 function toggleData() {
@@ -66,11 +69,8 @@ function toggleData() {
     }
   });
 
-  if (isHidden) {
-    dataButton.textContent = 'Reveal Data';
-  } else {
-    dataButton.textContent = 'Hide Data';
-  }
+  dataButton.classList.toggle('selected');
+
 }
 
 function closeIfClickOutside(event) {

@@ -149,8 +149,13 @@ pre {
 
 .s-panel__body.info {
 	gap: 6px;
-	width: 654px;
 	padding: 8px 9px 8px 9px;
+}
+
+@media only screen and (min-width: 1200px) {
+	.s-panel__body.info {
+		width: 654px;
+	}
 }
 
 .c-hdr {
@@ -165,13 +170,7 @@ pre {
 }
 
 .c-hdr #btn-toggle-data {
-	width: 99.2px;
-}
-
-@media only screen and (min-width: 1200px) and (max-width: 1549px) {
-	.c-hdr #btn-toggle-data {
-		width: 84.2px;
-	}
+	white-space: nowrap;
 }
 
 
@@ -181,9 +180,10 @@ pre {
 	gap: 1px;
 	height: fit-content;
 	opacity: 0;
-	
 	transition: opacity 0.7s ease-out;
 }
+
+
 
 .c-menu * {
 	pointer-events: all;
@@ -207,7 +207,7 @@ pre {
 
 @media only screen and (min-width: 1500px) {
 	.data-tgl {
-		max-width: 250px;
+		max-width: 222px;
 	}
 }
 
@@ -327,7 +327,7 @@ pre {
 		grid-row: 1;
 	}
 
-	.s-data-cnt--intro #ch-a-0{
+	.s-data-cnt--intro > div .perm{
 		max-width: 192px;
 	}
 
@@ -370,8 +370,9 @@ pre {
 		grid-column: 1 / span 4;
 	}
 
-	.s-data-cnt--intro #ch-a-0{
-		max-width: 236px;
+	
+	.s-data-cnt--intro > div .perm{
+		max-width: 214px;
 	}
 
 	.s-data-cnt--gltf {
