@@ -1,15 +1,9 @@
 class DataUpdater {
-  constructor() {
-    this.elements = {
-      cameraPosition: document.getElementById('dt-cam-pos'),
-      time: document.getElementById('dt-time'),
-      fps: document.getElementById('dt-fps'),
-      rotation: document.getElementById('dt-rotation'),
-      rotationMagnitude: document.getElementById('dt-rotation-mag'),
-      rotationAxis: document.getElementById('dt-rotation-axis'),
-      zoom: document.getElementById('dt-zoom'),
-      toggleRotateDir: document.getElementById('dt-toggle-rotate-dir') 
-    };
+    constructor() {
+      this.elements = {};
+      this.updateElements();
+      window.addEventListener('resize', this.updateElements.bind(this));
+    
 
     this.data = {
       cameraPosition: { x: 0, y: 0, z: 0 },
@@ -18,6 +12,18 @@ class DataUpdater {
       rotation: { x: 0, y: 0, z: 0 },
       zoom: 0
     };
+  }
+  
+  updateElements() {
+    const suffix = window.innerWidth < 1250 ? '-mb' : '';
+    this.elements.cameraPosition = document.getElementById(`dt-cam-pos${suffix}`);
+    this.elements.time = document.getElementById(`dt-time${suffix}`);
+    this.elements.fps = document.getElementById(`dt-fps${suffix}`);
+    this.elements.rotation = document.getElementById(`dt-rotation${suffix}`);
+    this.elements.rotationMagnitude = document.getElementById(`dt-rotation-mag${suffix}`);
+    this.elements.rotationAxis = document.getElementById(`dt-rotation-axis${suffix}`);
+    this.elements.zoom = document.getElementById(`dt-zoom${suffix}`);
+    this.elements.toggleRotateDir = document.getElementById(`dt-toggle-rotate-dir${suffix}`);
   }
 
   setRotationDirection(controls) {

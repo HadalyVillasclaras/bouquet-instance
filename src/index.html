@@ -18,8 +18,8 @@
 	<main>
 		<div class="o-grid s-data-grid scroll-cnt">
 			<section class="scroll-cnt s-data-cnt s-data-cnt--intro">
-				<div id="ch-a-0" class="o-list">
-					<article class="s-data perm ch-a-0">
+				<div class="o-list">
+					<article class="s-data  perm ch-a-0">
 						<header>
 							<h1 class="">Instance II: Bouquet</h1>
 						</header>
@@ -27,12 +27,57 @@
 							<p class="txt-no-transform">
 								glTF Mesh GPU Instancing & Image Bit Map Loader. Asset generator: Khronos glTF
 								I/O v4.2.70. Version:2.0.
-								<!-- GLTF Parser. -->
 							</p>
 						</div>
 					</article>
+					<!-- mobile -->
+					<article class="c-transp s-data hide-dk ">
+						<header>
+							<h3>Rot. magnitude</h3>
+						</header>
+						<p id="dt-rotation-mag-mb">1.08 rad</p>
+					</article>
+					<article class="s-data hide-dk  ">
+						<h3>Zoom:<span class="h3" id="dt-zoom-mb">14</span></h3>
+					</article>
+					<article class="c-transp s-data hide-dk ">
+						<header>
+							<h3>_Utime</h3>
+						</header>
+						<p id="dt-time-mb">00:00:00:00</p>
+					</article>
+					<article class="c-transp s-data hide-dk ">
+						<header>
+							<h3>Axis rotation</h3>
+						</header>
+						<div id="dt-rotation-axis-mb">
+							<p>X: -33.23°</p>
+							<p>Y: -48.13°</p>
+							<p>Z: -25.78°</p>
+						</div>
+						<p class="visually-hidden" id="dt-rotation-mb"></p>
+					</article>
+					<article class="c-transp s-data hide-dk ">
+						<header>
+							<h3>Max. Polar Angle</h3>
+						</header>
+						<p id="dt-toggle-rotate-dir-mb">PI / 1.2</p>
+					</article>
+					<article class="c-transp s-data hide-dk ">
+						<header>
+							<h3>_UPosition</h3>
+						</header>
+						<p id="dt-cam-pos-mb">-10.0x,5.0y,8.1z</p>
+						<div>
+						</div>
+					</article>
+					<section class="s-data hide-dk s-data-cnt s-data-cnt--fps">
+						<header>
+							<h3>FPS:<span class="h3" id="dt-fps-mb">0</span></h3>
+						</header>
+					</section>
 
-					<article class="s-data perm">
+					<article class="s-data perm hide-mb">
 						<header>
 							<h3>_GLTF_Parser</h3>
 						</header>
@@ -80,9 +125,183 @@
 				</div>
 			</section>
 
+			<section class="scroll-cnt s-data-cnt s-data-cnt--rot">
+				<div class="o-list">
+					<article class="c-transp s-data hide-mb">
+						<header>
+							<h3>Rot. magnitude</h3>
+						</header>
+						<p id="dt-rotation-mag">1.08 rad</p>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>_Camera</h3>
+						</header>
+						<div>
+							<pre id="obj-camera"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>_Orbit_controls</h3>
+						</header>
+						<div>
+							<pre id="obj-orbit"></pre>
+						</div>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Loading Manager</h3>
+						</header>
+						<pre id="obj-manager"></pre>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>GLTF Loader</h3>
+						</header>
+						<div>
+							<pre id="obj-gltf"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Draco Loader</h3>
+						</header>
+						<div>
+							<pre id="obj-draco"></pre>
+						</div>
+					</article>
+				</div>
+			</section>
+		
+			<section class="s-data-cnt scroll-cnt s-data-cnt--zoom">
+				<div class="o-list">
+					<article class="s-data hide-mb">
+						<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>_GLOBALS</h3>
+						</header>
+						<div>
+							<pre id="obj-globals"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Particles Buffer Geometry</h3>
+						</header>
+						<div>
+							<pre id="obj-particles-geo"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Particles Buffer Geometry Attributes</h3>
+						</header>
+						<div>
+							<pre id="obj-particles-geo-att"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Particles Material</h3>
+						</header>
+						<div>
+							<pre id="obj-particles-material"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Particles Material Uniforms</h3>
+						</header>
+						<div>
+							<pre id="obj-particles-material-uni"></pre>
+						</div>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>Particles Points</h3>
+						</header>
+						<div>
+							<pre id="obj-particles-points"></pre>
+						</div>
+					</article>
+
+				</div>
+			</section>
+
+			<section class="scroll-cnt s-data-cnt s-data-cnt--time">
+				<div class="o-list">
+					<article class="c-transp s-data hide-mb">
+						<header>
+							<h3>_Utime</h3>
+						</header>
+						<p id="dt-time">00:00:00:00</p>
+					</article>
+					<article class="c-transp s-data hide-mb">
+						<header>
+							<h3>Axis rotation</h3>
+						</header>
+						<div id="dt-rotation-axis">
+							<p>X: -33.23°</p>
+							<p>Y: -48.13°</p>
+							<p>Z: -25.78°</p>
+						</div>
+						<p class="visually-hidden" id="dt-rotation"></p>
+					</article>
+					<article class="c-transp s-data hide-mb">
+						<header>
+							<h3>Max. Polar Angle</h3>
+						</header>
+						<p id="dt-toggle-rotate-dir">PI / 1.2</p>
+					</article>
+					<article class="c-transp s-data hide-mb">
+						<header>
+							<h3>_UPosition</h3>
+						</header>
+						<p id="dt-cam-pos">-10.0x,5.0y,8.1z</p>
+						<div>
+						</div>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>_scene</h3>
+						</header>
+						<pre id="obj-scene"></pre>
+					</article>
+
+					<article class="s-data data-tgl">
+						<header>
+							<h3>WEBGL Render Programs</h3>
+						</header>
+						<pre id="obj-render-programs"></pre>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>WEBGL Render</h3>
+						</header>
+						<pre id="obj-render"></pre>
+					</article>
+					<article class="s-data data-tgl">
+						<header>
+							<h3>WEBGL Render State</h3>
+						</header>
+						<pre id="obj-render-state"></pre>
+					</article>
+				</div>
+			</section>
+
+			<section class="s-data hide-mb s-data-cnt s-data-cnt--fps">
+				<header>
+					<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
+				</header>
+			</section>
 			<section class="scroll-cnt s-data-cnt s-data-cnt--gltf">
 				<div class="o-list">
-					<article class="s-data">
+					<article class="s-data hide-mb">
 						<header>
 							<h3>Geometry I.(730639)</h3>
 						</header>
@@ -146,13 +365,12 @@
 						</header>
 						<pre id="obj-inst-mesh"></pre>
 					</article>
-
 				</div>
 			</section>
 
 			<section class="scroll-cnt s-data-cnt s-data-cnt--gpu">
 				<div class="o-list">
-					<article class="s-data">
+					<article class="s-data hide-mb">
 						<header>
 							<h3>GPU Computation Render</h3>
 						</header>
@@ -161,7 +379,7 @@
 							<p>Data_Texture / WEBGL</p>
 						</div>
 					</article>
-					<article class="s-data">
+					<article class="s-data hide-mb">
 						<header>
 							<h3>_RESOLUTION</h3>
 						</header>
@@ -212,181 +430,6 @@
 						</div>
 					</article>
 				</div>
-			</section>
-
-			<section class="scroll-cnt s-data-cnt s-data-cnt--rot">
-				<div class="o-list">
-					<article class="c-transp s-data">
-						<header>
-							<h3>Rot. magnitude</h3>
-						</header>
-						<p id="dt-rotation-mag">1.08 rad</p>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>_Camera</h3>
-						</header>
-						<div>
-							<pre id="obj-camera"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>_Orbit_controls</h3>
-						</header>
-						<div>
-							<pre id="obj-orbit"></pre>
-						</div>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Loading Manager</h3>
-						</header>
-						<pre id="obj-manager"></pre>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>GLTF Loader</h3>
-						</header>
-						<div>
-							<pre id="obj-gltf"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Draco Loader</h3>
-						</header>
-						<div>
-							<pre id="obj-draco"></pre>
-						</div>
-					</article>
-				</div>
-			</section>
-
-			<section class="s-data-cnt scroll-cnt s-data-cnt--zoom">
-				<div class="o-list">
-					<article class="s-data ">
-						<h3>Zoom:<span class="h3" id="dt-zoom">14</span></h3>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>_GLOBALS</h3>
-						</header>
-						<div>
-							<pre id="obj-globals"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Particles Buffer Geometry</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-geo"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Particles Buffer Geometry Attributes</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-geo-att"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Particles Material</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-material"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Particles Material Uniforms</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-material-uni"></pre>
-						</div>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>Particles Points</h3>
-						</header>
-						<div>
-							<pre id="obj-particles-points"></pre>
-						</div>
-					</article>
-
-				</div>
-			</section>
-
-			<section class="scroll-cnt s-data-cnt s-data-cnt--time">
-				<div class="o-list">
-					<article class="c-transp s-data">
-						<header>
-							<h3>_Utime</h3>
-						</header>
-						<p id="dt-time">00:00:00:00</p>
-					</article>
-					<article class="c-transp s-data">
-						<header>
-							<h3>Axis rotation</h3>
-						</header>
-						<div id="dt-rotation-axis">
-							<p>X: -33.23°</p>
-							<p>Y: -48.13°</p>
-							<p>Z: -25.78°</p>
-						</div>
-						<p class="visually-hidden" id="dt-rotation"></p>
-					</article>
-					<article class="c-transp s-data">
-						<header>
-							<h3>Max. Polar Angle</h3>
-						</header>
-						<p id="dt-toggle-rotate-dir">PI / 1.2</p>
-					</article>
-					<article class="c-transp s-data">
-						<header>
-							<h3>_UPosition</h3>
-						</header>
-						<p id="dt-cam-pos">-10.0x,5.0y,8.1z</p>
-						<div>
-						</div>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>_scene</h3>
-						</header>
-						<pre id="obj-scene"></pre>
-					</article>
-
-					<article class="s-data data-tgl">
-						<header>
-							<h3>WEBGL Render Programs</h3>
-						</header>
-						<pre id="obj-render-programs"></pre>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>WEBGL Render</h3>
-						</header>
-						<pre id="obj-render"></pre>
-					</article>
-					<article class="s-data data-tgl">
-						<header>
-							<h3>WEBGL Render State</h3>
-						</header>
-						<pre id="obj-render-state"></pre>
-					</article>
-				</div>
-			</section>
-
-			<section class="s-data s-data-cnt s-data-cnt--fps">
-				<header>
-					<h3>FPS:<span class="h3" id="dt-fps">0</span></h3>
-				</header>
 			</section>
 		</div>
 		<section id="panel-info" class="s-panel hide">

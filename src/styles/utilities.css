@@ -19,6 +19,29 @@
 	overflow: hidden;
 }
 
+
+.hide-mb {
+	display: none;
+}
+
+@media only screen and (min-width: 1250px) {
+	.hide-mb {
+		display: block;
+	}
+	
+}
+
+.hide-dk {
+	display: block;
+}
+
+@media only screen and (min-width: 1250px) {
+	.hide-dk {
+		display: none;
+	}
+	
+}
+
 .w-def {
 	width: var(--spc-width-def);
 }

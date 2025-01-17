@@ -32,7 +32,7 @@ function setupAutoScroll() {
 
 window.addEventListener('resize', () => {
   clearTimeout(autoScrollTimeout);
-  autoScrollTimeout = setTimeout(setupAutoScroll, 5000);
+  autoScrollTimeout = setTimeout(setupAutoScroll, 2000);
 });
 
 function manageCloning(container, articlesContainer, index) {

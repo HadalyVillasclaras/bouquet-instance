@@ -39,14 +39,6 @@ main {
 	width: 100%;
 }
 
-@media only screen and (max-width: 1250px) {
-	main{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
 .webgl, .canvas-poster {
 	position: absolute;
 	top: 0;
@@ -236,19 +228,13 @@ pre {
 	.o-grid.s-data-grid {
 		display: block;
 		width: fit-content;
-		margin-left: 60px;
 	}
 }
 
 .s-data-cnt {
-	padding-bottom: var(--spc-default);
+	padding-top: var(--spc-default);
 }
 
-@media only screen and (min-width: 1250px) {
-	.s-data-cnt {
-		padding-top: var(--spc-default);
-	}
-}
 
 .s-data-clnd {
 	margin-top: 16px;
