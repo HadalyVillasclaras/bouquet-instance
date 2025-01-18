@@ -2,6 +2,8 @@
 @import url('./objects.css');
 @import url('./utilities.css');
 @import url('./animations.css');
+@import url('./video.css');
+
 
 :root {
 	--color-black: #1e1e1e;
