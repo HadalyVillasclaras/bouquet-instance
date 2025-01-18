@@ -57,6 +57,7 @@ function togglePanel(currentPanel, otherPanel) {
 }
 
 function toggleData() {
+  const body = document.body;
   const elements = document.querySelectorAll('.data-tgl, .s-data-clnd');
   let isHidden = false;
 
@@ -69,9 +70,11 @@ function toggleData() {
     }
   });
 
-  dataButton.classList.toggle('selected');
+  body.setAttribute('data-hidden', isHidden);
 
+  dataButton.classList.toggle('selected');
 }
+
 
 function closeIfClickOutside(event) {
   if (!panelInfo.contains(event.target) && !panelControls.contains(event.target) &&

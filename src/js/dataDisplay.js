@@ -37,13 +37,21 @@ window.addEventListener('resize', () => {
 
 function manageCloning(container, articlesContainer, index) {
   const existingClone = document.getElementById(`ch-b-${index}`);
+  const isHidden = document.body.getAttribute('data-hidden') === 'true';
+
   if (window.innerWidth >= 1225 && !existingClone) {
     const clonedArticlesContainer = articlesContainer.cloneNode(true);
     clonedArticlesContainer.id = `ch-b-${index}`;
     clonedArticlesContainer.classList.add("s-data-clnd");
+    if (isHidden) {
+      clonedArticlesContainer.classList.add("hide");
+    }
     container.appendChild(clonedArticlesContainer);
-  } else if (window.innerWidth < 1225 && existingClone) {
-    existingClone.remove();
+  } else if (window.innerWidth < 1225) {
+    const allClones = document.querySelectorAll('.s-data-clnd');
+    allClones.forEach(clone => {
+      clone.remove();
+    });
   }
 }
 
@@ -108,6 +116,7 @@ function formatJson(obj, indentLevel) {
 
 // auto scroll
 function autoScroll(scrollContainerClass) {
+  console.log(scrollContainerClass);
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const intervals = new Map();
   const step = isSafari ? 1 : 0.5;
@@ -135,8 +144,14 @@ function autoScroll(scrollContainerClass) {
 
   scrollContainers.forEach((container, index) => {
     const delay = Math.random() * (maxDelay - minDelay) + minDelay;
-    const articlesContainer = container.firstElementChild;
-    articlesContainer.id = `ch-a-${index}`;
+    let articlesContainer;
+    if(scrollContainerClass === '.scroll-cnt.s-data-grid') {
+      articlesContainer = container;
+      articlesContainer.id = `ch-a-${index}-mb`;
+    }else {
+      articlesContainer = container.firstElementChild;
+      articlesContainer.id = `ch-a-${index}`;
+    }
     manageCloning(container, articlesContainer, index);
 
     let isActiveRef = { isActive: true }; 

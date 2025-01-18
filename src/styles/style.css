@@ -87,6 +87,7 @@ a:link,
 a:active,
 a:focus {
   color: inherit;
+	text-transform: none;
 }
 
 li {
