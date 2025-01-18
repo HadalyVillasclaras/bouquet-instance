@@ -56,7 +56,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 /**
  * Model
  */
-const gltf = await gltfLoader.loadAsync('./assets/models/bouquet.glb');
+const gltf = await gltfLoader.loadAsync('/models/bouquet.glb');
 
 
 /**
