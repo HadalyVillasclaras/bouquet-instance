@@ -76,14 +76,17 @@ function toggleData() {
 }
 
 
-function closeIfClickOutside(event) {
-  if (!panelInfo.contains(event.target) && !panelControls.contains(event.target) &&
-    !dataButton.contains(event.target) && !ctrlButton.contains(event.target) && !infoButton.contains(event.target)) {
-    if (!panelInfo.classList.contains('hide')) {
-      panelInfo.classList.add('hide');
-    }
-    if (!panelControls.classList.contains('hide')) {
-      panelControls.classList.add('hide');
-    }
+
+export function setVisibleData() {
+  const element = document.querySelector('.s-data-grid');
+  if (element) {
+    element.style.opacity = '1';
   }
+
+  setTimeout(() => {
+    const menuAndPanels = document.querySelector('.c-menu');
+    if (menuAndPanels) {
+      menuAndPanels.style.opacity = '1';
+    }
+  }, 1000);
 }

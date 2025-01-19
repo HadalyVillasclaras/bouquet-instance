@@ -1,5 +1,8 @@
 import { dataSources } from "./dataSource";
-let autoScrollTimeout;
+import { setVisibleData } from "./elementsDisplay";
+import { setupAutoScroll } from "./autoscroll";
+
+
 
 export function init() {
   const scrollContainer = document.querySelector('.scroll-cnt');
@@ -25,36 +28,6 @@ export function init() {
   });
 }
 
-function setupAutoScroll() {
-  const classSelector = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
-  autoScroll(classSelector);
-}
-
-window.addEventListener('resize', () => {
-  clearTimeout(autoScrollTimeout);
-  autoScrollTimeout = setTimeout(setupAutoScroll, 2000);
-});
-
-function manageCloning(container, articlesContainer, index) {
-  const existingClone = document.getElementById(`ch-b-${index}`);
-  const isHidden = document.body.getAttribute('data-hidden') === 'true';
-
-  if (window.innerWidth >= 1225 && !existingClone) {
-    const clonedArticlesContainer = articlesContainer.cloneNode(true);
-    clonedArticlesContainer.id = `ch-b-${index}`;
-    clonedArticlesContainer.classList.add("s-data-clnd");
-    if (isHidden) {
-      clonedArticlesContainer.classList.add("hide");
-    }
-    container.appendChild(clonedArticlesContainer);
-  } else if (window.innerWidth < 1225) {
-    const allClones = document.querySelectorAll('.s-data-clnd');
-    allClones.forEach(clone => {
-      clone.remove();
-    });
-  }
-}
-
 function fetchData(url, elementId) {
   fetch(url)
     .then(response => {
@@ -70,6 +43,7 @@ function fetchData(url, elementId) {
       console.error(`Failed to load data from ${url}: ${error.message}`);
     });
 }
+
 
 function displayFormattedData(obj, elementId) {
   const element = document.getElementById(elementId);
@@ -114,68 +88,5 @@ function formatJson(obj, indentLevel) {
   return result;
 }
 
-// auto scroll
-function autoScroll(scrollContainerClass) {
-  console.log(scrollContainerClass);
-  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-  const intervals = new Map();
-  const step = isSafari ? 1 : 0.5;
-  const minDelay = isSafari ? 60 : 30;
-  const maxDelay = isSafari ? 100 : 80;
-  const scrollContainers = document.querySelectorAll(scrollContainerClass);
 
-  const manageScroll = (container, isActiveRef, articlesContainer, index, delay, lastTime) => {
-    const now = performance.now();
-    if (isActiveRef.isActive && now - lastTime >= delay) {
-      container.scrollTop += step;
-      const clonedArticlesContainer = document.getElementById(`ch-b-${index}`);
-      if (clonedArticlesContainer) {
-        const secondDivTop = clonedArticlesContainer.getBoundingClientRect().top - container.getBoundingClientRect().top;
-        if (secondDivTop <= 0) {
-          container.scrollTop = articlesContainer.offsetTop;
-        }
-      }
-      lastTime = now;
-    }
-    if (intervals.has(container)) {
-      requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, lastTime));
-    }
-  };
-
-  scrollContainers.forEach((container, index) => {
-    const delay = Math.random() * (maxDelay - minDelay) + minDelay;
-    let articlesContainer;
-    if(scrollContainerClass === '.scroll-cnt.s-data-grid') {
-      articlesContainer = container;
-      articlesContainer.id = `ch-a-${index}-mb`;
-    }else {
-      articlesContainer = container.firstElementChild;
-      articlesContainer.id = `ch-a-${index}`;
-    }
-    manageCloning(container, articlesContainer, index);
-
-    let isActiveRef = { isActive: true }; 
-
-    if (intervals.has(container)) {
-      cancelAnimationFrame(intervals.get(container));
-    }
-    intervals.set(container, requestAnimationFrame(() => manageScroll(container, isActiveRef, articlesContainer, index, delay, performance.now())));
-
-    container.addEventListener('mouseenter', () => { isActiveRef.isActive = false; });
-    container.addEventListener('mouseleave', () => { isActiveRef.isActive = true; });
-  });
-}
-
-function setVisibleData() {
-  const element = document.querySelector('.s-data-grid');
-  if (element) {
-    element.style.opacity = '1';
-  }
-
-  setTimeout(() => {
-    const menuAndPanels = document.querySelector('.c-menu');
-    if (menuAndPanels) {
-      menuAndPanels.style.opacity = '1';
-    }
-  }, 1000);
-}
+// Autoscroll
