@@ -34,7 +34,6 @@ function init() {
       event.stopPropagation();
     });
   }
-
 }
 
 

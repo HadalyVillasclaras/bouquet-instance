@@ -57,14 +57,13 @@ gltfLoader.setDRACOLoader(dracoLoader)
  */
 const gltf = await gltfLoader.loadAsync('/models/bouquet.glb');
 
-
 /**
  * Camera
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100);
 if (window.innerWidth < 700) {
-	camera.position.set(-10, 5.0, 14);
+	camera.position.set(-10, 5.0, 12);
 } else {
 	camera.position.set(-10, 5.0, 8.1);
 }
