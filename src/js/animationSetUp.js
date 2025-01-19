@@ -1,5 +1,6 @@
 import { init } from "./dataDisplay";
 // Manager set up
+
 export function managerSetUp(manager) {
   manager.onLoad = function () {
     document.querySelector('.webgl').classList.add('loaded');

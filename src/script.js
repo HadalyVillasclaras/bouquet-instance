@@ -63,7 +63,12 @@ const gltf = await gltfLoader.loadAsync('/models/bouquet.glb');
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100);
-camera.position.set(-10, 5.0, 8.1);
+if (window.innerWidth < 700) {
+	camera.position.set(-10, 5.0, 14);
+} else {
+	camera.position.set(-10, 5.0, 8.1);
+}
+
 scene.add(camera);
 
 // Controls

@@ -1,3 +1,5 @@
+// import { init } from "./dataDisplay";
+
 document.addEventListener('DOMContentLoaded', init);
 const dataButton = document.getElementById('btn-toggle-data');
 const ctrlButton = document.getElementById('btn-toggle-ctrl');
@@ -8,9 +10,12 @@ const panelControls = document.getElementById('panel-controls');
 
 
 function init() {
-
   if (dataButton) {
-    dataButton.addEventListener('click', toggleData);
+
+    dataButton.addEventListener('click', function (event) {
+      event.stopPropagation();
+      toggleData();
+    });
 
   }
 
@@ -29,6 +34,7 @@ function init() {
       event.stopPropagation();
     });
   }
+
 }
 
 

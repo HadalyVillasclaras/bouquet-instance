@@ -1,7 +1,7 @@
-import { dataSources } from "./dataSource";
+import { dataSources, dataSources1, dataSources2, dataSources3, dataSources4, dataSources5, dataSources6, } from "./dataSource";
 import { setVisibleData } from "./elementsDisplay";
 import { setupAutoScroll } from "./autoscroll";
-
+let autoScrollTimeout;
 
 
 export function init() {
@@ -9,23 +9,66 @@ export function init() {
 
   if (scrollContainer) {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
-  } 
+    scrollContainer.addEventListener('scroll', (event) => { }, true);
 
-  // Fetch datas
-  const fetchedData = dataSources.map(source => {
-    return fetchData(source.url, source.elementId);
-  });
+  }
 
-  Promise.all(fetchedData).then(() => {
+  if (window.innerWidth < 1080) {
+    let currentDataIndex = 1;
+    const dataSourceArray = [dataSources1, dataSources2, dataSources3, dataSources4, dataSources5, dataSources6];
+    const dataContainerSelectors = ['.s-data-cnt--intro', '.s-data-cnt--rot', '.s-data-cnt--zoom', '.s-data-cnt--time', '.s-data-cnt--gltf', '.s-data-cnt--gpu'];
 
-    setTimeout(() => {
-      setVisibleData();
-    }, 3000);
+    function loadData() {
+      if (currentDataIndex > dataSourceArray.length) {
+        return;
+      }
+      const currentDataSources = dataSourceArray[currentDataIndex - 1];
+      const fetchedData = currentDataSources.map(source => {
+        return fetchData(source.url, source.elementId);
+      });
 
-    setTimeout(() => {
-      //  setupAutoScroll()
-    }, 4000);
-  });
+      Promise.all(fetchedData).then(() => {
+        currentDataIndex++;
+       
+      });
+    }
+
+    loadData();
+    scrollContainer.addEventListener('scroll', () => {
+      if (currentDataIndex > dataSourceArray.length) {
+        return;
+      }
+
+      const isDataShown = document.body.getAttribute('data-hidden') !== 'true';
+      if (!isDataShown) {
+        return;  
+      }
+
+      const nextDataContainer = document.querySelector(dataContainerSelectors[currentDataIndex - 1]);
+      const { scrollTop, clientHeight } = scrollContainer;
+      const { offsetTop } = nextDataContainer;
+
+      if (scrollTop + clientHeight >= offsetTop - 200) {
+        loadData();
+      }
+    });
+    setVisibleData();
+    setupAutoScroll();
+  } else {
+    const fetchedData = dataSources.map(source => {
+      return fetchData(source.url, source.elementId);
+    });
+
+    Promise.all(fetchedData).then(() => {
+      setTimeout(() => {
+        setVisibleData();
+      }, 3000);
+  
+      setTimeout(() => {
+        setupAutoScroll()
+      }, 4000);
+    });
+  }
 }
 
 function fetchData(url, elementId) {
@@ -43,7 +86,6 @@ function fetchData(url, elementId) {
       console.error(`Failed to load data from ${url}: ${error.message}`);
     });
 }
-
 
 function displayFormattedData(obj, elementId) {
   const element = document.getElementById(elementId);
@@ -90,3 +132,14 @@ function formatJson(obj, indentLevel) {
 
 
 // Autoscroll
+window.addEventListener('resize', () => {
+  const element = document.querySelector('.s-data-grid');
+  if (element) {
+    element.style.opacity = '0';
+  }
+  clearTimeout(autoScrollTimeout);
+  autoScrollTimeout = setTimeout(() => {
+    init();
+    setupAutoScroll();
+  }, 2000);
+});

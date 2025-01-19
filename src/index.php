@@ -1,6 +1,5 @@
 <?php
 include 'format_data.php';
-
 ?>
 
 <!DOCTYPE html>

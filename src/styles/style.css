@@ -92,6 +92,14 @@ a:focus {
 	text-transform: none;
 }
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 li {
 	list-style: none;
 }
@@ -197,7 +205,6 @@ pre {
 
 .data-tgl {
 	display: block;
-	max-width: 200px;
 }
 
 @media only screen and (min-width: 1500px) {

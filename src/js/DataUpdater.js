@@ -1,3 +1,4 @@
+
 class DataUpdater {
     constructor() {
       this.elements = {};

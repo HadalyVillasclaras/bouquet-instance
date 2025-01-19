@@ -1,4 +1,3 @@
-let autoScrollTimeout;
 
 export function setupAutoScroll() {
   const classSelector = window.innerWidth >= 1225 ? '.scroll-cnt.s-data-cnt' : '.scroll-cnt.s-data-grid';
@@ -15,11 +14,6 @@ function autoScroll(scrollContainerClass) {
   });
 }
 
-
-window.addEventListener('resize', () => {
-  clearTimeout(autoScrollTimeout);
-  autoScrollTimeout = setTimeout(setupAutoScroll, 2000);
-});
 
 function manageCloning(container, articlesContainer, index) {
   const existingClone = document.getElementById(`ch-b-${index}`);
