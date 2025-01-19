@@ -23,7 +23,7 @@ export function init() {
     }, 3000);
 
     setTimeout(() => {
-       setupAutoScroll()
+      //  setupAutoScroll()
     }, 4000);
   });
 }

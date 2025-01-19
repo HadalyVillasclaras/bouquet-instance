@@ -8,7 +8,6 @@ const panelControls = document.getElementById('panel-controls');
 
 
 function init() {
-  // document.addEventListener('click', closeIfClickOutside);
 
   if (dataButton) {
     dataButton.addEventListener('click', toggleData);

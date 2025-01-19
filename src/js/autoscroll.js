@@ -89,3 +89,4 @@ function getBrowserSettings() {
   const delay = Math.random() * (maxDelay - minDelay) + minDelay;
   return { step, delay };
 }
+

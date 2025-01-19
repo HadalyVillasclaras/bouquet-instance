@@ -1,3 +1,7 @@
+<?php
+include 'format_data.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,35 +98,7 @@
 							<h3>GLTF PARSER <br>(Data Attributes)</h3>
 						</header>
 						<pre >
-							{
-								"MIN_PAN": {
-									"PROTOTYPE": "OBJECT",
-									"TYPE": "_VECTOR3",
-									"X": -2,
-									"Y": -2,
-									"Z": -2
-								},
-								"MAX_PAN": {
-									"PROTOTYPE": "OBJECT",
-									"TYPE": "_VECTOR3",
-									"X": 2,
-									"Y": 2,
-									"Z": 2
-								},
-								"SIZES": {
-									"PROTOTYPE": "OBJECT",
-									"TYPE": "OBJECT",
-									"WIDTH": 1440,
-									"HEIGHT": 788,
-									"PIXELRATIO": 2
-								},
-									"COLORS": {
-										"BG_COLOR": "#f4f4f4",
-										"COLOR_1": "#0e083a",
-										"COLOR_2": "#172574",
-										"COLOR_3": "#0e083a"
-									}
-							}
+						<?php echo htmlspecialchars($formattedData['instance_parser']); ?>
 						</pre>
 					</article>
 
@@ -130,28 +106,28 @@
 						<header>
 							<h3>GLTF PARSER Extensions</h3>
 						</header>
-						<pre id="obj-inst-ext"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_parser_extensions']); ?></pre>
 					</article>
 
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF Draco Mesh Compression Extension</h3>
 						</header>
-						<pre id="obj-inst-ext-draco"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_parser_extensions_draco']); ?></pre>
 					</article>
 
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF Binary Extension</h3>
 						</header>
-						<pre id="obj-inst-ext-binary"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_parser_extensions_binary']); ?></pre>
 					</article>
 
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF PARSER Plugins</h3>
 						</header>
-						<pre id="obj-inst-parser-plugins"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_parser_plugins']); ?></pre>
 					</article>
 				</div>
 			</section>
@@ -169,7 +145,7 @@
 							<h3>_Camera</h3>
 						</header>
 						<div>
-							<pre id="obj-camera"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['camera']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -177,7 +153,7 @@
 							<h3>_Orbit_controls</h3>
 						</header>
 						<div>
-							<pre id="obj-orbit"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['orbit_controls']); ?></pre>
 						</div>
 					</article>
 
@@ -185,14 +161,14 @@
 						<header>
 							<h3>Loading Manager</h3>
 						</header>
-						<pre id="obj-manager"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['loading_manager']); ?></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF Loader</h3>
 						</header>
 						<div>
-							<pre id="obj-gltf"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['loader_gltf']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -200,7 +176,7 @@
 							<h3>Draco Loader</h3>
 						</header>
 						<div>
-							<pre id="obj-draco"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['loader_draco']); ?></pre>
 						</div>
 					</article>
 				</div>
@@ -216,7 +192,8 @@
 							<h3>_GLOBALS</h3>
 						</header>
 						<div>
-							<pre id="obj-globals"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['globals']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -224,7 +201,7 @@
 							<h3>Particles Buffer Geometry</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-geo"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['particles_geometry']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -232,7 +209,7 @@
 							<h3>Particles Buffer Geometry Attributes</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-geo-att"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['particles_geometry_attributes']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -240,7 +217,7 @@
 							<h3>Particles Material</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-material"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['particles_material']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -248,7 +225,7 @@
 							<h3>Particles Material Uniforms</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-material-uni"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['particles_material_variables']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -256,7 +233,7 @@
 							<h3>Particles Points</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-points"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['particles_points']); ?></pre>
 						</div>
 					</article>
 
@@ -301,26 +278,26 @@
 						<header>
 							<h3>_scene</h3>
 						</header>
-						<pre id="obj-scene"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['scene']); ?></pre>
 					</article>
 
 					<article class="s-data data-tgl">
 						<header>
 							<h3>WEBGL Render Programs</h3>
 						</header>
-						<pre id="obj-render-programs"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['webgl_render_programs']); ?></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>WEBGL Render</h3>
 						</header>
-						<pre id="obj-render"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['webgl_render']); ?></pre>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>WEBGL Render State</h3>
 						</header>
-						<pre id="obj-render-state"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['webgl_render_state']); ?></pre>
 					</article>
 				</div>
 			</section>
@@ -364,7 +341,8 @@
 						<header>
 							<h3>GLTF Instance </h3>
 						</header>
-						<pre id="obj-inst"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance']); ?></pre>
+
 					</article>
 
 					<!-- instance geometry, mesh and materials -->
@@ -373,7 +351,8 @@
 							<h3>GLTF Instance Geometry</h3>
 						</header>
 						<div>
-							<pre id="obj-inst-geo"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_geometry']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -381,20 +360,22 @@
 							<h3>GLTF Instance Geometry Attributes</h3>
 						</header>
 						<div>
-							<pre id="obj-inst-geo-atts"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_geometry_attributes']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF Instance Mesh Standard Material</h3>
 						</header>
-						<pre id="obj-inst-mat"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_material']); ?></pre>
+
 					</article>
 					<article class="s-data data-tgl">
 						<header>
 							<h3>GLTF Instance Mesh </h3>
 						</header>
-						<pre id="obj-inst-mesh"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['instance_mesh']); ?></pre>
 					</article>
 				</div>
 			</section>
@@ -425,7 +406,7 @@
 							<h3>GPU Data Texture</h3>
 						</header>
 						<div>
-							<pre id="obj-gpu-texture"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['gpu_data_texture']); ?></pre>
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -433,7 +414,8 @@
 							<h3>GPU Shader Material</h3>
 						</header>
 						<div>
-							<pre id="obj-gpu-material"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['gpu_shader_material']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -441,7 +423,8 @@
 							<h3>GPU Particles Uniforms</h3>
 						</header>
 						<div>
-							<pre id="obj-particles-uniforms"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['gpu_particles_variables']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -449,7 +432,8 @@
 							<h3>GPU Computation</h3>
 						</header>
 						<div>
-							<pre id="obj-gpu-comp"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['gpu_computation']); ?></pre>
+
 						</div>
 					</article>
 					<article class="s-data data-tgl">
@@ -457,7 +441,7 @@
 							<h3>GPU Render Targets</h3>
 						</header>
 						<div>
-							<pre id="obj-gpu-render-targets"></pre>
+						<pre><?php echo htmlspecialchars($formattedData['gpu_computation_render_targets']); ?></pre>
 						</div>
 					</article>
 				</div>
