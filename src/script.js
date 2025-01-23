@@ -12,7 +12,6 @@ import { getRotation, getFPS } from './js/helpers.js';
 import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './js/animationSetUp.js';
 import './js/elementsDisplay.js';
 
-
 /**
  * Globals
  */
@@ -246,23 +245,23 @@ const animate = (time) => {
 animate();
 // scene.visible = false;
 // Objects
-console.log(manager);
+// console.log(manager);
 
-console.log(scene);
-console.log(camera);
-console.log(controls);
-console.log(renderer);
+// console.log(scene);
+// console.log(camera);
+// console.log(controls);
+// console.log(renderer);
 
-console.log(dracoLoader);
-console.log(gltfLoader);
+// console.log(dracoLoader);
+// console.log(gltfLoader);
 
-console.log(gltf); // Loaded model
-console.log(baseGeometry); //instance: gltf.scene.children[0].geometry
+// console.log(gltf); // Loaded model
+// console.log(baseGeometry); //instance: gltf.scene.children[0].geometry
 
-console.log(gpgpu);
+// console.log(gpgpu);
 
 // //particles
-console.log(particles);
+// console.log(particles);
 // console.log(particles.geometry); // particles.geometry = new THREE.BufferGeometry();
 // console.log(particles.material); // new THREE.ShaderMaterial
 
@@ -285,5 +284,4 @@ window.addEventListener('resize', () => {
 	renderer.setSize(sizes.width, sizes.height)
 	renderer.setPixelRatio(sizes.pixelRatio)
 })
-console.log(particles.geometry.attributes.aParticlesUv.array.buffer.byteLength);
 

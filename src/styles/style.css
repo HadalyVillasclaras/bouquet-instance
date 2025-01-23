@@ -8,7 +8,7 @@
 	--color-black: #1e1e1e;
 	--color-black-tr-1: rgba(70, 70, 72, 0.847);
 	--color-black-tr-2: rgba(63, 63, 65, 0.8);
-	--color-black-tr-3: rgba(63, 63, 65, 0.8);
+	--color-black-tr-3: rgba(63, 63, 65, 0.653);
 
 	--color-bg: #f4f4f4;
 	--color-white: #ededed;
@@ -308,6 +308,7 @@ pre {
 .s-data-cnt--intro {
 	grid-column: 1 / span 3;
 	grid-row: 1;
+	max-width: 200px;
 }
 
 .s-data-cnt--gltf {
@@ -344,6 +345,7 @@ pre {
 @media only screen and (min-width: 1250px) {
 	.s-data-cnt--intro {
 		grid-column: 1 / span 4;
+		max-width: unset;
 		grid-row: 1;
 	}
 

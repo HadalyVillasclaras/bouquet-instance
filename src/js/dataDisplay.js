@@ -140,6 +140,5 @@ window.addEventListener('resize', () => {
   clearTimeout(autoScrollTimeout);
   autoScrollTimeout = setTimeout(() => {
     init();
-    setupAutoScroll();
-  }, 2000);
+  }, 1000);
 });
