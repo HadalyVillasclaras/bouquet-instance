@@ -21,9 +21,6 @@ const sizes = {
 	pixelRatio: Math.min(window.devicePixelRatio, 2)
 }
 
-// Min and Max camera panning
-const minPan = new THREE.Vector3( - 2, - 2, - 2 );
-const maxPan = new THREE.Vector3( 2, 2, 2 );
 
 // Styles
 const bgColor = "#f4f4f4";
@@ -230,6 +227,14 @@ const animate = (time) => {
 	lastTime = time;
 
 	// Orbit Controls
+// 	controls.addEventListener( 'change', function(){
+// 		this.target.y = 0;
+// 		camera.position.y = 0;
+//  });
+
+//  controls.minDistance = 0;
+// 	controls.maxDistance = Infinity;
+
 	controls.target.clamp(minPan, maxPan); //Limit camera panning
 	controls.update()
 
@@ -241,6 +246,11 @@ const animate = (time) => {
 
 	renderer.render(scene, camera);
 }
+
+// Min and Max camera panning
+const minPan = new THREE.Vector3( 0, - 2, - 2 );
+const maxPan = new THREE.Vector3( 0, 2, 2 );
+
 
 animate();
 // scene.visible = false;

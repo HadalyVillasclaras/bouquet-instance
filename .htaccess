@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.bouquet\.hhvv\.org$ [NC]
+RewriteRule ^(.*)$ https://bouquet.hhvv.org/$1 [R=301,L]

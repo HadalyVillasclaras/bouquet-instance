@@ -10,7 +10,7 @@ export function init() {
   if (scrollContainer) {
     scrollContainer.addEventListener('wheel', (event) => { }, true);
     scrollContainer.addEventListener('scroll', (event) => { }, true);
-
+    scrollContainer.addEventListener('touchmove', () => {}, true );
   }
 
   if (window.innerWidth < 1080) {
@@ -62,11 +62,11 @@ export function init() {
     Promise.all(fetchedData).then(() => {
       setTimeout(() => {
         setVisibleData();
-      }, 3000);
+      }, 1500);
   
       setTimeout(() => {
         setupAutoScroll()
-      }, 4000);
+      }, 3000);
     });
   }
 }
