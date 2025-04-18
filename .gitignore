@@ -1,5 +1,5 @@
 node_modules
 dist
 dist-ref
-.mov
-.mp4
+*.mov
+*.mp4
