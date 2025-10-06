@@ -22,7 +22,6 @@
 	width: 100%;
 
 	pointer-events: none;
-	/* border: 1px solid red; */
 }
 
 .o-list {
@@ -30,7 +29,6 @@
 	flex-direction: column;
 	gap: 16px;
 	height: fit-content;
-
 }
 
 .o-list--sm {

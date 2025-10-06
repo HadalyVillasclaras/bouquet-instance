@@ -19,7 +19,6 @@
 	overflow: hidden;
 }
 
-
 .hide-mb {
 	display: none;
 }
@@ -28,7 +27,6 @@
 	.hide-mb {
 		display: block;
 	}
-	
 }
 
 .hide-dk {
@@ -39,35 +37,10 @@
 	.hide-dk {
 		display: none;
 	}
-	
 }
 
 .w-def {
 	width: var(--spc-width-def);
-}
-
-.p-24 {
-	padding: 24px;
-}
-
-.p-12 {
-	padding: 12px;
-}
-
-.m-24 {
-	margin: 24px;
-}
-
-.m-12 {
-	margin: 12px;
-}
-
-.mb-4{
-	margin-bottom: 4px;
-}
-
-.mb-8{
-	margin-bottom: 8px;
 }
 
 .mt-4{

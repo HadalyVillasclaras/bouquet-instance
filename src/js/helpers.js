@@ -53,5 +53,3 @@ export const getFPS = (updateInterval) => {
   }
   return null;
 };
-
-

@@ -3,7 +3,6 @@ import { setVisibleData } from "./elementsDisplay";
 import { setupAutoScroll } from "./autoscroll";
 let autoScrollTimeout;
 
-
 export function init() {
   const scrollContainer = document.querySelector('.scroll-cnt');
 

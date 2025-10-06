@@ -8,15 +8,12 @@ const infoButton = document.getElementById('btn-toggle-info');
 const panelInfo = document.getElementById('panel-info');
 const panelControls = document.getElementById('panel-controls');
 
-
 function init() {
   if (dataButton) {
-
     dataButton.addEventListener('click', function (event) {
       event.stopPropagation();
       toggleData();
     });
-
   }
 
   if (ctrlButton) {
@@ -56,8 +53,6 @@ function togglePanel(currentPanel, otherPanel) {
       currentPanel.classList.add('hide');
     }
   }
-
-
 }
 
 function toggleData() {
@@ -78,8 +73,6 @@ function toggleData() {
 
   dataButton.classList.toggle('selected');
 }
-
-
 
 export function setVisibleData() {
   const element = document.querySelector('.s-data-grid');

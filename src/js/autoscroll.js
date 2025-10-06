@@ -14,7 +14,6 @@ function autoScroll(scrollContainerClass) {
   });
 }
 
-
 function manageCloning(container, articlesContainer, index) {
   const existingClone = document.getElementById(`ch-b-${index}`);
   const isHidden = document.body.getAttribute('data-hidden') === 'true';
@@ -73,8 +72,6 @@ function setupEventListeners(container, isActiveRef) {
 
 
 // Helpers
-
-
 function getBrowserSettings() {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   const step = isSafari ? 1 : 0.5;
