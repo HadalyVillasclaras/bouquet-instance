@@ -32,7 +32,7 @@ function init() {
     });
   }
 
-   handleOutsideClicks()
+  //  handleOutsideClicks();
 }
 
 function handleOutsideClicks() {
