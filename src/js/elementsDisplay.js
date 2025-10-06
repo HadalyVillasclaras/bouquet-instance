@@ -31,6 +31,27 @@ function init() {
       event.stopPropagation();
     });
   }
+
+   handleOutsideClicks()
+}
+
+function handleOutsideClicks() {
+  document.addEventListener('click', (event) => {
+    const isClickInsidePanel =
+      panelInfo.contains(event.target) ||
+      panelControls.contains(event.target) ||
+      ctrlButton.contains(event.target) ||
+      infoButton.contains(event.target)
+
+    if (!isClickInsidePanel) {
+      if (!panelInfo.classList.contains('hide') || !panelControls.classList.contains('hide')) {
+        panelInfo.classList.add('hide')
+        panelControls.classList.add('hide')
+        ctrlButton.classList.remove('selected')
+        infoButton.classList.remove('selected')
+      }
+    }
+  })
 }
 
 

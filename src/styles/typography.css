@@ -29,7 +29,7 @@
 	}
 }
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1700px){
 	* {
 		font-size: 12px;
 		line-height: 15px;
@@ -51,12 +51,12 @@ h4, .h4, a, button,
 	h3, .h3,
 	h4, .h4, a, button, 
 	.p2, p.p2 {
-		font-size: 11px;
+		font-size: 12px;
 	}
 }
 
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 1700px){
 	h1,
 	h3, .h3,
 	h4, .h4, a, button, 
@@ -99,6 +99,6 @@ pre {
 }
 
 ::selection {
-  color: var(--color-white);
-  background: var(--color-black);
+  color: var(--color-black);
+  background: transparent;
 }

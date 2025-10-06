@@ -85,8 +85,8 @@ export function controlsSetUp(controls) {
   controls.autoRotateSpeed = 0.2;
   controls.dampingFactor = 0.1;
   controls.keyPanSpeed = 1.2;
-  controls.maxDistance = 18;
-  controls.minDistance = 8;
+  controls.maxDistance = 14;
+  controls.minDistance = 6;
   controls.rotateSpeed = 0.4;
 
   controls.maxPolarAngle = Math.PI / 1.2;  
