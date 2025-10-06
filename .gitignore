@@ -3,3 +3,4 @@ dist
 dist-ref
 *.mov
 *.mp4
+.DS_Store
