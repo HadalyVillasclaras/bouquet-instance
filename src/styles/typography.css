@@ -24,14 +24,14 @@
 
 @media only screen and (min-width: 1200px){
 	* {
-		font-size: 11px;
+		font-size: 10px;
 		line-height: 14px;
 	}
 }
 
 @media only screen and (min-width: 1700px){
 	* {
-		font-size: 12px;
+		font-size: 11px;
 		line-height: 15px;
 	}
 }
@@ -51,7 +51,7 @@ h4, .h4, a, button,
 	h3, .h3,
 	h4, .h4, a, button, 
 	.p2, p.p2 {
-		font-size: 12px;
+		font-size: 11px;
 	}
 }
 
@@ -99,6 +99,6 @@ pre {
 }
 
 ::selection {
-  color: var(--color-black);
-  background: transparent;
+  color: var(--color-white);
+  background: rgba(215, 215, 215, 0.163);
 }

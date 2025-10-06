@@ -32,7 +32,7 @@
 html,
 body {
 	overflow: hidden;
-	color: var(--color-black);
+	color: var(--color-white);
 	background-color: var(--color-bg);
 }
 
@@ -204,9 +204,7 @@ pre {
 .c-hdr #btn-toggle-data {
 	white-space: nowrap;
 }
-
-
-
+ 
 .c-menu  {
 	display: flex;
 	gap: 1px;
@@ -284,6 +282,7 @@ pre {
   scrollbar-width: none;
 	-ms-overflow-style: none;
 	/* scroll-behavior: smooth; */
+	    mix-blend-mode: difference;
 }
 
 .scroll-cnt::-webkit-scrollbar {
