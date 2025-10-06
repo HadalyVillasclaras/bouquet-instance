@@ -1,16 +1,4 @@
-# Three.js Journey
+# Instance ii: Bouquet
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+Bouquet delves into the nature of a digital entity by exposing its data infrastructure.
 
-``` bash
-# Install dependencies (only the first time)
-npm install
-
-# Run the local server at localhost:8080
-npm run dev
-
-# Build for production in the dist/ directory
-npm run build
-```
