@@ -17,35 +17,46 @@ function autoScroll(scrollContainerClass) {
     { speed: 0.016 }, //3
   ];
 
-  scrollContainers.forEach((container, index) => {
-    const { speed } = settings[index];
-    initializeScrolling(container, index, speed, intervals);
+scrollContainers.forEach((container, index) => {
+  const { speed } = settings[index];
+  initializeScrolling(container, index, speed, intervals);
 
-container.addEventListener('mouseenter', () => {
-  pausedContainers.set(container, true);
-  const handler = () => {
+  const pres = container.querySelectorAll('.s-data');
+  if (!pres.length) return;
+
+  const onScrollWhilePaused = () => {
     if (pausedContainers.get(container)) {
       scrollOffsets.set(container, container.scrollTop);
     }
   };
-  container.addEventListener('scroll', handler, { passive: true });
-  scrollSyncHandlers.set(container, handler);
-});
 
-container.addEventListener('mouseleave', () => {
-  scrollOffsets.set(container, container.scrollTop);
-  lastTimestamps.set(container, performance.now());
-  pausedContainers.set(container, false);
-  const handler = scrollSyncHandlers.get(container);
-  if (handler) {
-    container.removeEventListener('scroll', handler);
-    scrollSyncHandlers.delete(container);
-  }
-});
+  pres.forEach((pre) => {
+    pre.addEventListener('mouseenter', () => {
+      if (!pausedContainers.get(container)) {
+        pausedContainers.set(container, true);
+        if (!scrollSyncHandlers.get(container)) {
+          container.addEventListener('scroll', onScrollWhilePaused, { passive: true });
+          scrollSyncHandlers.set(container, onScrollWhilePaused);
+        }
+      }
+    });
 
+    pre.addEventListener('mouseleave', () => {
+      if (container.querySelector('pre:hover')) return;
 
+      scrollOffsets.set(container, container.scrollTop);
+      lastTimestamps.set(container, performance.now());
+      pausedContainers.set(container, false);
 
+      const h = scrollSyncHandlers.get(container);
+      if (h) {
+        container.removeEventListener('scroll', h);
+        scrollSyncHandlers.delete(container);
+      }
+    });
   });
+});
+
 }
 
 

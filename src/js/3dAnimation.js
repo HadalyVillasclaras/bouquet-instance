@@ -19,7 +19,7 @@ import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, basePart
 const sizes = {
 	width: window.innerWidth,
 	height: window.innerHeight,
-	pixelRatio: Math.min(window.devicePixelRatio, 2)
+	pixelRatio:  window.devicePixelRatio
 }
 
 

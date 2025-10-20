@@ -27,7 +27,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
+
 }
 
 html,
@@ -43,14 +43,16 @@ main {
 	width: 100%;
 }
 
-.webgl, .canvas-poster {
+.webgl,
+.canvas-poster {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 0;
 }
 
-button, .btn,
+button,
+.btn,
 button:active,
 button:focus,
 button:hover,
@@ -91,15 +93,15 @@ button.btn.disabled:hover {
 
 button:focus,
 a:focus {
-  outline: none;
-  box-shadow: none;
+	outline: none;
+	box-shadow: none;
 }
 
 a,
 a:link,
 a:active,
 a:focus {
-  color: inherit;
+	color: inherit;
 	text-transform: none;
 }
 
@@ -116,13 +118,16 @@ li {
 }
 
 ul ul {
-	margin-left: 8px; /* indent */
+	margin-left: 8px;
+	/* indent */
 }
 
 pre {
 	white-space: pre-wrap;
 	text-transform: none;
 	overflow-x: visible;
+	width: fit-content;
+	pointer-events: all;
 }
 
 .highlight-1 {
@@ -137,10 +142,10 @@ pre {
 .s-panel {
 	color: var(--color-white);
 	position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -40%);
-  transform: translate(-50%, -40%);
+	top: 40%;
+	left: 50%;
+	-ms-transform: translate(-50%, -40%);
+	transform: translate(-50%, -40%);
 	z-index: 3;
 }
 
@@ -153,7 +158,7 @@ pre {
 	}
 }
 
-.s-panel > header {
+.s-panel>header {
 	display: none;
 	margin-bottom: 1px;
 }
@@ -175,16 +180,16 @@ pre {
 	padding: 8px 9px 8px 9px;
 }
 
-.s-panel__body.info > h3 {
-    margin-bottom: 4px;
+.s-panel__body.info>h3 {
+	margin-bottom: 4px;
 }
 
-.s-panel__body.info nav span{
+.s-panel__body.info nav span {
 	display: block;
 }
 
 @media only screen and (min-width: 700px) {
-	.s-panel__body.info nav span{
+	.s-panel__body.info nav span {
 		display: inline;
 	}
 }
@@ -211,10 +216,10 @@ pre {
 .c-hdr {
 	position: absolute;
 	bottom: 16px;
-  left: 50%;
+	left: 50%;
 	z-index: 4;
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
 	display: flex;
 	justify-content: flex-end;
 }
@@ -222,8 +227,8 @@ pre {
 .c-hdr #btn-toggle-data {
 	white-space: nowrap;
 }
- 
-.c-menu  {
+
+.c-menu {
 	display: flex;
 	gap: 1px;
 	height: fit-content;
@@ -241,27 +246,32 @@ pre {
 /* Data containers and sections */
 .s-data {
 	width: 100%;
-	pointer-events: all;
+	pointer-events: none;
 }
 
-.s-data header{
+.s-data header {
 	margin-bottom: 4px;
 }
 
 .data-tgl {
 	display: block;
+	width: fit-content;
+	pointer-events: none;
 }
 
 @media only screen and (min-width: 1500px) {
 	.data-tgl {
-		max-width: 222px;
+		/* max-width: 222px; */
 	}
 }
 
-.data-tgl * {
+.data-tgl *,
+.s-data * {
 	text-transform: uppercase;
-
+	width: fit-content;
+	pointer-events: all;
 }
+
 .visible {
 	display: block;
 }
@@ -297,10 +307,10 @@ pre {
 
 .scroll-cnt {
 	overflow-y: auto;
-  scrollbar-width: none;
+	scrollbar-width: none;
 	-ms-overflow-style: none;
 	/* scroll-behavior: smooth; */
-	    mix-blend-mode: difference;
+	mix-blend-mode: difference;
 }
 
 .scroll-cnt::-webkit-scrollbar {
@@ -336,7 +346,7 @@ pre {
 .s-data-cnt--intro {
 	grid-column: 1 / span 3;
 	grid-row: 1;
-	max-width: 200px;
+	/* max-width: 200px; */
 }
 
 .s-data-cnt--gltf {
@@ -377,8 +387,8 @@ pre {
 		grid-row: 1;
 	}
 
-	.s-data-cnt--intro > div .perm{
-		max-width: 192px;
+	.s-data-cnt--intro>div .perm {
+		/* max-width: 192px; */
 	}
 
 	.s-data-cnt--gltf {
@@ -404,7 +414,7 @@ pre {
 	.s-data-cnt--time {
 		grid-column: 21 / span 4;
 		grid-row: 1;
-		max-width: 180px;
+		/* max-width: 180px; */
 
 	}
 
@@ -420,9 +430,9 @@ pre {
 		grid-column: 1 / span 4;
 	}
 
-	
-	.s-data-cnt--intro > div .perm{
-		max-width: 214px;
+
+	.s-data-cnt--intro>div .perm {
+		/* max-width: 214px; */
 	}
 
 	.s-data-cnt--gltf {
@@ -444,7 +454,7 @@ pre {
 
 	.s-data-cnt--time {
 		grid-column: 21 / span 4;
-		max-width: 230px;
+		/* max-width: 230px; */
 	}
 }
 
@@ -456,14 +466,14 @@ pre {
 	pointer-events: none;
 
 	-ms-overflow-style: none;
-  scrollbar-width: none;
+	scrollbar-width: none;
 }
 
 .s-data-cnt--tl::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
-.s-data-cnt--tl > div {
+.s-data-cnt--tl>div {
 	pointer-events: none;
 }
 
@@ -500,4 +510,3 @@ pre {
 .o-list--sm {
 	gap: 1px;
 }
-
