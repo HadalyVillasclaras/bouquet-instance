@@ -9,7 +9,6 @@ class DataUpdater {
     this.data = {
       cameraPosition: { x: 0, y: 0, z: 0 },
       time: 0,
-      fps: 0,
       rotation: { x: 0, y: 0, z: 0 },
       zoom: 0
     };
@@ -19,7 +18,6 @@ class DataUpdater {
     const suffix = window.innerWidth < 1250 ? '-mb' : '';
     this.elements.cameraPosition = document.getElementById(`dt-cam-pos${suffix}`);
     this.elements.time = document.getElementById(`dt-time${suffix}`);
-    this.elements.fps = document.getElementById(`dt-fps${suffix}`);
     this.elements.rotation = document.getElementById(`dt-rotation${suffix}`);
     this.elements.rotationMagnitude = document.getElementById(`dt-rotation-mag${suffix}`);
     this.elements.rotationAxis = document.getElementById(`dt-rotation-axis${suffix}`);
@@ -101,12 +99,6 @@ class DataUpdater {
   }
   }
 
-  setFPS(fps) {
-    if (this.data.fps !== fps) {
-      this.data.fps = fps;
-      this.updateUI('fps', `${fps}`);
-    }
-  }
 
   updateUI(id, value) {
     const element = this.elements[id];

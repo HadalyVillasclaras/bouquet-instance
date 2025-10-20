@@ -36,20 +36,3 @@ export const getRotation = (currentRotation) => {
   }
   return null;
 };
-
-let fpsLastTime = performance.now();
-let frameCount = 0;
-
-export const getFPS = (updateInterval) => {
-  frameCount++;
-  const now = performance.now();
-  const elapsed = now - fpsLastTime;
-
-  if (elapsed >= updateInterval) {
-    const fps = frameCount;
-    frameCount = 0;
-    fpsLastTime = now;
-    return fps;
-  }
-  return null;
-};

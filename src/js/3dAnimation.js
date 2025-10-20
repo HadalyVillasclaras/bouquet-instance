@@ -9,8 +9,8 @@ import particlesVertexShader from './../shaders/particles/vertex.glsl'
 import particlesFragmentShader from './../shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './../shaders/gpgpu/particles.glsl'
 import DataUpdater from './DataUpdater.js';
-import { getRotation, getFPS } from './helpers.js';
-import { controlsSetUp, guiSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './animationSetUp.js';
+import { getRotation } from './helpers.js';
+import { controlsSetUp, geometryParticlesSetUp, managerSetUp, baseParticlesSetUp} from './animationSetUp.js';
 
 
 /**
@@ -157,19 +157,6 @@ particles.points = new THREE.Points(particles.geometry, particles.material)
 scene.add(particles.points)
 
 /**
- * GUI
- */
-// const gui = new GUI({ width: 340 })
-
-// guiSetUp(
-// 	gui,
-// 	particles.material.uniforms.uSize, 
-// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldInfluence, 
-// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldStrength, 
-// 	gpgpu.particlesVariable.material.uniforms.uFlowFieldFrequency
-// );
-
-/**
  * Animate
  */
 const clock = new THREE.Clock()
@@ -214,10 +201,7 @@ const animate = (time) => {
 		uiUpdater.setRotation(rotationValues);
 	}
 
-	const fps = getFPS(1000);
-	if (fps !== null) {
-		uiUpdater.setFPS(fps);
-	}
+	
 	uiUpdater.setCameraPosition(camera.position.x, camera.position.y, camera.position.z);
 	uiUpdater.setTime(clock.getElapsedTime());
 
@@ -228,16 +212,7 @@ const animate = (time) => {
 
 	lastTime = time;
 
-	// Orbit Controls
-// 	controls.addEventListener( 'change', function(){
-// 		this.target.y = 0;
-// 		camera.position.y = 0;
-//  });
-
-//  controls.minDistance = 0;
-// 	controls.maxDistance = Infinity;
-
-	controls.target.clamp(minPan, maxPan); //Limit camera panning
+	controls.target.clamp(minPan, maxPan); 
 	controls.update()
 
 	// GPGPU Update
@@ -253,30 +228,7 @@ const animate = (time) => {
 const minPan = new THREE.Vector3( 0, - 2, - 2 );
 const maxPan = new THREE.Vector3( 0, 2, 2 );
 
-
 animate();
-// scene.visible = false;
-// Objects
-// console.log(manager);
-
-// console.log(scene);
-// console.log(camera);
-// console.log(controls);
-// console.log(renderer);
-
-// console.log(dracoLoader);
-// console.log(gltfLoader);
-
-// console.log(gltf); // Loaded model
-// console.log(baseGeometry); //instance: gltf.scene.children[0].geometry
-
-// console.log(gpgpu);
-
-// //particles
-// console.log(particles);
-// console.log(particles.geometry); // particles.geometry = new THREE.BufferGeometry();
-// console.log(particles.material); // new THREE.ShaderMaterial
-
 
 
 window.addEventListener('resize', () => {

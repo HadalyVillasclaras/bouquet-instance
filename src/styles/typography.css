@@ -65,13 +65,6 @@ p.p2 {
 		font-size: 11px;
 	}
 
-	.s-panel__body p,
-	.s-panel__body h2,
-	.s-panel__body h3,
-	.s-panel__body span,
-	.s-panel__body a {
-		font-size: 12px;
-	}
 }
 
 @media only screen and (min-width: 1700px) {
@@ -97,21 +90,12 @@ a {
 	font-weight: normal;
 }
 
-.s-panel__body.info p.p2 {
-	text-transform: none;
-	line-height: 16px;
-}
 
 pre {
 	line-height: 16px;
 }
 
 @media only screen and (min-width: 1200px) {
-	.s-panel__body.info p.p2 {
-		text-transform: none;
-		line-height: 15px;
-	}
-
 	pre {
 		line-height: 15px;
 	}
