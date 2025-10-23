@@ -27,7 +27,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	
+
 }
 
 html,
@@ -43,14 +43,16 @@ main {
 	width: 100%;
 }
 
-.webgl, .canvas-poster {
+.webgl,
+.canvas-poster {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 0;
 }
 
-button, .btn,
+button,
+.btn,
 button:active,
 button:focus,
 button:hover,
@@ -91,15 +93,15 @@ button.btn.disabled:hover {
 
 button:focus,
 a:focus {
-  outline: none;
-  box-shadow: none;
+	outline: none;
+	box-shadow: none;
 }
 
 a,
 a:link,
 a:active,
 a:focus {
-  color: inherit;
+	color: inherit;
 	text-transform: none;
 }
 
@@ -116,7 +118,8 @@ li {
 }
 
 ul ul {
-	margin-left: 8px; /* indent */
+	margin-left: 8px;
+	/* indent */
 }
 
 pre {
@@ -137,10 +140,10 @@ pre {
 .s-panel {
 	color: var(--color-white);
 	position: absolute;
-  top: 40%;
-  left: 50%;
-  -ms-transform: translate(-50%, -40%);
-  transform: translate(-50%, -40%);
+	top: 40%;
+	left: 50%;
+	-ms-transform: translate(-50%, -40%);
+	transform: translate(-50%, -40%);
 	z-index: 3;
 }
 
@@ -153,7 +156,7 @@ pre {
 	}
 }
 
-.s-panel > header {
+.s-panel>header {
 	display: none;
 	margin-bottom: 1px;
 }
@@ -175,16 +178,16 @@ pre {
 	padding: 8px 9px 8px 9px;
 }
 
-.s-panel__body.info > h3 {
-    margin-bottom: 4px;
+.s-panel__body.info>h3 {
+	margin-bottom: 4px;
 }
 
-.s-panel__body.info nav span{
+.s-panel__body.info nav span {
 	display: block;
 }
 
 @media only screen and (min-width: 700px) {
-	.s-panel__body.info nav span{
+	.s-panel__body.info nav span {
 		display: inline;
 	}
 }
@@ -198,10 +201,46 @@ pre {
 .s-panel__crdts {
 	display: flex;
 	width: 100%;
-	justify-content: start;
 	align-items: flex-end;
-	gap: 8px;
+	gap: 4px;
+	flex-direction: row;
+	margin-top: 32px;
 }
+
+.s-panel__crdts  span {
+	display: none;
+}
+
+.s-panel__crdts>div:nth-child(1) {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.s-panel__crdts>div:nth-child(2) {
+	flex-shrink: 0;
+}
+
+
+@media only screen and (min-width: 1200px) {
+	.s-panel__crdts {
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 8px;
+	}
+
+	.s-panel__crdts>div:nth-child(1) {
+		flex-direction: row;
+		align-items: flex-end;
+		gap: 8px;
+	}
+
+	.s-panel__crdts  span {
+		display: block;
+	}
+}
+
 
 .s-panel__crdts h3 {
 	text-transform: none;
@@ -211,10 +250,10 @@ pre {
 .c-hdr {
 	position: absolute;
 	bottom: 16px;
-  left: 50%;
+	left: 50%;
 	z-index: 4;
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
 	display: flex;
 	justify-content: flex-end;
 }
@@ -222,8 +261,8 @@ pre {
 .c-hdr #btn-toggle-data {
 	white-space: nowrap;
 }
- 
-.c-menu  {
+
+.c-menu {
 	display: flex;
 	gap: 1px;
 	height: fit-content;
@@ -231,7 +270,19 @@ pre {
 	transition: opacity 0.7s ease-out;
 }
 
+.screen-link {
+	text-decoration: none;
+}
 
+.screen-link::after {
+	content: "\2197";
+	margin-left: 2px;
+	font-variant-emoji: text;
+	top: -1px;
+	position: relative;
+	font-size: 13px;
+	line-height: 0;
+}
 
 .c-menu * {
 	pointer-events: all;
@@ -244,7 +295,7 @@ pre {
 	pointer-events: all;
 }
 
-.s-data header{
+.s-data header {
 	margin-bottom: 4px;
 }
 
@@ -262,6 +313,7 @@ pre {
 	text-transform: uppercase;
 
 }
+
 .visible {
 	display: block;
 }
@@ -297,10 +349,10 @@ pre {
 
 .scroll-cnt {
 	overflow-y: auto;
-  scrollbar-width: none;
+	scrollbar-width: none;
 	-ms-overflow-style: none;
 	/* scroll-behavior: smooth; */
-	    mix-blend-mode: difference;
+	mix-blend-mode: difference;
 }
 
 .scroll-cnt::-webkit-scrollbar {
@@ -377,7 +429,7 @@ pre {
 		grid-row: 1;
 	}
 
-	.s-data-cnt--intro > div .perm{
+	.s-data-cnt--intro>div .perm {
 		max-width: 192px;
 	}
 
@@ -420,8 +472,8 @@ pre {
 		grid-column: 1 / span 4;
 	}
 
-	
-	.s-data-cnt--intro > div .perm{
+
+	.s-data-cnt--intro>div .perm {
 		max-width: 214px;
 	}
 
@@ -456,14 +508,14 @@ pre {
 	pointer-events: none;
 
 	-ms-overflow-style: none;
-  scrollbar-width: none;
+	scrollbar-width: none;
 }
 
 .s-data-cnt--tl::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
-.s-data-cnt--tl > div {
+.s-data-cnt--tl>div {
 	pointer-events: none;
 }
 
@@ -500,4 +552,3 @@ pre {
 .o-list--sm {
 	gap: 1px;
 }
-
