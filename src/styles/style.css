@@ -127,7 +127,7 @@ pre {
 	text-transform: none;
 	overflow-x: visible;
 	width: fit-content;
-	pointer-events: all;
+	/* pointer-events: all; */
 }
 
 .highlight-1 {
@@ -136,38 +136,6 @@ pre {
 	color: var(--color-white);
 	border-radius: 0;
 }
-
-
-
-.c-hdr {
-	position: absolute;
-	bottom: 16px;
-	left: 50%;
-	z-index: 4;
-	-ms-transform: translate(-50%, 0);
-	transform: translate(-50%, 0);
-	display: flex;
-	justify-content: flex-end;
-}
-
-.c-hdr #btn-toggle-data {
-	white-space: nowrap;
-}
-
-.c-menu {
-	display: flex;
-	gap: 1px;
-	height: fit-content;
-	opacity: 0;
-	transition: opacity 0.7s ease-out;
-}
-
-
-
-.c-menu * {
-	pointer-events: all;
-}
-
 
 /* Data containers and sections */
 .s-data {
@@ -195,7 +163,7 @@ pre {
 .s-data * {
 	text-transform: uppercase;
 	width: fit-content;
-	pointer-events: all;
+	/* pointer-events: all; */
 }
 
 .visible {

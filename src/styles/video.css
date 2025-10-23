@@ -17,3 +17,16 @@
     width: 70vw;
   }
 }
+
+.video-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.video-data a {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}

@@ -4,7 +4,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js'
 import { GPUComputationRenderer } from 'three/addons/misc/GPUComputationRenderer.js';
-import GUI from 'lil-gui'
 import particlesVertexShader from './../shaders/particles/vertex.glsl'
 import particlesFragmentShader from './../shaders/particles/fragment.glsl'
 import gpgpuParticlesShader from './../shaders/gpgpu/particles.glsl'
@@ -175,6 +174,12 @@ document.getElementById('dt-toggle-rotate-dir').addEventListener('click', () => 
 
 let lastZoom = 0;
 
+
+// ZOOM params
+const baseDistance = 10
+const amplitude = 4
+const speed = 0.2
+
 const animate = (time) => {
 	animationFrameId = requestAnimationFrame(animate);
 
@@ -213,6 +218,19 @@ const animate = (time) => {
 	lastTime = time;
 
 	controls.target.clamp(minPan, maxPan); 
+
+
+	// ZOOM ANIMATION
+	const offset = Math.cos(elapsedTime * 0.015) * amplitude;
+	const newDistance = baseDistance + offset;
+	const direction = new THREE.Vector3()
+		.subVectors(camera.position, controls.target)
+		.normalize()
+		.multiplyScalar(newDistance);
+	camera.position.copy(controls.target).add(direction);
+
+
+
 	controls.update()
 
 	// GPGPU Update
