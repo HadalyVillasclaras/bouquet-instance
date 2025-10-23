@@ -127,7 +127,7 @@ pre {
 	text-transform: none;
 	overflow-x: visible;
 	width: fit-content;
-	/* pointer-events: all; */
+	pointer-events: all;
 }
 
 .highlight-1 {
