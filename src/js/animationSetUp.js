@@ -62,4 +62,31 @@ export function controlsSetUp(controls) {
 
   controls.maxPolarAngle = Math.PI / 1.2;  
   // controls.minPolarAngle = Math.PI / 4;
+
+  controls.keys = {
+    LEFT: 'ArrowRight',
+    UP: 'ArrowDown',
+    RIGHT: 'ArrowLeft',
+    BOTTOM: 'ArrowUp'
+  }
+
+  initCameraPanningKeyEvents(controls);
+}
+
+function initCameraPanningKeyEvents(controls) {
+  const arrow_keys = ['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft'];
+
+  window.addEventListener('pointerdown', (event) => { }, false);
+  window.addEventListener('pointerup', (event) => { }, false);
+  window.addEventListener('wheel', (event) => { }, false);
+  window.addEventListener('keydown', (event) => {
+    if (arrow_keys.some(k => k === event.key) || event.ctrlKey || event.metaKey || event.shiftKey) {
+      controls.listenToKeyEvents(window);
+    }
+  }, false);
+  window.addEventListener('keyup', (event) => {
+    if (arrow_keys.some(k => k === event.key)) {
+      controls.stopListenToKeyEvents();
+    }
+  }, false);
 }
